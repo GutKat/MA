@@ -7,34 +7,40 @@ import csv
 import random
 from datetime import datetime
 
-
+def add_nt(seq, n_nts):
+    return ''.join(random.choices(['A', "C", 'G', 'U'], k=n_nts)) + seq + ''.join(random.choices(['A', "C", 'G', 'U'], k=n_nts))
 
 def remove_gaps(s, gaps):
     s = list(s)
     for gap in gaps:
         s[gap] = '-'
-    
     return ''.join(s).replace('-', '')
+
+def margin_left(left_text, right_text, padding):
+    print(f"{left_text: <{padding}}{right_text}")
+
+
+def print_line():
+    print(f"\n{'':->150}\n")
 
 
 check = True
 target_gc = 0.5
 target_energy = -30
-target_len = 100
+target_len = 94
 
 
-base_ss =   '((((((..((((((((......(((((....))))).(((((...............))))).))))))))..))))))............................'
-pk1 =       '...................(((.........................................................................))).........'
-pk2 =       '.................................................((((...............................................))))...'
-iupac_seq = "NNNNXXXXNNNNXXXGGCAGCRCNNXXNNXXXXNNGACNNXXNNNNXXXGGUCNNXXXXNNGACXXXNNNNXXXXNNNNNNNNNNNNNNXXXXXXUGYXXGACCXXX"
 
+iupac_cons =    'NNNNXXXXNNNNXXXGGCAGCRCNNXXNNXXXXNNGACNNXXNNXXXXGGUCXXXXXXXXXXNNGACXXXNNNNXXXXNNNNNNNNNNNNNNXXXXXXUGYXXXXXGXACCX'
+base_ss =       '((((((..((((((((......(((((....))))).(((((..................))))).))))))))..))))))..............................'
+pk1 =           '...................(((............................................................................)))...........'
+pk2 =           '...............................................(((((..(((..............................................)))).))))'
 
 csv_protocol = '/scr/aldea/kgutenbrunner/xrRNA_design/TBFV_design/seqs/designed_seqs.csv'
-add_to_csv = True
-seq = 'GGCUUC--GCAUCGUGGCAGCACCGGCUUGAGCCGGACCCGCUUUU---GGUCUU--GCGGGACACGGUGC--GAGGCCAUCCUUUUUUUUACUUUGCACGACC---' 
-model = 'mc, 100 000'
+add_to_csv = False
+seq = 'GUCA-CCAGCGCCUGGGCAGCACCG-CUACCG-CGGACCCUCAA----GGUCAA------GAGGGACCGGGUGCCAG-UGACAAAAAAAAAAAAUAUAUGCA----G-ACC-' 
+model = 'mc, 500 000, HL-III + PK2 changed'
 date = datetime.now().strftime("%m/%d/%Y")
-print(date)
 
 seq_ = seq
 gaps = [i for i in range(len(seq)) if seq[i] == '-']
@@ -53,7 +59,7 @@ fc = RNA.fold_compound(seq)
 (ss, mfe) = fc.mfe()
 print('suboptimal structures:')
 for s in fc.subopt(100):
-    print(f"{s.structure} {s.energy:6.2f}")
+    print(f"\t{s.structure}\t{s.energy:6.2f}")
 
 if ss != base_ss:
     check = False
@@ -61,7 +67,14 @@ if ss != base_ss:
 print(f'\nstructures:\n\t{base_ss}\n\t{pk1}\n\t{pk2}\n')
 
 gc_content = (seq.count("G") + seq.count("C")) / len(seq)
-print(f'\nseq:\t{seq}\nss:\t{ss}\nlength:\t{len(seq)}\nMFE:\t{round(mfe,3)}\nfreq:\t{round(freq, 3)}\ngc:\t{round(gc_content, 3)}\nfolds in structure: {check}\n')
+margin_left('seq:', seq, 15)
+margin_left('ss:', ss, 15)
+margin_left('length:', len(seq), 15)
+margin_left('MFE:', round(mfe,3), 15)
+margin_left('freq:', round(freq, 3), 15)
+margin_left('gc:', round(gc_content, 3), 15)
+margin_left('folds correct:', check, 15)
+print_line()
 
 if add_to_csv:
     with open(csv_protocol) as f:
@@ -74,14 +87,25 @@ if add_to_csv:
 
 
 # #check when we add 10 random nts (or just A's) to 5' and 3' whether xrRNA structure remains the same
-# nts = 15
-# long_seq = ''.join(random.choices(['A', "C", 'G', 'U'], k = nts)) + seq +''.join(random.choices(['A', "C", 'G', 'U'], k = nts))
-# long_seq = 'A' * 10 + seq + 'A' * 10 
+nts = 10
+long_seq = ''.join(random.choices(['A', "C", 'G', 'U'], k = nts)) + seq +''.join(random.choices(['A', "C", 'G', 'U'], k = nts))
+#long_seq = 'A' * 10 + seq + 'A' * 10
+long_seq_p = ''.join(' ' * nts) +  ''.join('*' * len(seq)) + ''.join(' ' * nts)
 
-# print(f'seqs with added nts:\t{long_seq}')
-# fc = RNA.fold_compound(long_seq)
-# (long_ss, mfe) = fc.mfe()
 
-# print(f'new ss:\t\t\t{long_ss}')
-# print(f'ss w\o add nts:\t\t{long_ss[10:-10]}')
-# print(f'r structures the same?\t{long_ss[10:-10] == ss}')
+fc = RNA.fold_compound(long_seq)
+(long_ss, mfe) = fc.mfe()
+print('Adding nts up and downstream of designed sequence\n')
+margin_left('designed seqs:', long_seq_p, 30)
+margin_left('seqs with added nts:', long_seq, 30)
+margin_left('new ss:', long_ss, 30)
+margin_left('ss w\\o added nts:', ''.join(' ' * nts) + long_ss[nts:-nts] + ''.join(' ' * nts), 30)
+margin_left('True structure:', ''.join(' ' * nts) + ss + ''.join(' ' * nts), 30)
+
+print(f'\nstructures:\n\t{base_ss}\n\t{pk1}\n\t{pk2}\n')
+print(base_ss)
+print(pk1)
+print(pk2)
+print('1234567890'*9)
+print(f'         1' * 10)
+print(seq)
