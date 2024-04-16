@@ -7,7 +7,19 @@ import random
 import math
 import ir_utils as ir_ut
 import itertools as it
+import matplotlib.pyplot as plt
+import numpy as np
 
+target_len = 94
+target_gc =  0.58
+target_energy = -33
+relations = {
+        'st2_hl2': [0.81, 0.3, 1.75],
+        'st3_hl3': [0.48, 0.3, 1.75],
+        'sI_sII': [1.56, 0.66, 2.29],
+        'sII_sIII': [0.63, 0.4, 1],
+        'sI_sIII': [0.91, 0.46, 1.2]
+    }
 
 
 def target_frequency(sequence, target):
@@ -17,26 +29,68 @@ def target_frequency(sequence, target):
     return fc.pr_structure(ss)
 
 
-def count_gaps(sequence, region):
-    return sequence[region[0]:region[1]].count('-')
+def calculate_length(sequence, region):
+    return (region[1] - region[0]) - sequence[region[0]:region[1]].count('-')
+
+
+
+def calculate_all_structure_len(sequence, model_input):
+    stems = model_input.structure_span['stem']
+    loops = model_input.structure_span['loop']
+    st1 = calculate_length(sequence, stems[0][0][0]) + calculate_length(sequence, stems[0][0][1]) + calculate_length(sequence, stems[0][1][0]) + calculate_length(sequence, stems[0][1][1])
+    st2 = calculate_length(sequence, stems[1][0]) + calculate_length(sequence, stems[1][1])
+    st3 = calculate_length(sequence, stems[2][0]) + calculate_length(sequence, stems[2][1])
+    hl2 = calculate_length(sequence, loops['hl2'])
+    hl3 = calculate_length(sequence, loops['hl3'])
+    # upk1 = count_gaps(sequence, loops['upk1'])
+    sI = calculate_length(sequence, [stems[0][0][0][0],  stems[0][0][1][1]]) + calculate_length(sequence, [stems[0][1][0][0],  stems[0][1][1][1]])
+    sII = st2 + hl2
+    sIII = st3 + hl3
+    return st1, st2, st3, hl2, hl3, sI, sII, sIII
+
 
 
 def optimization_function(sequence, model_input):
-    stems = model_input.structure_span['stem']
-    loops = model_input.structure_span['loop']
+    st1, st2, st3, hl2, hl3, sI, sII, sIII = calculate_all_structure_len(sequence, model_input)
+ 
+    cur_relations = {}
+    cur_relations['st2_hl2'] = st2 / hl2
+    cur_relations['st3_hl3'] = st3 / hl3
 
-    st1 = count_gaps(sequence, stems[0][0]) + count_gaps(sequence, stems[0][1])
-    st2 = count_gaps(sequence, stems[1][0]) + count_gaps(sequence, stems[1][1])
-    st3 = count_gaps(sequence, stems[2][0]) + count_gaps(sequence, stems[2][1])#
-    hl2 = count_gaps(sequence, loops['hl2'])
-    hl3 = count_gaps(sequence, loops['hl3'])
-    upk1 = count_gaps(sequence, loops['upk1'])
-    print(st1, st2, st3, hl2, hl3, upk1)
+    cur_relations['sI_sII'] = sI / sII
+    cur_relations['sI_sIII'] = sI / sIII
+    cur_relations['sII_sIII'] = sII / sIII
+
+    error_rel = 0
+
+    error_rel = sum([error(relations[key][0], cur_relations[key]) for key in cur_relations.keys()])
 
     target = model_input.structures[0]
     fc_pr = target_frequency(sequence, target)
-    print(fc_pr)
-    return fc_pr
+
+    tot_length = len(sequence.replace('-', ''))
+    error_len = error(target_len, tot_length)
+
+    length_fraction = 0.01
+    relation_fraction = 0.05
+    new_val = fc_pr - (error_rel * relation_fraction) - (error_len * length_fraction)
+
+    # print('freq',fc_pr)
+    # print('e rel',error_rel)
+    # print('e len', error_len)
+    # print('obj',new_val)
+    # return fc_pr
+    return new_val, error_rel , error_len , fc_pr
+
+
+def number_in_range(x, range_):
+    if range_[0] <= x <= range_[1]:
+        return True
+    return False
+
+
+def error(x, y):
+    return abs(x-y)
 
 
 def remove_positioned_gaps(sequence, structure):
@@ -44,33 +98,87 @@ def remove_positioned_gaps(sequence, structure):
     new_ss = [structure[i] for i in range(len(structure)) if i not in remove]
     return ''.join(new_ss)
 
-    
 
 
 def mc_optimize(model, model_input, objective, steps, temp, start=None):
     sampler = ir.Sampler(model)
     cur = sampler.sample() if start is None else start
 
+
     cur_seq = rna.values_to_seq(cur.values()[:len(model_input.structures[0])])
-    curval = objective(cur_seq)
+    curval, error_rel, error_len, fc_pr = objective(cur_seq)
     best, bestval = cur, curval
     ccs = model.connected_components()
     weights = [1/len(cc) for cc in ccs]
-    for i in (range(steps)): #tqdm
+
+
+    values = [curval]
+    best_values = [curval]
+    errors_lens = [error_len]
+    errors_rels = [error_rel]
+    freqs = [fc_pr]
+
+    for i in tqdm((range(steps))): #tqdm
         cc = random.choices(ccs,weights)[0]
         new = sampler.resample(cc, cur)
         new_seq = rna.values_to_seq(new.values()[:len(model_input.structures[0])])
-        newval = objective(new_seq)
+        newval, error_rel, error_len, fc_pr = objective(new_seq)
+
+    
         if (newval >= curval or random.random() <= math.exp((newval-curval)/temp)):
             cur, curval = new, newval
             if curval > bestval:
-                #print(curval)
+                # print(curval)
                 best, bestval = cur, curval
-        print(f'{i} step')
-    return (best, bestval)
+        if i%50==0:
+            values.append(newval)
+            errors_lens.append(error_len)
+            errors_rels.append(error_rel)
+            freqs.append(fc_pr)
+            best_values.append(bestval)
+
+        # print(f'{i} step')
+
+    # creating plot to have an overview of the behaviour of optimization function, length and relation error, frequency
+    if False:
+        x_ticks = [i * 50 for i in range(len(values))]               
+        plt.plot(x_ticks, values, label = "cur value") 
+        plt.plot(x_ticks, best_values, label = "best value")
+        plt.title('optimization function')
+        plt.xlabel('steps')
+        plt.legend()
+        #plt.clf()
+        plt.savefig('/scr/aldea/kgutenbrunner/working/xrRNA_design/TBFV_design/img/opt_function.png')
+
+        plt.clf()
+        plt.plot(x_ticks, values) 
+        plt.plot(x_ticks, freqs)
+        plt.plot(x_ticks, errors_rels)
+        plt.plot(x_ticks, errors_lens)
+
+        plt.title('part of the optimization function')
+        plt.xlabel('steps')
+        
+        plt.legend(["obj function", "frequency", 'relation error', 'length error'])
+        plt.savefig('/scr/aldea/kgutenbrunner/working/xrRNA_design/TBFV_design/img/errors.png')
+
+
+        plt.clf()
+        plt.plot(x_ticks, values) 
+        plt.plot(x_ticks, freqs)
+        plt.plot(x_ticks, np.array(errors_rels) * 0.1)
+        plt.plot(x_ticks, np.array(errors_lens) * 0.01)
+
+        plt.title('part of the optimization function')
+        plt.xlabel('steps')
+        
+        plt.legend(["obj function", "frequency", 'relation error', 'length error'])
+        plt.savefig('/scr/aldea/kgutenbrunner/working/xrRNA_design/TBFV_design/img/errors_fraction.png')
+    return (best, bestval), sampler
 
 
 def weight_testing(model_input, target_structure, steps = 1000):
+
     model = ir_ut.create_model(model_input)
 
     stems = model_input.structure_span['stem']
@@ -86,49 +194,50 @@ def weight_testing(model_input, target_structure, steps = 1000):
     st3_lens = []
     upk1_lens = []
     tot_lens = []
+    sI_lens = []
+    sII_lens = []
+    sIII_lens = []
+
     for sample in samples:
         sample = rna.values_to_seq(sample.values()[:len(model_input.structures[0])])
         print(sample)
         print(model_input.structures[0])
 
+        stems = model_input.structure_span['stem']
+        loops = model_input.structure_span['loop']
 
-
-        st1 = len(sample[slice(*stems[0][0])]+sample[slice(*stems[0][1])].replace('-', ''))
-
-        hl2 = len(sample[slice(*loops['hl2'])].replace('-', ''))
-        st2 = len(sample[slice(*stems[1][0])]+sample[slice(*stems[1][1])].replace('-', ''))
-
-
-        hl3 = len(sample[slice(*loops['hl3'])].replace('-', ''))
-        st3 = len(sample[slice(*stems[2][0])]+sample[slice(*stems[2][1])].replace('-', ''))
-
-        upk1 = len(sample[slice(*loops['upk1'])].replace('-', ''))
-
+        st1 = calculate_length(sample, stems[0][0][0]) + calculate_length(sample, stems[0][0][1]) + calculate_length(sample, stems[0][1][0]) + calculate_length(sample, stems[0][1][1])
+        st2 = calculate_length(sample, stems[1][0]) + calculate_length(sample, stems[1][1])
+        st3 = calculate_length(sample, stems[2][0]) + calculate_length(sample, stems[2][1])
+        hl2 = calculate_length(sample, loops['hl2'])
+        hl3 = calculate_length(sample, loops['hl3'])
+        upk1 = calculate_length(sample, loops['upk1'])
+        
+        sI = calculate_length(sample, [stems[0][0][0][0],  stems[0][0][1][1]]) + calculate_length(sample, [stems[0][1][0][0],  stems[0][1][1][1]])
+        sII = st2 + hl2
+        sIII = st3 + hl3
 
         st1_lens.append(st1)
-
         hl2_lens.append(hl2)
         st2_lens.append(st2)
-
         hl3_lens.append(hl3)
         st3_lens.append(st3)
         upk1_lens.append(upk1)
-
+        sI_lens.append(sI)
+        sII_lens.append(sII)
+        sIII_lens.append(sIII)
         tot_lens.append(len(sample.replace('-', '')))
 
-
     print('-' * 150)
-
     print('ST1\t', sum(st1_lens) / len(st1_lens))
-
     print('HL2\t', sum(hl2_lens) / len(hl2_lens))
     print('ST2\t', sum(st2_lens) / len(st2_lens))
-
     print('HL3\t', sum(hl3_lens) / len(hl3_lens))
     print('ST3\t', sum(st3_lens) / len(st3_lens))
-
+    print('s I\t', sum(sI_lens) / len(sI_lens))
+    print('s II\t', sum(sII_lens) / len(sII_lens))
+    print('s III\t', sum(sIII_lens) / len(sIII_lens))
     print('uPK1\t', sum(upk1_lens) / len(upk1_lens))
-
     print('totLen\t', sum(tot_lens) / len(tot_lens))
 
 
