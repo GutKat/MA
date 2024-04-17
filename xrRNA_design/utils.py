@@ -6,9 +6,13 @@ from collections import namedtuple
 import random
 import math
 import ir_utils as ir_ut
-import itertools as it
 import matplotlib.pyplot as plt
 import numpy as np
+
+
+def margin_left(left_text, right_text, padding):
+    print(f"{left_text: <{padding}}{right_text}")
+
 
 target_len = 94
 target_gc =  0.58
@@ -20,67 +24,9 @@ relations = {
         'sII_sIII': [0.63, 0.4, 1],
         'sI_sIII': [0.91, 0.46, 1.2]
     }
-
-
-def target_frequency(sequence, target):
-    ss = remove_positioned_gaps(sequence, target)
-    fc = RNA.fold_compound(sequence.replace('-',''))
-    fc.pf()
-    return fc.pr_structure(ss)
-
-
-def calculate_length(sequence, region):
-    return (region[1] - region[0]) - sequence[region[0]:region[1]].count('-')
-
-
-
-def calculate_all_structure_len(sequence, model_input):
-    stems = model_input.structure_span['stem']
-    loops = model_input.structure_span['loop']
-    st1 = calculate_length(sequence, stems[0][0][0]) + calculate_length(sequence, stems[0][0][1]) + calculate_length(sequence, stems[0][1][0]) + calculate_length(sequence, stems[0][1][1])
-    st2 = calculate_length(sequence, stems[1][0]) + calculate_length(sequence, stems[1][1])
-    st3 = calculate_length(sequence, stems[2][0]) + calculate_length(sequence, stems[2][1])
-    hl2 = calculate_length(sequence, loops['hl2'])
-    hl3 = calculate_length(sequence, loops['hl3'])
-    # upk1 = count_gaps(sequence, loops['upk1'])
-    sI = calculate_length(sequence, [stems[0][0][0][0],  stems[0][0][1][1]]) + calculate_length(sequence, [stems[0][1][0][0],  stems[0][1][1][1]])
-    sII = st2 + hl2
-    sIII = st3 + hl3
-    return st1, st2, st3, hl2, hl3, sI, sII, sIII
-
-
-
-def optimization_function(sequence, model_input):
-    st1, st2, st3, hl2, hl3, sI, sII, sIII = calculate_all_structure_len(sequence, model_input)
- 
-    cur_relations = {}
-    cur_relations['st2_hl2'] = st2 / hl2
-    cur_relations['st3_hl3'] = st3 / hl3
-
-    cur_relations['sI_sII'] = sI / sII
-    cur_relations['sI_sIII'] = sI / sIII
-    cur_relations['sII_sIII'] = sII / sIII
-
-    error_rel = 0
-
-    error_rel = sum([error(relations[key][0], cur_relations[key]) for key in cur_relations.keys()])
-
-    target = model_input.structures[0]
-    fc_pr = target_frequency(sequence, target)
-
-    tot_length = len(sequence.replace('-', ''))
-    error_len = error(target_len, tot_length)
-
-    length_fraction = 0.01
-    relation_fraction = 0.05
-    new_val = fc_pr - (error_rel * relation_fraction) - (error_len * length_fraction)
-
-    # print('freq',fc_pr)
-    # print('e rel',error_rel)
-    # print('e len', error_len)
-    # print('obj',new_val)
-    # return fc_pr
-    return new_val, error_rel , error_len , fc_pr
+length_fraction = 0.0
+relation_fraction = 0.05 
+plotting_steps = 100
 
 
 def number_in_range(x, range_):
@@ -99,11 +45,206 @@ def remove_positioned_gaps(sequence, structure):
     return ''.join(new_ss)
 
 
+def add_gaps(sequence, structure):
+    structure = list(structure)
+    new_ss = [structure.pop(0) if nt != '-' else '-' for  nt in sequence]
+    return ''.join(new_ss)
+
+
+def target_frequency(sequence, target):
+    ss = remove_positioned_gaps(sequence, target)
+    fc = RNA.fold_compound(sequence.replace('-',''))
+    fc.pf()
+    return fc.pr_structure(ss)
+
+
+def calculate_nts(sequence, region):
+    return (region[1] - region[0]) - sequence[region[0]:region[1]].count('-')
+
+
+def calculate_bps(sequence, region, symbol):
+    return sequence[region[0]:region[1]].count(symbol)
+
+
+def nt_in_structures(sequence, model_input):
+    stems = model_input.structure_span['stem']
+    loops = model_input.structure_span['loop']
+    # st1 = calculate_nts(sequence, stems[0][0][0]) + calculate_nts(sequence, stems[0][0][1]) + calculate_nts(sequence, stems[0][1][0]) + calculate_nts(sequence, stems[0][1][1])
+    st2 = calculate_nts(sequence, stems[1][0]) + calculate_nts(sequence, stems[1][1])
+    st3 = calculate_nts(sequence, stems[2][0]) + calculate_nts(sequence, stems[2][1])
+    hl2 = calculate_nts(sequence, loops['hl2'])
+    hl3 = calculate_nts(sequence, loops['hl3'])
+    # upk1 = count_gaps(sequence, loops['upk1'])
+    sI = calculate_nts(sequence, [stems[0][0][0][0],  stems[0][0][1][1]]) + calculate_nts(sequence, [stems[0][1][0][0],  stems[0][1][1][1]])
+    sII = st2 + hl2
+    sIII = st3 + hl3
+    return  st2, st3, hl2, hl3, sI, sII, sIII # st1,
+
+
+def bp_in_structures(sequence, model_input):
+    stems = model_input.structure_span['stem']
+    loops = model_input.structure_span['loop']
+
+    fc = RNA.fold_compound(sequence.replace('-',''))
+    fc.pf()
+    (ss, mfe) = fc.mfe()
+    ss = add_gaps(sequence, ss)
+
+    st1 = calculate_bps(ss, stems[0][0][0], '(') + calculate_bps(ss, stems[0][0][1], '(') + calculate_bps(ss, stems[0][1][0], ')') + calculate_bps(ss, stems[0][1][1], ')')
+    st2 = calculate_bps(ss, stems[1][0], '(') + calculate_bps(ss, stems[1][1], ')')
+    st3 = calculate_bps(ss, stems[2][0], '(') + calculate_bps(ss, stems[2][1], ')')
+    hl2 = calculate_bps(ss, loops['hl2'], '.')
+    hl3 = calculate_bps(ss, loops['hl3'], '.')
+
+    sI = calculate_bps(ss, [stems[0][0][0][1],  stems[0][0][1][0]], '.') + calculate_bps(ss, [stems[0][1][0][1],  stems[0][1][1][0]], '.') + st1
+    sII = st2 + hl2
+    sIII = st3 + hl3
+    return st1, st2, st3, hl2, hl3, sI, sII, sIII
+
+
+def correct_bp_in_structure(ss, model_input, stems_pairs, predicted_pairs):
+    stems = model_input.structure_span['stem']
+    loops = model_input.structure_span['loop']
+    stem_counter = {0:0, 1:0, 2:0}
+    for i, stem in enumerate(stems_pairs.values()):
+        for pair in predicted_pairs:
+            if pair in stem:
+                stem_counter[i] += 1
+    
+    st1 = stem_counter[0] * 2
+    st2 = stem_counter[1] * 2
+    st3 = stem_counter[2] * 2
+
+    hl2 = calculate_bps(ss, loops['hl2'], '.')
+    hl3 = calculate_bps(ss, loops['hl3'], '.')
+
+    sI = calculate_bps(ss, [stems[0][0][0][1],  stems[0][0][1][0]], '.') + calculate_bps(ss, [stems[0][1][0][1],  stems[0][1][1][0]], '.') + st1
+    sII = st2 + hl2
+    sIII = st3 + hl3
+    return st1, st2, st3, hl2, hl3, sI, sII, sIII
+
+
+def db_to_pairs(db):
+    pairs = []
+    db_dict = {')': '(',
+               ']': '[',
+               '}': '{',
+               '>': '<',
+               'a': 'A'}
+    db_stacks = {'(':[],
+               '[':[],
+               '{':[],
+               '<':[],
+               'A': []
+               }
+
+    for i, symbol in enumerate(db):
+        if symbol in db_stacks.keys():
+            db_stacks[symbol].append(i)
+        elif symbol in ')}]>a':
+            opening_index = db_stacks[db_dict[symbol]].pop()
+            closing_index = i
+            pairs.append((opening_index,closing_index))
+    if any(db_stacks.values()):
+        print(db)
+        print(db_stacks)
+        raise ValueError(f"structure {db} not balanced ")
+    return pairs
+
+
+def get_pair(x, pairs):
+    for pair in pairs:
+        if x in pair:
+            return pair
+
+
+def get_stem_pairs(target_pairs, stems):
+    stems_pairs = {}
+    for stem_i, stem in enumerate(stems.values()):
+        stem_x_pairs = []
+        for stem_part in stem:
+            if type(stem_part) == list:
+                for j in stem_part:
+                    for i in range(*j):
+                        pair = get_pair(i, target_pairs)
+                        stem_x_pairs.append(pair)
+            else:
+                for i in range(*stem_part):
+                    pair = get_pair(i, target_pairs)
+                    stem_x_pairs.append(pair)
+        stem_x_pairs = list(set(stem_x_pairs))
+        stems_pairs[stem_i] = stem_x_pairs
+    return stems_pairs
+
+
+def new_optimization_function(sequence, model_input, stems_pairs):
+    target = model_input.structures[0]
+    fc = RNA.fold_compound(sequence.replace('-',''))
+    fc.pf()
+    (ss, mfe) = fc.mfe()
+    ss = add_gaps(sequence, ss)
+    predicted_pairs = db_to_pairs(ss)
+
+    st1, st2, st3, hl2, hl3, sI, sII, sIII = correct_bp_in_structure(ss, model_input, stems_pairs, predicted_pairs)
+
+    cur_relations = {}
+    cur_relations['st2_hl2'] = st2 / hl2
+    cur_relations['st3_hl3'] = st3 / hl3
+
+    cur_relations['sI_sII'] = sI / sII
+    cur_relations['sI_sIII'] = sI / sIII
+    cur_relations['sII_sIII'] = sII / sIII
+
+    error_rel = 0
+    error_rel = sum([error(relations[key][0], cur_relations[key]) for key in cur_relations.keys()])
+
+    fc_pr = target_frequency(sequence, target)
+
+    tot_length = len(sequence.replace('-', ''))
+    error_len = error(target_len, tot_length)
+    # relation_fraction_ = 1 / fc_pr
+    new_val = fc_pr - (error_rel * fc_pr) - (error_len * length_fraction)
+
+    # print('freq',fc_pr)
+    # print('e rel',error_rel)
+    # print('e len', error_len)
+    # print('obj',new_val)
+    return new_val, error_rel , error_len , fc_pr
+
+
+def optimization_function(sequence, model_input):
+    target = model_input.structures[0]
+    st1, st2, st3, hl2, hl3, sI, sII, sIII = nt_in_structures(sequence, model_input)
+    # st1, st2, st3, hl2, hl3, sI, sII, sIII = bp_in_structures(sequence, model_input)
+
+    cur_relations = {}
+    cur_relations['st2_hl2'] = st2 / hl2
+    cur_relations['st3_hl3'] = st3 / hl3
+
+    cur_relations['sI_sII'] = sI / sII
+    cur_relations['sI_sIII'] = sI / sIII
+    cur_relations['sII_sIII'] = sII / sIII
+
+    error_rel = 0
+    error_rel = sum([error(relations[key][0], cur_relations[key]) for key in cur_relations.keys()])
+
+    fc_pr = target_frequency(sequence, target)
+
+    tot_length = len(sequence.replace('-', ''))
+    error_len = error(target_len, tot_length)
+    new_val = max(0, fc_pr - (error_rel * relation_fraction) - (error_len * length_fraction))
+
+    # print('freq',fc_pr)
+    # print('e rel',error_rel)
+    # print('e len', error_len)
+    # print('obj',new_val)
+    # return fc_pr
+    return new_val, error_rel , error_len , fc_pr
+
 
 def mc_optimize(model, model_input, objective, steps, temp, start=None):
     sampler = ir.Sampler(model)
     cur = sampler.sample() if start is None else start
-
 
     cur_seq = rna.values_to_seq(cur.values()[:len(model_input.structures[0])])
     curval, error_rel, error_len, fc_pr = objective(cur_seq)
@@ -111,12 +252,13 @@ def mc_optimize(model, model_input, objective, steps, temp, start=None):
     ccs = model.connected_components()
     weights = [1/len(cc) for cc in ccs]
 
+    values = []
+    best_values = []
+    errors_lens = []
+    errors_rels = []
+    freqs = []
 
-    values = [curval]
-    best_values = [curval]
-    errors_lens = [error_len]
-    errors_rels = [error_rel]
-    freqs = [fc_pr]
+
 
     for i in tqdm((range(steps))): #tqdm
         cc = random.choices(ccs,weights)[0]
@@ -130,20 +272,18 @@ def mc_optimize(model, model_input, objective, steps, temp, start=None):
             if curval > bestval:
                 # print(curval)
                 best, bestval = cur, curval
-        if i%50==0:
+        if i%plotting_steps==0:
             values.append(newval)
             errors_lens.append(error_len)
             errors_rels.append(error_rel)
             freqs.append(fc_pr)
             best_values.append(bestval)
 
-        # print(f'{i} step')
-
     # creating plot to have an overview of the behaviour of optimization function, length and relation error, frequency
     if False:
-        x_ticks = [i * 50 for i in range(len(values))]               
-        plt.plot(x_ticks, values, label = "cur value") 
-        plt.plot(x_ticks, best_values, label = "best value")
+        x_ticks = [i * plotting_steps for i in range(len(values))]               
+        plt.plot(x_ticks, values, label = "cur value", alpha=0.7) 
+        plt.plot(x_ticks, best_values, label = "best value", alpha=0.7)
         plt.title('optimization function')
         plt.xlabel('steps')
         plt.legend()
@@ -151,12 +291,12 @@ def mc_optimize(model, model_input, objective, steps, temp, start=None):
         plt.savefig('/scr/aldea/kgutenbrunner/working/xrRNA_design/TBFV_design/img/opt_function.png')
 
         plt.clf()
-        plt.plot(x_ticks, values) 
-        plt.plot(x_ticks, freqs)
-        plt.plot(x_ticks, errors_rels)
-        plt.plot(x_ticks, errors_lens)
+        plt.plot(x_ticks, values, alpha=0.7) 
+        plt.plot(x_ticks, freqs, alpha=0.7)
+        plt.plot(x_ticks, errors_rels, alpha=0.7)
+        plt.plot(x_ticks, errors_lens, alpha=0.7)
 
-        plt.title('part of the optimization function')
+        plt.title('total errors/score of the optimization function')
         plt.xlabel('steps')
         
         plt.legend(["obj function", "frequency", 'relation error', 'length error'])
@@ -164,15 +304,17 @@ def mc_optimize(model, model_input, objective, steps, temp, start=None):
 
 
         plt.clf()
-        plt.plot(x_ticks, values) 
-        plt.plot(x_ticks, freqs)
-        plt.plot(x_ticks, np.array(errors_rels) * 0.1)
-        plt.plot(x_ticks, np.array(errors_lens) * 0.01)
+        plt.plot(x_ticks, values, alpha=0.7) 
+        plt.plot(x_ticks, freqs, alpha=0.7)
+        plt.plot(x_ticks, np.array(errors_rels) * relation_fraction, alpha=0.7)
+        plt.plot(x_ticks, np.array(errors_lens) * length_fraction, alpha=0.7)
 
-        plt.title('part of the optimization function')
+        plt.title('relative errors/score of the optimization function')
         plt.xlabel('steps')
         
-        plt.legend(["obj function", "frequency", 'relation error', 'length error'])
+        plt.legend(["obj function", "frequency", f'relation error * {relation_fraction}', f'length error * {length_fraction}'])
+
+        # plt.legend(["obj function", "frequency", f'relation error * {relation_fraction}', f'length error * {length_fraction}'])
         plt.savefig('/scr/aldea/kgutenbrunner/working/xrRNA_design/TBFV_design/img/errors_fraction.png')
     return (best, bestval), sampler
 
@@ -206,14 +348,14 @@ def weight_testing(model_input, target_structure, steps = 1000):
         stems = model_input.structure_span['stem']
         loops = model_input.structure_span['loop']
 
-        st1 = calculate_length(sample, stems[0][0][0]) + calculate_length(sample, stems[0][0][1]) + calculate_length(sample, stems[0][1][0]) + calculate_length(sample, stems[0][1][1])
-        st2 = calculate_length(sample, stems[1][0]) + calculate_length(sample, stems[1][1])
-        st3 = calculate_length(sample, stems[2][0]) + calculate_length(sample, stems[2][1])
-        hl2 = calculate_length(sample, loops['hl2'])
-        hl3 = calculate_length(sample, loops['hl3'])
-        upk1 = calculate_length(sample, loops['upk1'])
+        st1 = calculate_nts(sample, stems[0][0][0]) + calculate_nts(sample, stems[0][0][1]) + calculate_nts(sample, stems[0][1][0]) + calculate_nts(sample, stems[0][1][1])
+        st2 = calculate_nts(sample, stems[1][0]) + calculate_nts(sample, stems[1][1])
+        st3 = calculate_nts(sample, stems[2][0]) + calculate_nts(sample, stems[2][1])
+        hl2 = calculate_nts(sample, loops['hl2'])
+        hl3 = calculate_nts(sample, loops['hl3'])
+        upk1 = calculate_nts(sample, loops['upk1'])
         
-        sI = calculate_length(sample, [stems[0][0][0][0],  stems[0][0][1][1]]) + calculate_length(sample, [stems[0][1][0][0],  stems[0][1][1][1]])
+        sI = calculate_nts(sample, [stems[0][0][0][0],  stems[0][0][1][1]]) + calculate_nts(sample, [stems[0][1][0][0],  stems[0][1][1][1]])
         sII = st2 + hl2
         sIII = st3 + hl3
 
@@ -280,6 +422,3 @@ def constraint_testing(sampling_no = 100):
     else:
         print('test passed - all samples fulfill constraints')
 
-
-def margin_left(left_text, right_text, padding):
-    print(f"{left_text: <{padding}}{right_text}")
