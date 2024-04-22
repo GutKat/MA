@@ -153,6 +153,7 @@ def gapslefttest(seq, region):
         results.append(0 if left != 4 and right == 4 else 1)
     return 0 if 0 in results else 1
 
+
 def gapsrighttest(seq, region):
     embedding = {'N':0, '-': 4, 'X': 4}
     seq_embedded = [embedding[x] for x in seq]
@@ -162,6 +163,7 @@ def gapsrighttest(seq, region):
         left, right = seq_embedded[i], seq_embedded[i+1]
         results.append(0 if left == 4 and right != 4 else 1)
     return 0 if 0 in results else 1
+
 
 def gapstemtest(seq, region_a, region_b):
     results = [gapsrighttest(seq, region_a), gapslefttest(seq, region_b)]
