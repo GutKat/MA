@@ -14,10 +14,10 @@ def margin_left(left_text, right_text, padding):
     print(f"{left_text: <{padding}}{right_text}")
 
 
-target_len = 94
+target_len = 87
 target_gc =  0.58
 target_energy = -33
-relations_mean = {
+relations_median = {
         'st2_hl2': 3,
         'st3_hl3': 2,
         'sI_sII': 1.823529,
@@ -28,15 +28,15 @@ relations_mean = {
 relations_range = {
         'st2_hl2': [2, 4],
         'st3_hl3': [3/4, 2],
-        'sI_sII': [1.594118, 2.57222],
-        'sII_sIII': [0.5, 0.85],
-        'sI_sIII': [1.292857, 1.4]
+        'sI_sII': [1.5, 2.6],
+        'sII_sIII': [0.5, 0.9],
+        'sI_sIII': [1.20, 1.4]
     }
 
 penalty = 0.2
 length_fraction = 0.0
 relation_fraction = 0.0 
-plotting_steps = 50
+plotting_steps = 100
 
 
 def number_in_range(x, range_):
@@ -103,21 +103,17 @@ def optimization_function(sequence, model_input):
     cur_relations['sI_sIII'] = sI / sIII
     cur_relations['sII_sIII'] = sII / sIII
 
-    error_rel = sum([0 if number_in_range(cur_relations[key], relations_range[key]) else penalty for key in cur_relations.keys()])
+    error_rel = sum([0 if number_in_range(cur_relations[key], relations_range[key]) else error(cur_relations[key], relations_median[key])*0.1 for key in cur_relations.keys()])
     # error_rel = sum([(error(cur_relations[key], relations_mean[key])) for key in cur_relations.keys()])
     errors_name = [0 if number_in_range(cur_relations[key], relations_range[key]) else key for key in cur_relations.keys()]
-    # print(errors_name)
-    # print(error_rel)
-
-
-    error_rel = round(error_rel, 2)
+    error_rel = round(error_rel, 3)
 
     fc_pr = target_frequency(sequence, target)
 
     tot_length = len(sequence.replace('-', ''))
-    error_len = error(target_len, tot_length)
-    new_val =  fc_pr - error_rel #fc_pr
-
+    error_len = error(target_len, tot_length) / 24
+    new_val = fc_pr - error_rel - error_len # fc_pr -error_rel -
+    # print(new_val, tot_length)
     # new_val = max(0, fc_pr - (error_rel * relation_fraction) - (error_len * length_fraction))
     # print('freq',fc_pr)
     # print('e rel',error_rel)
@@ -192,13 +188,13 @@ def mc_optimize(model, model_input, objective, steps, temp, start=None):
         plt.plot(x_ticks, values, alpha=0.7) 
         plt.plot(x_ticks, freqs, alpha=0.7)
         plt.plot(x_ticks, errors_rels, alpha=0.7)
-        # plt.plot(x_ticks, np.array(errors_lens) * length_fraction, alpha=0.7)
+        plt.plot(x_ticks, np.array(errors_lens) * length_fraction, alpha=0.7)
 
         plt.title('relative errors/score of the optimization function')
         plt.xlabel('steps')
         
-        plt.legend(["obj function", "frequency", f'relation penalty'])
-        # plt.legend(["obj function", "frequency", f'relation error * log', f'length error * {length_fraction}'])
+        # plt.legend(["obj function", "frequency", f'relation penalty'])
+        plt.legend(["obj function", "frequency", f'relation error penalty', f'length error normalized'])
 
         # plt.legend(["obj function", "frequency", f'relation error * {relation_fraction}', f'length error * {length_fraction}'])
         plt.savefig('/Users/katringutenbrunner/Desktop/MA/working/xrRNA_design/TBFV_design/img/errors_fraction.png')

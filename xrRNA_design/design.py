@@ -30,8 +30,8 @@ stems = {0: [[(0,7), (9, 16)], [(71, 78), (80, 87)]], 1: [(22,27), (36, 41)], 2:
 loops = {'hl2': (27,36), 'hl3': (49, 63), 'upk1': (87, 102)} # range
 structure_span = {'stem': stems, 'loop': loops}
 
-target_len = 94
-target_gc =  0.58
+target_len = 87
+target_gc = 0.58
 target_energy = -33
 target_structure = structure[0]
 
@@ -73,9 +73,9 @@ def mc_negative_optimization(model_input, target_structure, start=None, steps = 
         ut.margin_left('length:', len(culled_seq), 30)
         ut.margin_left('frequency:', f'{freq:2.4f}', 30)
         ut.margin_left('objective funtion:', f'{best_val:2.4f}', 30)
-
-        with open("seq.out", "w") as file:
-            file.write(sample)
+        if True:
+            with open("/Users/katringutenbrunner/Desktop/MA/working/xrRNA_design/TBFV_design/seqs/seq.out", "w") as file:
+                file.write(sample)
 
     # print('\n')
     # for sample in samples:
@@ -106,7 +106,7 @@ def main():
     # ut.weight_testing(model_input ,target_structure, steps = 1000)
     # ut.constraint_testing(sampling_no=10000)
     
-    mc_negative_optimization(model_input, target_structure= target_structure, steps=200000)
+    mc_negative_optimization(model_input, target_structure= target_structure, steps=100000)
 
 
 if __name__ == "__main__":
