@@ -1,0 +1,13 @@
+#DP 1.0
+REF_PDB	/Users/katringutenbrunner/Desktop/MA/working/opt/Deformation_Profile/examples/ex3/a.pdb
+REF_MODEL	0
+REF_MODEL_SEQUENCE	
+REF_MODEL_RESIDUES	
+CMP_PDB	/Users/katringutenbrunner/Desktop/MA/working/opt/Deformation_Profile/examples/ex3/b.pdb
+CMP_MODEL	0
+CMP_MODEL_SEQUENCE	
+CMP_MODEL_RESIDUES	
+LOCAL_RMSD	
+ROW_MEANS	
+COL_MEANS	
+#eof
