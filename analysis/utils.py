@@ -22,10 +22,8 @@ def create_index(file, start=1, length=None):
 
 	return file_index
 
-RESIDUES_LIST = "/Users/katringutenbrunner/Desktop/MA/working/analysis/RNA_assessment/data/residues.list"
-ATOMS_LIST = "/Users/katringutenbrunner/Desktop/MA/working/analysis/RNA_assessment/data/atoms.list"
-# RESIDUES_LIST = "/scr/aldea/kgutenbrunner/working/analysis/RNA_assessment/data/residues.list"
-# ATOMS_LIST = "/scr/aldea/kgutenbrunner/working/analysis/RNA_assessment/data/atoms.list"
+RESIDUES_LIST = "/scr/aldea/kgutenbrunner/working/analysis/RNA_assessment/data/residues.list"
+ATOMS_LIST = "/scr/aldea/kgutenbrunner/working/analysis/RNA_assessment/data/atoms.list"
 
 def CleanFormat(f):
 	os.system( "mac2unix -q %s" %f )
@@ -45,20 +43,9 @@ def normalize_structure(struct, out_file = None, index_file=None, extract_file =
 
 
 # PVALUE set according to Hajdin et al., RNA (7) 16, 2010, either "+" or "-"
-def calc_RMSD(native_file, native_index, prediction_file, prediction_index, PVALUE = "-"):
-	res_struct = RNA_normalizer.PDBStruct()
-	res_struct.load( native_file, native_index )
-	res_raw_seq = res_struct.raw_sequence()
-	
-	sol_struct = RNA_normalizer.PDBStruct()
-	sol_struct.load( prediction_file, prediction_index )
+def calc_RMSD(res_struct, sol_struct, PVALUE = "-"):	
+
 	sol_raw_seq = sol_struct.raw_sequence()
-	
-	if( sol_raw_seq != res_raw_seq ):
-		sys.stderr.write("ERROR Result sequence != Solution sequence!\n")
-		sys.stderr.write("DATA Solution sequence --> '%s'\n" %sol_raw_seq )
-		sys.stderr.write("DATA Result sequence   --> '%s'\n" %res_raw_seq )
-		return(-1)
 	# computes the RMSD
 	comparer = RNA_normalizer.PDBComparer()
 	rmsd = comparer.rmsd( sol_struct, res_struct )
@@ -68,20 +55,7 @@ def calc_RMSD(native_file, native_index, prediction_file, prediction_index, PVAL
 	return(rmsd, pvalue)
 
 
-def InteractionNetworkFidelity(native_file, native_index, prediction_file, prediction_index):
-	res_struct = RNA_normalizer.PDBStruct()
-	res_struct.load( native_file, native_index )
-	res_raw_seq = res_struct.raw_sequence()
-	
-	sol_struct = RNA_normalizer.PDBStruct()
-	sol_struct.load( prediction_file, prediction_index )
-	sol_raw_seq = sol_struct.raw_sequence()
-	
-	if( sol_raw_seq != res_raw_seq ):
-		sys.stderr.write("ERROR Result sequence != Solution sequence!\n")
-		sys.stderr.write("DATA Solution sequence --> '%s'\n" %sol_raw_seq )
-		sys.stderr.write("DATA Result sequence   --> '%s'\n" %res_raw_seq )
-		# return(-1)
+def InteractionNetworkFidelity(res_struct, sol_struct):
 	# computes the RMSD
 	comparer = RNA_normalizer.PDBComparer()
 	rmsd = comparer.rmsd( sol_struct, res_struct )

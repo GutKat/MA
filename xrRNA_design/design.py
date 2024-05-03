@@ -22,7 +22,7 @@ structure = ['(((((((..(((((((......(((((.........))))).(((((((..............)))
 		     '......................................................((((((...............................................))))))']
 #   		  01234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012
 #    		  0        10        20        30        40        50        60        70        80        90       100       110
-
+len('(((((((..(((((((......(((((.........))))).(((((((..............))))))).)))))))..)))))))..........................')
 var_stem_regions = [[(4,6), (80, 82)],[(12,14), (72, 74)], [(25,26), (36,37)], [(46,48), (63,65)]] # start, stop -> including stop
 var_loop_regions = [(7, 8), (78,79), (30, 35), (51, 53), (60, 62), (96,101)] # start, stop -> including stop
 
@@ -31,7 +31,7 @@ loops = {'hl2': (27,36), 'hl3': (49, 63), 'upk1': (87, 102)} # range
 structure_span = {'stem': stems, 'loop': loops}
 
 target_len = 87
-target_gc = 0.58
+target_gc =  0.58
 target_energy = -33
 target_structure = structure[0]
 
@@ -69,14 +69,13 @@ def mc_negative_optimization(model_input, target_structure, start=None, steps = 
         print('\nRNAFold predictions')
         ut.margin_left('folding:', ss, 30)
         ut.margin_left('MFE:', f'{mfe:4.2f}', 30)
-        ut.margin_left('energy:', f"{RNA.energy_of_struct(culled_seq,culled_structure):4.2f}", 30)
         ut.margin_left('length:', len(culled_seq), 30)
+        ut.margin_left('energy:', f"{RNA.energy_of_struct(culled_seq,culled_structure):4.2f}", 30)
         ut.margin_left('frequency:', f'{freq:2.4f}', 30)
         ut.margin_left('objective funtion:', f'{best_val:2.4f}', 30)
         if True:
-            with open("/Users/katringutenbrunner/Desktop/MA/working/xrRNA_design/TBFV_design/seqs/seq.out", "w") as file:
+            with open("/scr/aldea/kgutenbrunner/working/xrRNA_design/TBFV_design/seqs/seq.out", "w") as file:
                 file.write(sample)
-
     # print('\n')
     # for sample in samples:
     #     sample = rna.values_to_seq(sample.values()[:len(model_input.structures[0])])

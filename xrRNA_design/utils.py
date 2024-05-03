@@ -17,7 +17,8 @@ def margin_left(left_text, right_text, padding):
 target_len = 87
 target_gc =  0.58
 target_energy = -33
-relations_median = {
+energy_range = [-36, -30]
+relations_median= {
         'st2_hl2': 3,
         'st3_hl3': 2,
         'sI_sII': 1.823529,
@@ -84,7 +85,7 @@ def nt_in_structures(sequence, model_input):
     st3 = calculate_nts(sequence, stems[2][0]) + calculate_nts(sequence, stems[2][1])
     hl2 = calculate_nts(sequence, loops['hl2'])
     hl3 = calculate_nts(sequence, loops['hl3'])
-    # upk1 = count_gaps(sequence, loops['upk1']) ##
+    # upk1 = count_gaps(sequence, loops['upk1'])
     sI = calculate_nts(sequence, [stems[0][0][0][0],  stems[0][0][1][1]]) + calculate_nts(sequence, [stems[0][1][0][0],  stems[0][1][1][1]])
     sII = st2 + hl2
     sIII = st3 + hl3
@@ -103,24 +104,22 @@ def optimization_function(sequence, model_input):
     cur_relations['sI_sIII'] = sI / sIII
     cur_relations['sII_sIII'] = sII / sIII
 
+
+    fc_pr = target_frequency(sequence, target)  
+    fc = RNA.fold_compound(sequence)
+    fc.pf()
+    (ss, mfe) = fc.mfe()
+
     error_rel = sum([0 if number_in_range(cur_relations[key], relations_range[key]) else error(cur_relations[key], relations_median[key])*0.1 for key in cur_relations.keys()])
     # error_rel = sum([(error(cur_relations[key], relations_mean[key])) for key in cur_relations.keys()])
-    errors_name = [0 if number_in_range(cur_relations[key], relations_range[key]) else key for key in cur_relations.keys()]
+    # errors_name = [0 if number_in_range(cur_relations[key], relations_range[key]) else key for key in cur_relations.keys()]
     error_rel = round(error_rel, 3)
-
-    fc_pr = target_frequency(sequence, target)
-
+    error_energy = 0 if number_in_range(mfe, energy_range) else penalty
     tot_length = len(sequence.replace('-', ''))
     error_len = error(target_len, tot_length) / 24
-    new_val = fc_pr - error_rel - error_len # fc_pr -error_rel -
-    # print(new_val, tot_length)
-    # new_val = max(0, fc_pr - (error_rel * relation_fraction) - (error_len * length_fraction))
-    # print('freq',fc_pr)
-    # print('e rel',error_rel)
-    # print('e len', error_len)
-    # print('obj',new_val)
-    # return fc_pr
-    return new_val, error_rel , error_len , fc_pr
+    new_val = fc_pr - error_rel - error_len - error_energy
+
+    return new_val, error_rel , error_len , fc_pr, error_energy
 
 
 def mc_optimize(model, model_input, objective, steps, temp, start=None):
@@ -128,7 +127,7 @@ def mc_optimize(model, model_input, objective, steps, temp, start=None):
     cur = sampler.sample() if start is None else start
 
     cur_seq = rna.values_to_seq(cur.values()[:len(model_input.structures[0])])
-    curval, error_rel, error_len, fc_pr = objective(cur_seq)
+    curval, error_rel, error_len, fc_pr, error_energy = objective(cur_seq)
     best, bestval = cur, curval
     ccs = model.connected_components()
     weights = [1/len(cc) for cc in ccs]
@@ -137,6 +136,7 @@ def mc_optimize(model, model_input, objective, steps, temp, start=None):
     best_values = []
     errors_lens = []
     errors_rels = []
+    errors_energies = []
     freqs = []
 
 
@@ -145,18 +145,18 @@ def mc_optimize(model, model_input, objective, steps, temp, start=None):
         cc = random.choices(ccs,weights)[0]
         new = sampler.resample(cc, cur)
         new_seq = rna.values_to_seq(new.values()[:len(model_input.structures[0])])
-        newval, error_rel, error_len, fc_pr = objective(new_seq)
+        newval, error_rel, error_len, fc_pr, error_energy = objective(new_seq)
 
     
         if (newval >= curval or random.random() <= math.exp((newval-curval)/temp)):
             cur, curval = new, newval
             if curval > bestval:
-                # print(curval)
                 best, bestval = cur, curval
         if i%plotting_steps==0:
             values.append(newval)
             errors_lens.append(error_len)
             errors_rels.append(error_rel)
+            errors_energies.append(error_energy)
             freqs.append(fc_pr)
             best_values.append(bestval)
 
@@ -169,35 +169,21 @@ def mc_optimize(model, model_input, objective, steps, temp, start=None):
         plt.xlabel('steps')
         plt.legend()
         #plt.clf()
-        plt.savefig('/Users/katringutenbrunner/Desktop/MA/working/xrRNA_design/TBFV_design/img/opt_function.png')
-
-        # plt.clf()
-        # plt.plot(x_ticks, values, alpha=0.7) 
-        # plt.plot(x_ticks, freqs, alpha=0.7)
-        # plt.plot(x_ticks, errors_rels, alpha=0.7)
-        # plt.plot(x_ticks, errors_lens, alpha=0.7)
-
-        # plt.title('total errors/score of the optimization function')
-        # plt.xlabel('steps')
-        
-        # plt.legend(["obj function", "frequency", 'relation error', 'length error'])
-        # plt.savefig('/scr/aldea/kgutenbrunner/working/xrRNA_design/TBFV_design/img/errors.png')
-
+        plt.savefig('/scr/aldea/kgutenbrunner/working/xrRNA_design/TBFV_design/img/opt_function.png')
 
         plt.clf()
         plt.plot(x_ticks, values, alpha=0.7) 
         plt.plot(x_ticks, freqs, alpha=0.7)
         plt.plot(x_ticks, errors_rels, alpha=0.7)
+        plt.plot(x_ticks, errors_energies, alpha=0.7)
         plt.plot(x_ticks, np.array(errors_lens) * length_fraction, alpha=0.7)
 
         plt.title('relative errors/score of the optimization function')
         plt.xlabel('steps')
         
-        # plt.legend(["obj function", "frequency", f'relation penalty'])
-        plt.legend(["obj function", "frequency", f'relation error penalty', f'length error normalized'])
+        plt.legend(["obj function", "frequency", f'relation error penalty', f'energy error penalty', f'length error normalized'])
 
-        # plt.legend(["obj function", "frequency", f'relation error * {relation_fraction}', f'length error * {length_fraction}'])
-        plt.savefig('/Users/katringutenbrunner/Desktop/MA/working/xrRNA_design/TBFV_design/img/errors_fraction.png')
+        plt.savefig('/scr/aldea/kgutenbrunner/working/xrRNA_design/TBFV_design/img/errors_fraction.png')
     return (best, bestval), sampler
 
 
