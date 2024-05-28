@@ -119,19 +119,16 @@ def optimization_function(sequence, model_input):
     error_rel = round(error_rel, 3)
     error_energy = 0 if number_in_range(energy, energy_range) else penalty
     tot_length = len(sequence.replace('-', ''))
-    error_len = error(target_len, tot_length) / 24
-    new_val = fc_pr - error_rel - error_len - error_energy
+    new_val = fc_pr - error_rel - error_energy
 
-    return new_val, error_rel , error_len , fc_pr, error_energy
+    return new_val, error_rel ,fc_pr, error_energy
 
 
 def mc_optimize(model, model_input, objective, steps, temp, start=None):
-    print("!!")
     sampler = ir.Sampler(model)
     cur = sampler.sample() if start is None else start
-    print("!!")
     cur_seq = rna.values_to_seq(cur.values()[:len(model_input.structures[0])])
-    curval, error_rel, error_len, fc_pr, error_energy = objective(cur_seq)
+    curval, error_rel, fc_pr, error_energy = objective(cur_seq)
     best, bestval = cur, curval
     ccs = model.connected_components()
     weights = [1/len(cc) for cc in ccs]
@@ -145,11 +142,11 @@ def mc_optimize(model, model_input, objective, steps, temp, start=None):
 
 
 
-    for i in ((range(steps))): #tqdm
+    for i in tqdm((range(steps))): #tqdm
         cc = random.choices(ccs,weights)[0]
         new = sampler.resample(cc, cur)
         new_seq = rna.values_to_seq(new.values()[:len(model_input.structures[0])])
-        newval, error_rel, error_len, fc_pr, error_energy = objective(new_seq)
+        newval, error_rel, fc_pr, error_energy = objective(new_seq)
 
     
         if (newval >= curval or random.random() <= math.exp((newval-curval)/temp)):
@@ -158,7 +155,6 @@ def mc_optimize(model, model_input, objective, steps, temp, start=None):
                 best, bestval = cur, curval
         if i%plotting_steps==0:
             values.append(newval)
-            errors_lens.append(error_len)
             errors_rels.append(error_rel)
             errors_energies.append(error_energy)
             freqs.append(fc_pr)

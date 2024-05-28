@@ -3,6 +3,7 @@ import infrared.rna as rna
 import RNA
 import utils as ut
 import ir_utils as ir_ut
+from time import time
 
 '''
 structure overview
@@ -31,7 +32,7 @@ stems = {0: [[(2,9), (11, 18)], [(73, 80), (82, 89)]], 1: [(24,29), (38, 43)], 2
 loops = {'hl2': (29,38), 'hl3': (51, 65), 'upk1': (89, 104)} # range
 structure_span = {'stem': stems, 'loop': loops}
 
-target_len = 95
+target_len = 87
 target_gc =  0.58
 target_energy = -33
 target_structure = structure[0]
@@ -60,9 +61,7 @@ def mc_negative_optimization(model_input, target_structure, start=None, steps = 
     fc.pf()
     (ss, mfe) = fc.mfe()
     freq = ut.target_frequency(sample, target_structure)
-    ut.margin_left('target structure:', target_structure, 30)
-    ut.margin_left('sequence:', sample, 30)
-    if False:
+    if True:
         print('\n')
         ut.margin_left('target structure:', target_structure, 30)
         ut.margin_left('sequence:', sample, 30)
@@ -107,22 +106,27 @@ def main():
 
     # ut.weight_testing(model_input ,target_structure, steps = 1000)
     # ut.constraint_testing(sampling_no=10000)
+    tic = time()
+    mc_negative_optimization(model_input, target_structure= target_structure, steps=100)
+    tac = time()
+    print('time: ', round((tac-tic)/60, 2))
 
-    model = ir_ut.create_model(model_input)
-    sampler = ir.Sampler(model)
-    samples = [sampler.sample() for _ in range(10)]
-    possible_gaps = [i for i in range(len(iupac_cons)) if iupac_cons[i] == 'X']
-    possible_gaps.sort()
-    for sample in samples:
-        X = sample.values()[0:len(iupac_cons)]
-        Y = sample.values()[len(iupac_cons):]
-        seq = rna.values_to_seq(sample.values()[0:len(iupac_cons)])
-        print('X: ', X)
-        print('X: ', [X[i] for i in possible_gaps])
-        print('Y: ', Y)
-        print(iupac_cons)
-        print(seq)
-        print(seq.count('-'), '\n')
+    # model = ir_ut.create_model(model_input)
+    # sampler = ir.Sampler(model)
+    # tic = time()
+    # samples = [sampler.sample() for _ in range(200)]
+    # tac = time()
+    # possible_gaps = [i for i in range(len(iupac_cons)) if iupac_cons[i] == 'X']
+    # possible_gaps.sort()
+    # for sample in samples:
+    #     X = sample.values()[0:len(iupac_cons)]
+    #     Y = sample.values()[len(iupac_cons):]
+    #     seq = rna.values_to_seq(sample.values()[0:len(iupac_cons)])
+    #     # print('X: ', X)
+    #     # print('X: ', [X[i] for i in possible_gaps])
+    #     # print('Y: ', Y)
+    #     print(seq)
+    # print('time: ', round((tac-tic)/60, 2))
 
 
 

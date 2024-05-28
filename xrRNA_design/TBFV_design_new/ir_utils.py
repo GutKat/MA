@@ -8,6 +8,14 @@ from collections import Counter
 ModelInput = namedtuple("ModelInput", "structures anti_structures iupac var_stem_regions var_loop_regions structure_span target_length")
 
 
+relations_range = {
+        'st2_hl2': [2, 4],
+        'st3_hl3': [3/4, 2],
+        'sI_sII': [1.5, 2.6],
+        'sII_sIII': [0.5, 0.9],
+        'sI_sIII': [1.20, 1.4]
+    }
+
 extended_iupac_nucleotides = {
     'A': 'A',
     'C': 'C',
@@ -115,6 +123,11 @@ ir.def_constraint_class(
 )
 
 
+def number_in_range(x, range_):
+    if range_[0] <= round(x, 3) <= range_[1]:
+        return 1
+    return 0
+
 
 def create_model(model_input):
 
@@ -156,7 +169,8 @@ def create_model(model_input):
     possible_gaps.sort()
     n_y = len(possible_gaps)
     model.add_variables(n_y, n_y+1, name='Y')
-    print('possible gaps:', n_y)
+    for i in range(n_y):
+        model.restrict_domains([('Y',i)], (0, i))
     var = model.idx
 
     model.add_constraints(StartYIfNotGap(possible_gaps[0], 0, var))
@@ -165,14 +179,22 @@ def create_model(model_input):
         model.add_constraints(IncrementYIfNotGap(g, i, var))
 
     n_no_gaps = (len(possible_gaps) + target_length) - n
-    print('target gaps:', n - target_length)
-    print('target no gaps:', n_no_gaps)
     model.add_constraints(CheckLastY(n_y, n_no_gaps, var))
+ 
+    # ######## constraints for relation controll ########
+    # stems = model_input.structure_span['stem']
+    # loops = model_input.structure_span['loop']
+    # print(stems)
+    # print(loops)
+    # # check helix beta and hairpin beta relation
+    # hlII = loops['hl2']
+    # stII = stems[1]
+    # model.add_constraints(Testing(hlII, stII, var))
 
-    ######## additional constraints from simulation analysis ########
+    # ######## additional constraints from simulation analysis ########
 
-    loops = model_input.structure_span['loop']
-    hl2 = range(*loops['hl2'])
-    upk1 = range(*loops['upk1'])
+    # loops = model_input.structure_span['loop']
+    # hl2 = range(*loops['hl2'])
+    # upk1 = range(*loops['upk1'])
 
     return model
