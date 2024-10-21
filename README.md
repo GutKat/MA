@@ -5,11 +5,11 @@ This repository contains the files and code associated with my Master’s thesis
 ## Project Structure
 
 ### 1. xrRNA Design
-The main focus of this project is to design RNA sequences that are resistant to exoribonucleases. The sequences are designed for two different flavivirus subfamilies: **MBFV** and **TBFV**.
+The RNA design approaches are besed on two different flavivirus subfamilies: **MBFV** and **TBFV**.
 
 #### Sequence Analysis
 - **Path:** `xrRNA_design/analysis_MBFV` and `xrRNA_design/analysis_TBFV`
-- **Description:** These folders contain data and Jupyter notebooks used to analyze the sequences of the respective families. These analyses form the basis for designing the xrRNA.
+- **Description:** These folders contain data and Jupyter notebooks used to analyze the sequences of the respective families. It cointains analyse of the structural characteristics of the xrRNA structure. These analyses form the scaffold for designing approach.
 
 #### RNA Design
 - **Path:** `xrRNA_design/design_MBFV` and `xrRNA_design/design_TBFV`
@@ -18,11 +18,24 @@ The main focus of this project is to design RNA sequences that are resistant to 
     ```bash
     python design.py
     ```
+    This starts the design process and outputs a seqeuence.
     This will generate the designed RNA sequence as output.
-  - `utils.py` and `ir_utils.py`: Helper files used for supporting functionalities in the design process.
+  - `utils.py`: Contains important functions for the design process, like `mc_optimize()`.
+  - `ir_utils.py`: Contains functions for setting up the Infrared model for the RNA process.
+
   
-- **Additional files (MBFV only):** 
-  In the `xrRNA_design/design_MBFV` folder, you will also find other files used to generate multiple sequences with and without optimization. There is also a `leader_design` folder for creating a leader sequence needed for experimental testing.
+- **Additional files in MBFV only:** 
+  In the `xrRNA_design/design_MBFV` folder, you will also find other files used to generate multiple sequences with (`create_sample.py`) and without optimization (`create_sample_wo_opt.py`). These scripts need an output file or folder, to store the created sequences within the specified file/folder. The output path can be specified by using the flag -o or --output. 
+  ```bash
+    python create_sample.py -o path_to_folder
+  ```
+where the -o defines the path to the output folder and the sequences are stored as 'designs_before_after_opt_i.csv', where i is replaced by a number.
+
+  ```bash
+    python create_sample_wo_sample.py -o csv_file.csv
+  ```
+where the -o defines the path to the output csv file, where the sequences are stored.
+There is also a `leader_design` folder for creating a leader sequence needed for experimental testing.
 
 ### 2. Covariance Model
 - **Path:** `cov_model/MBFV` and `cov_model/TBFV`
