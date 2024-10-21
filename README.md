@@ -22,7 +22,7 @@ The RNA design approaches are besed on two different flavivirus subfamilies: **M
   - `ir_utils.py`: Contains functions for setting up the Infrared model for the RNA process.
 
   
-- **Additional files in MBFV only:** 
+- **Additional files in MBFV:** 
   In the `xrRNA_design/design_MBFV` folder, you will also find other files used to generate multiple sequences with (`create_sample.py`) and without optimization (`create_sample_wo_opt.py`). These scripts need an output file or folder, to store the created sequences within the specified file/folder. The output path can be specified by using the flag -o or --output. 
   ```bash
     python create_sample.py -o path_to_folder
