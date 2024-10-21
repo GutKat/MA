@@ -1,0 +1,933 @@
+# STOCKHOLM 1.0
+#=GF SQ 310
+JEV_ON875960.1:49-110 agucaggccagcaaaag---cugccaccgaauacugaguagacggugcugccugcgucucaguc-----
+#=GS JEV_ON875960.1:49-110 AC JEV_ON875960.1:49-110
+#=GS JEV_ON875960.1:49-110 DE JEV_ON875960.1:49-110
+JEV_JN381839.1:48-109 agucaggccagcaaaag---cugccaccggauacugaguagacggugcugccugcgucucaguc-----
+#=GS JEV_JN381839.1:48-109 AC JEV_JN381839.1:48-109
+#=GS JEV_JN381839.1:48-109 DE JEV_JN381839.1:48-109
+JEV_JN381833.1:49-110 agucaggccagcaaaag---cugccaccggauacugaguagacggugcugccugcgccucaguc-----
+#=GS JEV_JN381833.1:49-110 AC JEV_JN381833.1:49-110
+#=GS JEV_JN381833.1:49-110 DE JEV_JN381833.1:49-110
+JEV_JF706268.1:49-110 agucaggccagcaaaag---cugccaccggacacugaguagacggugcugccugcgccucaguc-----
+#=GS JEV_JF706268.1:49-110 AC JEV_JF706268.1:49-110
+#=GS JEV_JF706268.1:49-110 DE JEV_JF706268.1:49-110
+JEV_AF098736.1:63-124 agucaggccagcaaaag---cugccaccggauacugggcagacggugcugccugcgucucaguc-----
+#=GS JEV_AF098736.1:63-124 AC JEV_AF098736.1:63-124
+#=GS JEV_AF098736.1:63-124 DE JEV_AF098736.1:63-124
+JEV_AY585242.1:54-115 agucaggccagcaaaag---cugccaccggauacuggguagacggugcugccugcgucucaguc-----
+#=GS JEV_AY585242.1:54-115 AC JEV_AY585242.1:54-115
+#=GS JEV_AY585242.1:54-115 DE JEV_AY585242.1:54-115
+JEV_KF667322.1:49-110 agucaggccagcaaaag---cugccaccggauacuggguagacggugcugccugcgucucaguu-----
+#=GS JEV_KF667322.1:49-110 AC JEV_KF667322.1:49-110
+#=GS JEV_KF667322.1:49-110 DE JEV_KF667322.1:49-110
+JEV_L78128.1:38-99 agucaggccagcaaaag---cugccaccggauacuggguagacggugcugccugcgccucaguc-----
+#=GS JEV_L78128.1:38-99 AC JEV_L78128.1:38-99
+#=GS JEV_L78128.1:38-99 DE JEV_L78128.1:38-99
+JEV_ON804799.1:51-112 agucaggccagcaaaag---cugccaccggauacuggguagacggugcugccugcgccucaguu-----
+#=GS JEV_ON804799.1:51-112 AC JEV_ON804799.1:51-112
+#=GS JEV_ON804799.1:51-112 DE JEV_ON804799.1:51-112
+JEV_KR908702.1:49-110 agucaggccaacaaaag---cugccaccggacacugaguagacggugcugccugcgucucaguu-----
+#=GS JEV_KR908702.1:49-110 AC JEV_KR908702.1:49-110
+#=GS JEV_KR908702.1:49-110 DE JEV_KR908702.1:49-110
+JEV_EU429297.1:49-110 agucaggccagcaaaag---cugccaccggacacugaguagacggugcugccugcgucucaguu-----
+#=GS JEV_EU429297.1:49-110 AC JEV_EU429297.1:49-110
+#=GS JEV_EU429297.1:49-110 DE JEV_EU429297.1:49-110
+JEV_KU351668.1:49-110 agucaggccaguaaaag---cugccaccggauacugaguagacggugcugccugcgucucaguu-----
+#=GS JEV_KU351668.1:49-110 AC JEV_KU351668.1:49-110
+#=GS JEV_KU351668.1:49-110 DE JEV_KU351668.1:49-110
+JEV_AB920399.1:40-101 agucaggccagcaaaag---cugccaccggauacugaguagacggugcugccugcgucucaguu-----
+#=GS JEV_AB920399.1:40-101 AC JEV_AB920399.1:40-101
+#=GS JEV_AB920399.1:40-101 DE JEV_AB920399.1:40-101
+JEV_AB569988.2:63-124 agucaggccagcaaaag---cugccaccggauacuggguagacggugcugucugcgucucaguc-----
+#=GS JEV_AB569988.2:63-124 AC JEV_AB569988.2:63-124
+#=GS JEV_AB569988.2:63-124 DE JEV_AB569988.2:63-124
+JEV_AY508813.1:63-124 agucaggccagcaaaag---cugccaccggauacuggguagacggugcugucugcgucccaguc-----
+#=GS JEV_AY508813.1:63-124 AC JEV_AY508813.1:63-124
+#=GS JEV_AY508813.1:63-124 DE JEV_AY508813.1:63-124
+JEV_KT447437.1:63-124 agucaggccagcaaaag---cugccacuggauacuggguagacagugcugccugcgucucaguc-----
+#=GS JEV_KT447437.1:63-124 AC JEV_KT447437.1:63-124
+#=GS JEV_KT447437.1:63-124 DE JEV_KT447437.1:63-124
+JEV_JF706284.1:63-124 agucaggccagcaaaag---cugccaccggauacuggguagucggugcugccugcgucucaguc-----
+#=GS JEV_JF706284.1:63-124 AC JEV_JF706284.1:63-124
+#=GS JEV_JF706284.1:63-124 DE JEV_JF706284.1:63-124
+JEV_KR265316.1:63-124 agucaggccagcaaaag---cugccaccggauacuggguagacggugcugccugcgucucacuc-----
+#=GS JEV_KR265316.1:63-124 AC JEV_KR265316.1:63-124
+#=GS JEV_KR265316.1:63-124 DE JEV_KR265316.1:63-124
+JEV_MH184575.1:49-110 agucaggccagcaaaug---cugccaccggauacugaguagacggugcugccugcgucucaguu-----
+#=GS JEV_MH184575.1:49-110 AC JEV_MH184575.1:49-110
+#=GS JEV_MH184575.1:49-110 DE JEV_MH184575.1:49-110
+JEV_MT253737.1:50-111 agucaggccagcaaacg---cugccaccggauacuggguagacggugcugccugcgucucaguu-----
+#=GS JEV_MT253737.1:50-111 AC JEV_MT253737.1:50-111
+#=GS JEV_MT253737.1:50-111 DE JEV_MT253737.1:50-111
+JEV_JN381849.1:49-110 agucaggccagcaaaag---cugccaccggauucuggguagacggugcugccugcgucucaguu-----
+#=GS JEV_JN381849.1:49-110 AC JEV_JN381849.1:49-110
+#=GS JEV_JN381849.1:49-110 DE JEV_JN381849.1:49-110
+JEV_KF667327.1:49-110 agucaggccagcaauag---cugccaccggauacugaguagacggugcugccugcgccucaguc-----
+#=GS JEV_KF667327.1:49-110 AC JEV_KF667327.1:49-110
+#=GS JEV_KF667327.1:49-110 DE JEV_KF667327.1:49-110
+JEV_KF667318.1:49-110 agucaggccagcaacag---cugccaccggauacugaguagacggugcugccugcgccucaguc-----
+#=GS JEV_KF667318.1:49-110 AC JEV_KF667318.1:49-110
+#=GS JEV_KF667318.1:49-110 DE JEV_KF667318.1:49-110
+JEV_ON804798.1:51-112 agucaggccagcaacag---cugccaccggauacuggguagacggugcugccugcgccucaguc-----
+#=GS JEV_ON804798.1:51-112 AC JEV_ON804798.1:51-112
+#=GS JEV_ON804798.1:51-112 DE JEV_ON804798.1:51-112
+JEV_KU508409.1:49-110 agucaggccaguaaaag---cugccaccggauacugaguagacugugcugccugcgucucaguu-----
+#=GS JEV_KU508409.1:49-110 AC JEV_KU508409.1:49-110
+#=GS JEV_KU508409.1:49-110 DE JEV_KU508409.1:49-110
+JEV_AY316157.1:49-110 agucaggccagcaaaag---cugccaccgaauacugaguagacggugcugccugccucucaguu-----
+#=GS JEV_AY316157.1:49-110 AC JEV_AY316157.1:49-110
+#=GS JEV_AY316157.1:49-110 DE JEV_AY316157.1:49-110
+JEV_EU880214.1:49-109 agucaggccagcaa-ag---cugccaccggauacugaguagacggugcugccugcgucucaguu-----
+#=GS JEV_EU880214.1:49-109 AC JEV_EU880214.1:49-109
+#=GS JEV_EU880214.1:49-109 DE JEV_EU880214.1:49-109
+JEV_MT253733.1:51-111 agucaggccagcaa-ag---cugccaccggauacuggguagacggugcugccugcgucucaguc-----
+#=GS JEV_MT253733.1:51-111 AC JEV_MT253733.1:51-111
+#=GS JEV_MT253733.1:51-111 DE JEV_MT253733.1:51-111
+JEV_EU693899.1:49-109 agucaggccagcaa-ag---cugccaccggacacuggguagacggugcugccugcgucucaguu-----
+#=GS JEV_EU693899.1:49-109 AC JEV_EU693899.1:49-109
+#=GS JEV_EU693899.1:49-109 DE JEV_EU693899.1:49-109
+JEV_OP904182.1:56-117 agucaggccagcguuag---cugccaccggauacuggguagacggugcugccugcaacucaguc-----
+#=GS JEV_OP904182.1:56-117 AC JEV_OP904182.1:56-117
+#=GS JEV_OP904182.1:56-117 DE JEV_OP904182.1:56-117
+JEV_LC579814.1:56-117 agucaggccagcguuag---cugccaccggaaacuggguagacggugcugccugcaacucaguc-----
+#=GS JEV_LC579814.1:56-117 AC JEV_LC579814.1:56-117
+#=GS JEV_LC579814.1:56-117 DE JEV_LC579814.1:56-117
+JEV_JF915894.1:70-131 agucaggccgacguaag---ucgccaccggaugcugaguagacggugcugccugcgccucagcc-----
+#=GS JEV_JF915894.1:70-131 AC JEV_JF915894.1:70-131
+#=GS JEV_JF915894.1:70-131 DE JEV_JF915894.1:70-131
+JEV_HM596272.1:75-136 agucaggccgacgcgag---ucgccaccggaagcugaguagacggugcugccugcgccucagcc-----
+#=GS JEV_HM596272.1:75-136 AC JEV_HM596272.1:75-136
+#=GS JEV_HM596272.1:75-136 DE JEV_HM596272.1:75-136
+WNV_KJ831223.1:65-125 agucaggccggcaa--u--gccgccaccggaaguugaguagacggugcugccugcgccucaacc-----
+#=GS WNV_KJ831223.1:65-125 AC WNV_KJ831223.1:65-125
+#=GS WNV_KJ831223.1:65-125 DE WNV_KJ831223.1:65-125
+WNV_AY262283.1:106-167 agucaggccggaaauuu---ccgccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_AY262283.1:106-167 AC WNV_AY262283.1:106-167
+#=GS WNV_AY262283.1:106-167 DE WNV_AY262283.1:106-167
+WNV_GQ851605.1:94-156 agucaggccggagcauu--uccgccaccggaugcugaguagacggugcugccugcgucucaacc-----
+#=GS WNV_GQ851605.1:94-156 AC WNV_GQ851605.1:94-156
+#=GS WNV_GQ851605.1:94-156 DE WNV_GQ851605.1:94-156
+WNV_KU978770.1:94-156 agucaggccggagcauu--uccgccaccggauguugaguagacggugcugccugcgucucaacc-----
+#=GS WNV_KU978770.1:94-156 AC WNV_KU978770.1:94-156
+#=GS WNV_KU978770.1:94-156 DE WNV_KU978770.1:94-156
+WNV_KX547553.1:106-168 agucaggccgggaagau--cccgccaccggaaguugaguagacggugcugccugcgacucaauc-----
+#=GS WNV_KX547553.1:106-168 AC WNV_KX547553.1:106-168
+#=GS WNV_KX547553.1:106-168 DE WNV_KX547553.1:106-168
+WNV_MH166891.1:106-168 agucaggccgggaagau--cccgccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_MH166891.1:106-168 AC WNV_MH166891.1:106-168
+#=GS WNV_MH166891.1:106-168 DE WNV_MH166891.1:106-168
+WNV_DQ786572.1:106-168 agucaggccggaaaaau--uccgccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_DQ786572.1:106-168 AC WNV_DQ786572.1:106-168
+#=GS WNV_DQ786572.1:106-168 DE WNV_DQ786572.1:106-168
+WNV_JQ700438.1:93-155 agucaggccgggaaguu--cccgccaccggaaguugaguagacggugcugccugcgacucagcc-----
+#=GS WNV_JQ700438.1:93-155 AC WNV_JQ700438.1:93-155
+#=GS WNV_JQ700438.1:93-155 DE WNV_JQ700438.1:93-155
+WNV_KX547368.1:106-168 agucaggccgggaaguu--cccgccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_KX547368.1:106-168 AC WNV_KX547368.1:106-168
+#=GS WNV_KX547368.1:106-168 DE WNV_KX547368.1:106-168
+WNV_KX547356.1:106-168 agucaggccgggaaguu--cccgccaccggaaguugaguagacggugcugccugcgacucaauc-----
+#=GS WNV_KX547356.1:106-168 AC WNV_KX547356.1:106-168
+#=GS WNV_KX547356.1:106-168 DE WNV_KX547356.1:106-168
+WNV_KX547191.1:106-168 agucaggccgggaaguc--cccgccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_KX547191.1:106-168 AC WNV_KX547191.1:106-168
+#=GS WNV_KX547191.1:106-168 DE WNV_KX547191.1:106-168
+WNV_KY782123.1:106-168 agucaggccgggaaguu--cccgccaccggaaguuggguagacggugcugccugcgacucaacc-----
+#=GS WNV_KY782123.1:106-168 AC WNV_KY782123.1:106-168
+#=GS WNV_KY782123.1:106-168 DE WNV_KY782123.1:106-168
+WNV_KJ501287.1:106-168 agucaggccgggaagcu--cccgccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_KJ501287.1:106-168 AC WNV_KJ501287.1:106-168
+#=GS WNV_KJ501287.1:106-168 DE WNV_KJ501287.1:106-168
+WNV_KX547611.1:106-168 agucaggccgggaaguu--cccgccaccggaaguugaguagacggugcugccugcggcucaacc-----
+#=GS WNV_KX547611.1:106-168 AC WNV_KX547611.1:106-168
+#=GS WNV_KX547611.1:106-168 DE WNV_KX547611.1:106-168
+WNV_KJ501160.1:106-168 agucaggccgggaaguu--cccgccaccggagguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_KJ501160.1:106-168 AC WNV_KJ501160.1:106-168
+#=GS WNV_KJ501160.1:106-168 DE WNV_KJ501160.1:106-168
+WNV_MH170246.1:106-168 agucaggccggggaguu--cccgccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_MH170246.1:106-168 AC WNV_MH170246.1:106-168
+#=GS WNV_MH170246.1:106-168 DE WNV_MH170246.1:106-168
+WNV_KX547593.1:106-168 agucaggccgggaaguu--cccgccaccggaaguugaguagacggugcugccugcaacucaacc-----
+#=GS WNV_KX547593.1:106-168 AC WNV_KX547593.1:106-168
+#=GS WNV_KX547593.1:106-168 DE WNV_KX547593.1:106-168
+WNV_KJ501226.1:106-168 agucaggccgggaaguu--ccugccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_KJ501226.1:106-168 AC WNV_KJ501226.1:106-168
+#=GS WNV_KJ501226.1:106-168 DE WNV_KJ501226.1:106-168
+WNV_KX547543.1:106-168 agucaggccgggaaguu--cccgccaccggaaguugaguagacggugcugccugcgacccaacc-----
+#=GS WNV_KX547543.1:106-168 AC WNV_KX547543.1:106-168
+#=GS WNV_KX547543.1:106-168 DE WNV_KX547543.1:106-168
+WNV_HM488228.1:106-168 agucaggccgggaaguu--cccgccaccggaaguugagcagacggugcugccugcgacucaacc-----
+#=GS WNV_HM488228.1:106-168 AC WNV_HM488228.1:106-168
+#=GS WNV_HM488228.1:106-168 DE WNV_HM488228.1:106-168
+WNV_KM012188.1:106-168 agucaggccgggaaguu--cccgccaccggaaguugaguagacgguguugccugcgacucaacc-----
+#=GS WNV_KM012188.1:106-168 AC WNV_KM012188.1:106-168
+#=GS WNV_KM012188.1:106-168 DE WNV_KM012188.1:106-168
+WNV_HM488136.1:106-168 agucaggccgggaaguu--cccgccaccggaaguugaguagacggugcugccugugacucaacc-----
+#=GS WNV_HM488136.1:106-168 AC WNV_HM488136.1:106-168
+#=GS WNV_HM488136.1:106-168 DE WNV_HM488136.1:106-168
+WNV_MH166883.1:106-168 agucaggccgggaaguu--cccgccaccggaaguugaguagacggugccgccugcgacucaacc-----
+#=GS WNV_MH166883.1:106-168 AC WNV_MH166883.1:106-168
+#=GS WNV_MH166883.1:106-168 DE WNV_MH166883.1:106-168
+WNV_JF957178.1:106-168 agucaggccgggaaguu--cccgccaccggaaguugaguaaacggugcugccugcgacucaacc-----
+#=GS WNV_JF957178.1:106-168 AC WNV_JF957178.1:106-168
+#=GS WNV_JF957178.1:106-168 DE WNV_JF957178.1:106-168
+WNV_KC736493.1:106-168 agucaggccgggaaguu--cccgccaccggaaguugaguagacggugcugccugcgacucgacc-----
+#=GS WNV_KC736493.1:106-168 AC WNV_KC736493.1:106-168
+#=GS WNV_KC736493.1:106-168 DE WNV_KC736493.1:106-168
+WNV_KJ501143.1:106-168 ggucaggccgggaaguu--cccgccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_KJ501143.1:106-168 AC WNV_KJ501143.1:106-168
+#=GS WNV_KJ501143.1:106-168 DE WNV_KJ501143.1:106-168
+WNV_KM012170.1:106-168 agucaggccgggaaguu--cccgccaccggaaguugaguagauggugcugccugcgacucaacc-----
+#=GS WNV_KM012170.1:106-168 AC WNV_KM012170.1:106-168
+#=GS WNV_KM012170.1:106-168 DE WNV_KM012170.1:106-168
+WNV_KY216155.1:106-168 agucagaccgggaaguu--cccgccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_KY216155.1:106-168 AC WNV_KY216155.1:106-168
+#=GS WNV_KY216155.1:106-168 DE WNV_KY216155.1:106-168
+WNV_MH170255.1:106-168 agucaggccgggaaguu--cccgccaccagaaguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_MH170255.1:106-168 AC WNV_MH170255.1:106-168
+#=GS WNV_MH170255.1:106-168 DE WNV_MH170255.1:106-168
+WNV_MG004537.1:106-168 agucaggccgagaaguu--cucgccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_MG004537.1:106-168 AC WNV_MG004537.1:106-168
+#=GS WNV_MG004537.1:106-168 DE WNV_MG004537.1:106-168
+WNV_KJ501486.1:106-168 agucaggccgggaaguu--cucgccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_KJ501486.1:106-168 AC WNV_KJ501486.1:106-168
+#=GS WNV_KJ501486.1:106-168 DE WNV_KJ501486.1:106-168
+WNV_KX547518.1:103-165 agucaggccgagaaguu--cccgccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_KX547518.1:103-165 AC WNV_KX547518.1:103-165
+#=GS WNV_KX547518.1:103-165 DE WNV_KX547518.1:103-165
+WNV_JF957177.1:106-168 agucaggccgggaaauu--cccgccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_JF957177.1:106-168 AC WNV_JF957177.1:106-168
+#=GS WNV_JF957177.1:106-168 DE WNV_JF957177.1:106-168
+WNV_GQ851602.1:99-161 agucaggccggaaaauu--cccgccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_GQ851602.1:99-161 AC WNV_GQ851602.1:99-161
+#=GS WNV_GQ851602.1:99-161 DE WNV_GQ851602.1:99-161
+KUNV_KX394396.1:99-161 agucaggccggaaaauu--cccgccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS KUNV_KX394396.1:99-161 AC KUNV_KX394396.1:99-161
+#=GS KUNV_KX394396.1:99-161 DE KUNV_KX394396.1:99-161
+WNV_KX547328.1:106-168 agucaggccggaaaguu--cccgccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_KX547328.1:106-168 AC WNV_KX547328.1:106-168
+#=GS WNV_KX547328.1:106-168 DE WNV_KX547328.1:106-168
+WNV_KU978768.1:93-155 agucaggccggaaaguu--uccgccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_KU978768.1:93-155 AC WNV_KU978768.1:93-155
+#=GS WNV_KU978768.1:93-155 DE WNV_KU978768.1:93-155
+WNV_AY603654.1:106-168 agucaggccggaaaguc--uccgccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_AY603654.1:106-168 AC WNV_AY603654.1:106-168
+#=GS WNV_AY603654.1:106-168 DE WNV_AY603654.1:106-168
+WNV_JX041628.1:106-168 agucaggccggaaaguc--uccgccaccggaaguugaguggacggugcugccugcgacucaacc-----
+#=GS WNV_JX041628.1:106-168 AC WNV_JX041628.1:106-168
+#=GS WNV_JX041628.1:106-168 DE WNV_JX041628.1:106-168
+WNV_MH170253.1:106-168 agucaggccgggagguu--cccgccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_MH170253.1:106-168 AC WNV_MH170253.1:106-168
+#=GS WNV_MH170253.1:106-168 DE WNV_MH170253.1:106-168
+WNV_GQ851606.1:105-167 agucaggccgggagguu--uccgccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_GQ851606.1:105-167 AC WNV_GQ851606.1:105-167
+#=GS WNV_GQ851606.1:105-167 DE WNV_GQ851606.1:105-167
+WNV_JF920744.1:107-169 agucaggccgggaaguu--cccgccaccgaaaguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_JF920744.1:107-169 AC WNV_JF920744.1:107-169
+#=GS WNV_JF920744.1:107-169 DE WNV_JF920744.1:107-169
+WNV_KF704153.1:106-168 agucaggccgggagguu--cccgccaccgaaaguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_KF704153.1:106-168 AC WNV_KF704153.1:106-168
+#=GS WNV_KF704153.1:106-168 DE WNV_KF704153.1:106-168
+WNV_GQ851608.1:106-168 agucaggccgggaaguu--uccgccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_GQ851608.1:106-168 AC WNV_GQ851608.1:106-168
+#=GS WNV_GQ851608.1:106-168 DE WNV_GQ851608.1:106-168
+WNV_JX041634.1:106-168 agucaggccgggaaguu--yccgccaccggaaguugagurgacggugcugccugcgacucaacc-----
+#=GS WNV_JX041634.1:106-168 AC WNV_JX041634.1:106-168
+#=GS WNV_JX041634.1:106-168 DE WNV_JX041634.1:106-168
+WNV_HM488119.1:107-169 agucaggccgggaaguu--cccgccaccggaaguugaguggacggugcugccugcgacucaacc-----
+#=GS WNV_HM488119.1:107-169 AC WNV_HM488119.1:107-169
+#=GS WNV_HM488119.1:107-169 DE WNV_HM488119.1:107-169
+WNV_OQ689697.1:106-168 agucaggccggaaaauu--uccgccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_OQ689697.1:106-168 AC WNV_OQ689697.1:106-168
+#=GS WNV_OQ689697.1:106-168 DE WNV_OQ689697.1:106-168
+WNV_JQ928174.1:106-168 agucaggccggaaaacu--uccgccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_JQ928174.1:106-168 AC WNV_JQ928174.1:106-168
+#=GS WNV_JQ928174.1:106-168 DE WNV_JQ928174.1:106-168
+WNV_AF260969.1:106-168 agucaggccggaaaauu--uccgccaccggaaguugaguagacggugcugccugcggcucaacc-----
+#=GS WNV_AF260969.1:106-168 AC WNV_AF260969.1:106-168
+#=GS WNV_AF260969.1:106-168 DE WNV_AF260969.1:106-168
+WNV_AY701413.1:106-168 agucaggccggagaauu--uccgccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_AY701413.1:106-168 AC WNV_AY701413.1:106-168
+#=GS WNV_AY701413.1:106-168 DE WNV_AY701413.1:106-168
+WNV_AY701412.1:106-168 agucaggccggaaaauu--uccgccaccggaaguugaguagacggugcugccugcgacccaacc-----
+#=GS WNV_AY701412.1:106-168 AC WNV_AY701412.1:106-168
+#=GS WNV_AY701412.1:106-168 DE WNV_AY701412.1:106-168
+WNV_KU573079.1:107-169 agucaggccggaaaauu--uccgccaccggaaguugaguggacggugcugccugcgacucaacc-----
+#=GS WNV_KU573079.1:107-169 AC WNV_KU573079.1:107-169
+#=GS WNV_KU573079.1:107-169 DE WNV_KU573079.1:107-169
+WNV_GU011992.2:107-169 agucaggccggaaaauu--uccgccaccggaaguugaguagacggugcwgccugcgacucaacc-----
+#=GS WNV_GU011992.2:107-169 AC WNV_GU011992.2:107-169
+#=GS WNV_GU011992.2:107-169 DE WNV_GU011992.2:107-169
+WNV_ON813212.1:106-168 agucaggccggaaaauu--ucugccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_ON813212.1:106-168 AC WNV_ON813212.1:106-168
+#=GS WNV_ON813212.1:106-168 DE WNV_ON813212.1:106-168
+WNV_ON813213.1:107-169 agucaggccggaaaauu--ucugccaccggaaguugaguagacgrugcugccugcgacucaacc-----
+#=GS WNV_ON813213.1:107-169 AC WNV_ON813213.1:107-169
+#=GS WNV_ON813213.1:107-169 DE WNV_ON813213.1:107-169
+WNV_OP734271.1:106-168 agucaggccggaaaauu--uccgccaccggaaguugaguagacggugcugccugcaacucaacc-----
+#=GS WNV_OP734271.1:106-168 AC WNV_OP734271.1:106-168
+#=GS WNV_OP734271.1:106-168 DE WNV_OP734271.1:106-168
+KUNV_KX394395.1:101-163 agucaggccggaaaauu--uccgccaccggaaguugaguagacggugcugccugcaacucaacc-----
+#=GS KUNV_KX394395.1:101-163 AC KUNV_KX394395.1:101-163
+#=GS KUNV_KX394395.1:101-163 DE KUNV_KX394395.1:101-163
+WNV_OP609801.1:106-168 agucaggccggaarauu--uccgccaccggaaguugaguagacggugcugccugcaacucaacc-----
+#=GS WNV_OP609801.1:106-168 AC WNV_OP609801.1:106-168
+#=GS WNV_OP609801.1:106-168 DE WNV_OP609801.1:106-168
+WNV_OP609812.1:106-168 agucaggccggaaaauu--uccgccaccggaaguugaguagacggugcugccugyaacucaacc-----
+#=GS WNV_OP609812.1:106-168 AC WNV_OP609812.1:106-168
+#=GS WNV_OP609812.1:106-168 DE WNV_OP609812.1:106-168
+WNV_KX547349.1:106-168 agucaggccgguaaguu--cccgccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_KX547349.1:106-168 AC WNV_KX547349.1:106-168
+#=GS WNV_KX547349.1:106-168 DE WNV_KX547349.1:106-168
+WNV_HQ671714.1:106-168 agucaggccgggaaguu--cccgccaccggaaguugaguauacggugcugccugcgacucaacc-----
+#=GS WNV_HQ671714.1:106-168 AC WNV_HQ671714.1:106-168
+#=GS WNV_HQ671714.1:106-168 DE WNV_HQ671714.1:106-168
+WNV_KJ501273.1:106-168 agucaggccgggaauuu--cccgccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_KJ501273.1:106-168 AC WNV_KJ501273.1:106-168
+#=GS WNV_KJ501273.1:106-168 DE WNV_KJ501273.1:106-168
+WNV_KJ501418.1:106-168 agucaggccgggaguuu--cccgccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_KJ501418.1:106-168 AC WNV_KJ501418.1:106-168
+#=GS WNV_KJ501418.1:106-168 DE WNV_KJ501418.1:106-168
+WNV_FJ527738.1:106-168 agucaggccgggaaguu--cccgccaccggaaguugaguagacggugcagccugcgacucaacc-----
+#=GS WNV_FJ527738.1:106-168 AC WNV_FJ527738.1:106-168
+#=GS WNV_FJ527738.1:106-168 DE WNV_FJ527738.1:106-168
+WNV_DQ164187.1:106-168 agucaggccgggaaguu--cccgccaccggaaguugaguagacggugcggccugcgacucaacc-----
+#=GS WNV_DQ164187.1:106-168 AC WNV_DQ164187.1:106-168
+#=GS WNV_DQ164187.1:106-168 DE WNV_DQ164187.1:106-168
+WNV_GQ379159.1:106-168 agucaggccgggacguu--cccgccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_GQ379159.1:106-168 AC WNV_GQ379159.1:106-168
+#=GS WNV_GQ379159.1:106-168 DE WNV_GQ379159.1:106-168
+WNV_JX015520.1:106-168 agucaggccgggaaguu--cccgccaccggaaguugaguagacggugcugccugggacucaacc-----
+#=GS WNV_JX015520.1:106-168 AC WNV_JX015520.1:106-168
+#=GS WNV_JX015520.1:106-168 DE WNV_JX015520.1:106-168
+WNV_KX547604.1:106-168 agucaggccgggaaguu--cccgccaccggaaguugaguagacggugcugccugcgacucaccc-----
+#=GS WNV_KX547604.1:106-168 AC WNV_KX547604.1:106-168
+#=GS WNV_KX547604.1:106-168 DE WNV_KX547604.1:106-168
+WNV_HM488241.1:106-168 agucaggccuggaaguu--cccgccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_HM488241.1:106-168 AC WNV_HM488241.1:106-168
+#=GS WNV_HM488241.1:106-168 DE WNV_HM488241.1:106-168
+WNV_MF797870.1:106-168 agucaggccggaaaauu--uccgccaccggaaguugaguagacggugcugccugcgccucaacc-----
+#=GS WNV_MF797870.1:106-168 AC WNV_MF797870.1:106-168
+#=GS WNV_MF797870.1:106-168 DE WNV_MF797870.1:106-168
+WNV_KJ145800.1:106-167 agucaggccgggaaguu---ccgccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_KJ145800.1:106-167 AC WNV_KJ145800.1:106-167
+#=GS WNV_KJ145800.1:106-167 DE WNV_KJ145800.1:106-167
+WNV_JN819310.1:106-167 agucaggccgggaaguu--cccgccaccg-aaguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_JN819310.1:106-167 AC WNV_JN819310.1:106-167
+#=GS WNV_JN819310.1:106-167 DE WNV_JN819310.1:106-167
+WNV_JF920758.1:107-168 agucaggccgggaaguu---cccgcaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_JF920758.1:107-168 AC WNV_JF920758.1:107-168
+#=GS WNV_JF920758.1:107-168 DE WNV_JF920758.1:107-168
+WNV_JF784158.1:106-167 agucaggccgggaaguu--cccgccaccggaaguuga-uagacggugcugccugcgacucaacc-----
+#=GS WNV_JF784158.1:106-167 AC WNV_JF784158.1:106-167
+#=GS WNV_JF784158.1:106-167 DE WNV_JF784158.1:106-167
+WNV_MW383507.1:123-185 agucaggccagcuaaac--gcugccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_MW383507.1:123-185 AC WNV_MW383507.1:123-185
+#=GS WNV_MW383507.1:123-185 DE WNV_MW383507.1:123-185
+WNV_HM147822.1:141-203 agucaggccagacaaac--gcugccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_HM147822.1:141-203 AC WNV_HM147822.1:141-203
+#=GS WNV_HM147822.1:141-203 DE WNV_HM147822.1:141-203
+WNV_MZ605382.4:126-188 agucaggccagcuuaau--gcugccaccggaaguugaguagacggugcugccugcggcucaacc-----
+#=GS WNV_MZ605382.4:126-188 AC WNV_MZ605382.4:126-188
+#=GS WNV_MZ605382.4:126-188 DE WNV_MZ605382.4:126-188
+WNV_KU978767.1:127-189 agucaggccggcuuaac--gcugccaccggaaguugaguagacggugcugccugcggcucaacc-----
+#=GS WNV_KU978767.1:127-189 AC WNV_KU978767.1:127-189
+#=GS WNV_KU978767.1:127-189 DE WNV_KU978767.1:127-189
+WNV_GQ903680.1:139-201 agucaggccagauuaau--gcugccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_GQ903680.1:139-201 AC WNV_GQ903680.1:139-201
+#=GS WNV_GQ903680.1:139-201 DE WNV_GQ903680.1:139-201
+WNV_OX442293.1:129-191 agucaggccagauuaau--gcugccaccggaaguugaguagacggugcugccugcggcucaacc-----
+#=GS WNV_OX442293.1:129-191 AC WNV_OX442293.1:129-191
+#=GS WNV_OX442293.1:129-191 DE WNV_OX442293.1:129-191
+WNV_OP734244.1:126-188 agucaggccagauuaac--gcugccaccggaaguugaguagacggugcugccugcggcucaacc-----
+#=GS WNV_OP734244.1:126-188 AC WNV_OP734244.1:126-188
+#=GS WNV_OP734244.1:126-188 DE WNV_OP734244.1:126-188
+WNV_MH549209.1:126-188 agucaggccagauugau--gcugccaccggaaguugaguagacggugcugccugcggcucaacc-----
+#=GS WNV_MH549209.1:126-188 AC WNV_MH549209.1:126-188
+#=GS WNV_MH549209.1:126-188 DE WNV_MH549209.1:126-188
+WNV_OR159870.1:126-188 agucaggccagauuaau--gcugccaccggaaguugaguagacggugcugccugcagcucaacc-----
+#=GS WNV_OR159870.1:126-188 AC WNV_OR159870.1:126-188
+#=GS WNV_OR159870.1:126-188 DE WNV_OR159870.1:126-188
+WNV_ON032493.1:126-188 agucaggccagauuaau--gcugccaccggaaguugagcagacggugcugccugcggcucaacc-----
+#=GS WNV_ON032493.1:126-188 AC WNV_ON032493.1:126-188
+#=GS WNV_ON032493.1:126-188 DE WNV_ON032493.1:126-188
+WNV_OX442313.1:129-191 agucaggccagauuaau--gcugccaccggaagucgaguagacggugcugccugcggcucaacc-----
+#=GS WNV_OX442313.1:129-191 AC WNV_OX442313.1:129-191
+#=GS WNV_OX442313.1:129-191 DE WNV_OX442313.1:129-191
+WNV_KF647248.1:126-188 agucaggccagauuaau--gcugccaccggaaguggaguagacggugcugccugcggcucaacc-----
+#=GS WNV_KF647248.1:126-188 AC WNV_KF647248.1:126-188
+#=GS WNV_KF647248.1:126-188 DE WNV_KF647248.1:126-188
+WNV_MN939562.1:126-188 agucaggccagauucau--gcugccaccggaaguugaguagacggugcugccugcggcucaacc-----
+#=GS WNV_MN939562.1:126-188 AC WNV_MN939562.1:126-188
+#=GS WNV_MN939562.1:126-188 DE WNV_MN939562.1:126-188
+WNV_OP345108.1:126-188 agucaggccagauuaau--gcugcccccggaaguugaguagacggugcugccugcggcucaacc-----
+#=GS WNV_OP345108.1:126-188 AC WNV_OP345108.1:126-188
+#=GS WNV_OP345108.1:126-188 DE WNV_OP345108.1:126-188
+WNV_ON032498.1:126-188 agucaggccagauuaac--gcugccaccggaaguugaguagacggugcugccugcggcuccacc-----
+#=GS WNV_ON032498.1:126-188 AC WNV_ON032498.1:126-188
+#=GS WNV_ON032498.1:126-188 DE WNV_ON032498.1:126-188
+WNV_DQ176636.2:38-100 agucaggccagacuaga--gcugccaccggaaguugaguagacggugcugccugcaacucaacc-----
+#=GS WNV_DQ176636.2:38-100 AC WNV_DQ176636.2:38-100
+#=GS WNV_DQ176636.2:38-100 DE WNV_DQ176636.2:38-100
+USUV_JQ219843.1:143-204 agucaggccaggacaac---cugccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS USUV_JQ219843.1:143-204 AC USUV_JQ219843.1:143-204
+#=GS USUV_JQ219843.1:143-204 DE USUV_JQ219843.1:143-204
+USUV_KJ438714.1:143-204 agucaggccagggcaac---cugccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS USUV_KJ438714.1:143-204 AC USUV_KJ438714.1:143-204
+#=GS USUV_KJ438714.1:143-204 DE USUV_KJ438714.1:143-204
+USUV_KX816653.1:143-204 agucaggccagggcaac---cugccaccggaaguuggguagacggugcugccugcgacucaacc-----
+#=GS USUV_KX816653.1:143-204 AC USUV_KX816653.1:143-204
+#=GS USUV_KX816653.1:143-204 DE USUV_KX816653.1:143-204
+USUV_ON813221.1:143-204 agucaggccagggcaac---cugccaccgaaaguugaguagacggugcugccugcgacucaacc-----
+#=GS USUV_ON813221.1:143-204 AC USUV_ON813221.1:143-204
+#=GS USUV_ON813221.1:143-204 DE USUV_ON813221.1:143-204
+USUV_OP734248.1:141-202 agucaggccagggcaac---cugccaccggaaguugaguagacggugcugccugcgacccaacc-----
+#=GS USUV_OP734248.1:141-202 AC USUV_OP734248.1:141-202
+#=GS USUV_OP734248.1:141-202 DE USUV_OP734248.1:141-202
+USUV_KU573072.1:143-204 agucaggccagggcaac---cugccaccggaaguugaguagacggukcugccugcgacucaacc-----
+#=GS USUV_KU573072.1:143-204 AC USUV_KU573072.1:143-204
+#=GS USUV_KU573072.1:143-204 DE USUV_KU573072.1:143-204
+USUV_MN122175.1:143-204 agucaggccaggguaac---cugccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS USUV_MN122175.1:143-204 AC USUV_MN122175.1:143-204
+#=GS USUV_MN122175.1:143-204 DE USUV_MN122175.1:143-204
+USUV_MN122240.1:143-204 agucaggccaggguaac---cugccaccggaaguugaguagacggugcugccugcggcucaacc-----
+#=GS USUV_MN122240.1:143-204 AC USUV_MN122240.1:143-204
+#=GS USUV_MN122240.1:143-204 DE USUV_MN122240.1:143-204
+USUV_ON813223.1:143-204 agucaggccaagguaac---cugccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS USUV_ON813223.1:143-204 AC USUV_ON813223.1:143-204
+#=GS USUV_ON813223.1:143-204 DE USUV_ON813223.1:143-204
+USUV_ON813222.1:143-204 agucaggccaaggcaac---cugccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS USUV_ON813222.1:143-204 AC USUV_ON813222.1:143-204
+#=GS USUV_ON813222.1:143-204 DE USUV_ON813222.1:143-204
+WNV_JF488096.1:106-166 agucaggc--gggaagu--cccgccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS WNV_JF488096.1:106-166 AC WNV_JF488096.1:106-166
+#=GS WNV_JF488096.1:106-166 DE WNV_JF488096.1:106-166
+WNV_FJ159130.1:69-130 agucaggccggcaaacg---ccgccaccggaaguuggguauacggugcugccugcgacccaacc-----
+#=GS WNV_FJ159130.1:69-130 AC WNV_FJ159130.1:69-130
+#=GS WNV_FJ159130.1:69-130 DE WNV_FJ159130.1:69-130
+WNV_AY277251.1:69-130 agucaggccggcaaacg---ccgccaccggaaguuggguauacggugcugccugugacccaacc-----
+#=GS WNV_AY277251.1:69-130 AC WNV_AY277251.1:69-130
+#=GS WNV_AY277251.1:69-130 DE WNV_AY277251.1:69-130
+WNV_AY765264.1:46-108 agucaggccagcuuuaa--gcugccaccggaugucgaguagacggugcugccugcagcucuucc-----
+#=GS WNV_AY765264.1:46-108 AC WNV_AY765264.1:46-108
+#=GS WNV_AY765264.1:46-108 DE WNV_AY765264.1:46-108
+KUNV_D00246.1:99-159 agucaggccggaaaauu--cccgccaccguag--ugaguagacggugcugccugcgacucaacc-----
+#=GS KUNV_D00246.1:99-159 AC KUNV_D00246.1:99-159
+#=GS KUNV_D00246.1:99-159 DE KUNV_D00246.1:99-159
+USUV_KC754958.1:121-181 ugucaggccag--auuu--ucugccaccggaaguugaguagacggugcugccugcgacucaacc-----
+#=GS USUV_KC754958.1:121-181 AC USUV_KC754958.1:121-181
+#=GS USUV_KC754958.1:121-181 DE USUV_KC754958.1:121-181
+SLEV_JQ957869.1:36-97 agucaggccaauuaaaa---uugccaccggaugucagguaaacggugcugccuguaaccuggcc-----
+#=GS SLEV_JQ957869.1:36-97 AC SLEV_JQ957869.1:36-97
+#=GS SLEV_JQ957869.1:36-97 DE SLEV_JQ957869.1:36-97
+SLEV_KY825743.1:37-98 agucaggccaauuaauu---uugccaccggaugucagguaaacggugcugucugcaaccuggcc-----
+#=GS SLEV_KY825743.1:37-98 AC SLEV_KY825743.1:37-98
+#=GS SLEV_KY825743.1:37-98 DE SLEV_KY825743.1:37-98
+SLEV_KT823415.1:37-98 agucaggccaauuaauu---uugccaccggaugucagguaaacggugcugucuguaaccuggcc-----
+#=GS SLEV_KT823415.1:37-98 AC SLEV_KT823415.1:37-98
+#=GS SLEV_KT823415.1:37-98 DE SLEV_KT823415.1:37-98
+SLEV_KX258462.1:37-98 agucaggccaauuaauu---uugccaccggaugucaaguaaacggugcugucuguaaccuggcc-----
+#=GS SLEV_KX258462.1:37-98 AC SLEV_KX258462.1:37-98
+#=GS SLEV_KX258462.1:37-98 DE SLEV_KX258462.1:37-98
+SLEV_MH899073.1:33-94 agucaggccaauuaguu---uugccaccggaugucagguaaacggugcugccuguaaccuggcc-----
+#=GS SLEV_MH899073.1:33-94 AC SLEV_MH899073.1:33-94
+#=GS SLEV_MH899073.1:33-94 DE SLEV_MH899073.1:33-94
+SLEV_FJ753287.2:37-98 agucaggccaauuaguu---uugccaccggaugucagguaaacggugcugucuguaaccuggcc-----
+#=GS SLEV_FJ753287.2:37-98 AC SLEV_FJ753287.2:37-98
+#=GS SLEV_FJ753287.2:37-98 DE SLEV_FJ753287.2:37-98
+SLEV_EU566860.1:37-98 agucagaccaauuaguu---uugccaccggaugucagguaaacggugcugucuguaaccuggcc-----
+#=GS SLEV_EU566860.1:37-98 AC SLEV_EU566860.1:37-98
+#=GS SLEV_EU566860.1:37-98 DE SLEV_EU566860.1:37-98
+SLEV_KM267635.1:38-99 agucaggccaauuagcu---uugccaccggaugucagguaaacggugcugucuguaaccuggcc-----
+#=GS SLEV_KM267635.1:38-99 AC SLEV_KM267635.1:38-99
+#=GS SLEV_KM267635.1:38-99 DE SLEV_KM267635.1:38-99
+SLEV_MN233334.1:37-98 agucaggccaaucaguu---uugccaccggaugucagguaaacggugcugucuguaaccuggcc-----
+#=GS SLEV_MN233334.1:37-98 AC SLEV_MN233334.1:37-98
+#=GS SLEV_MN233334.1:37-98 DE SLEV_MN233334.1:37-98
+SLEV_DQ359217.1:37-98 agucaggccaauuaguu---uugccaccggaagucagguaaacggugcugucuguaaccuggcc-----
+#=GS SLEV_DQ359217.1:37-98 AC SLEV_DQ359217.1:37-98
+#=GS SLEV_DQ359217.1:37-98 DE SLEV_DQ359217.1:37-98
+MVEV_KF751869.1:91-154 agucaggccagccgguuaggcugccaccggaaguug-guagacggugcugccugcgaccaaccc-----
+#=GS MVEV_KF751869.1:91-154 AC MVEV_KF751869.1:91-154
+#=GS MVEV_KF751869.1:91-154 DE MVEV_KF751869.1:91-154
+MVEV_JX123032.1:93-156 agucaggccagccgguuaggcugccaccggagguug-guagacggugcugccugcgaccaaccc-----
+#=GS MVEV_JX123032.1:93-156 AC MVEV_JX123032.1:93-156
+#=GS MVEV_JX123032.1:93-156 DE MVEV_JX123032.1:93-156
+MVEV_NC_000943.1:93-156 agucaggccagccgguuaggcugccaccgaagguug-guagacggugcugccugcgaccaaccc-----
+#=GS MVEV_NC_000943.1:93-156 AC MVEV_NC_000943.1:93-156
+#=GS MVEV_NC_000943.1:93-156 DE MVEV_NC_000943.1:93-156
+MVEV_KC852194.1:30-93 agucaggccagccgcucaggcugccaccggagguug-guagacggugcugccugcgaccaaccc-----
+#=GS MVEV_KC852194.1:30-93 AC MVEV_KC852194.1:30-93
+#=GS MVEV_KC852194.1:30-93 DE MVEV_KC852194.1:30-93
+BSQV_AY632536.4:29-85 agucaggccaga-------aaugccaccggauaaag-guagacggugcugccugcaaccuuucu-----
+#=GS BSQV_AY632536.4:29-85 AC BSQV_AY632536.4:29-85
+#=GS BSQV_AY632536.4:29-85 DE BSQV_AY632536.4:29-85
+TMUV_OQ473625.1:98-156 agucaggccagggaaac--ccugccaccggauguug-gaugacggugcugucugcguucca--------
+#=GS TMUV_OQ473625.1:98-156 AC TMUV_OQ473625.1:98-156
+#=GS TMUV_OQ473625.1:98-156 DE TMUV_OQ473625.1:98-156
+TMUV_KM275941.1:95-153 agucaggccagggaauc--ccugccaccggauguug-gaugacggugcugucugcguucca--------
+#=GS TMUV_KM275941.1:95-153 AC TMUV_KM275941.1:95-153
+#=GS TMUV_KM275941.1:95-153 DE TMUV_KM275941.1:95-153
+TMUV_KX686579.1:96-154 agucaggccagggaauu--ccugccaccggauguug-gaugacggugcugucugcguucca--------
+#=GS TMUV_KX686579.1:96-154 AC TMUV_KX686579.1:96-154
+#=GS TMUV_KX686579.1:96-154 DE TMUV_KX686579.1:96-154
+TMUV_KX097989.1:95-153 agucaggccaggggauc--ccugccaccggauguug-gaugacggugcugucugcguucca--------
+#=GS TMUV_KX097989.1:95-153 AC TMUV_KX097989.1:95-153
+#=GS TMUV_KX097989.1:95-153 DE TMUV_KX097989.1:95-153
+TMUV_KX977553.1:95-153 agucaggccagggaauc--ccugccaccggauguua-gaugacggugcugucugcguucca--------
+#=GS TMUV_KX977553.1:95-153 AC TMUV_KX977553.1:95-153
+#=GS TMUV_KX977553.1:95-153 DE TMUV_KX977553.1:95-153
+TMUV_OQ920272.1:95-153 agucaggccggggaauc--ccugccaccggauguug-gaugacggugcugucugcguucca--------
+#=GS TMUV_OQ920272.1:95-153 AC TMUV_OQ920272.1:95-153
+#=GS TMUV_OQ920272.1:95-153 DE TMUV_OQ920272.1:95-153
+TMUV_KX686571.1:95-153 agucaggccagggaauc--ccugccaccggacguug-gaugacggugcugucugcguucca--------
+#=GS TMUV_KX686571.1:95-153 AC TMUV_KX686571.1:95-153
+#=GS TMUV_KX686571.1:95-153 DE TMUV_KX686571.1:95-153
+TMUV_OL677430.1:96-155 agucaggccagggaauc--ccugccaccggauguug-gaugacggugcugumugcguucca--------
+#=GS TMUV_OL677430.1:96-155 AC TMUV_OL677430.1:96-155
+#=GS TMUV_OL677430.1:96-155 DE TMUV_OL677430.1:96-155
+BAGV_MW463911.2:117-180 agucaggccggauaacauguccgccaccggauguug-gaugacggugcugccugcaguccaacc-----
+#=GS BAGV_MW463911.2:117-180 AC BAGV_MW463911.2:117-180
+#=GS BAGV_MW463911.2:117-180 DE BAGV_MW463911.2:117-180
+BAGV_MF380427.1:117-180 agucaggccggauuacauguccgccaccggauguug-gaugacggugcugccugcaguccaacc-----
+#=GS BAGV_MF380427.1:117-180 AC BAGV_MF380427.1:117-180
+#=GS BAGV_MF380427.1:117-180 DE BAGV_MF380427.1:117-180
+BAGV_MF380429.1:117-180 agucaggccggacuacauguccgccaccggauguug-gaugacggugcugccugcaguccaacc-----
+#=GS BAGV_MF380429.1:117-180 AC BAGV_MF380429.1:117-180
+#=GS BAGV_MF380429.1:117-180 DE BAGV_MF380429.1:117-180
+BAGV_LC318701.1:117-180 agucaggccggauuacguguccgccaccggauguug-gaugacggugcugccugcaguccaacc-----
+#=GS BAGV_LC318701.1:117-180 AC BAGV_LC318701.1:117-180
+#=GS BAGV_LC318701.1:117-180 DE BAGV_LC318701.1:117-180
+BAGV_KR108244.1:117-180 agucaggccggacuacguguccgccaccggauguug-gaugacggugcugccugcaguccaacc-----
+#=GS BAGV_KR108244.1:117-180 AC BAGV_KR108244.1:117-180
+#=GS BAGV_KR108244.1:117-180 DE BAGV_KR108244.1:117-180
+BAGV_LC730845.1:118-181 agucagaccggacuacguguccgccaccggauguug-gaugacggugcugccugcaguccaacc-----
+#=GS BAGV_LC730845.1:118-181 AC BAGV_LC730845.1:118-181
+#=GS BAGV_LC730845.1:118-181 DE BAGV_LC730845.1:118-181
+BAGV_MF380426.1:117-180 agucaggccugauuucaugugagccaccggauguug-gaugacggugcugccugcaguccaacc-----
+#=GS BAGV_MF380426.1:117-180 AC BAGV_MF380426.1:117-180
+#=GS BAGV_MF380426.1:117-180 DE BAGV_MF380426.1:117-180
+IGUV_AY632538.4:30-86 ugucaggccgga-------aacgccaccggaugguc-guaaacggugcggccugugacgacccc-----
+#=GS IGUV_AY632538.4:30-86 AC IGUV_AY632538.4:30-86
+#=GS IGUV_AY632538.4:30-86 DE IGUV_AY632538.4:30-86
+IGUV_MK332105.2:52-108 ugucaggccgga-------aacgccaccggaugguc-guaaacggugcggccugugacgucccc-----
+#=GS IGUV_MK332105.2:52-108 AC IGUV_MK332105.2:52-108
+#=GS IGUV_MK332105.2:52-108 DE IGUV_MK332105.2:52-108
+KOKV_OL347997.1:34-88 agucaggccuga-------aaagccaccugaucc---ggugaaggugcugccugcauccggccu-----
+#=GS KOKV_OL347997.1:34-88 AC KOKV_OL347997.1:34-88
+#=GS KOKV_OL347997.1:34-88 DE KOKV_OL347997.1:34-88
+KOKV_DUMMYY97.1:34-88 agucaggccuga-------aaagccaccugaucc---ggugaaggugcugccugcauccggccu-----
+#=GS KOKV_DUMMYY97.1:34-88 AC KOKV_DUMMYY97.1:34-88
+#=GS KOKV_DUMMYY97.1:34-88 DE KOKV_DUMMYY97.1:34-88
+NMV_NC_032088.1:37-90 agucaggccga--------auagccaucugaucc---ggugaagaugcugccugcgaccggccc-----
+#=GS NMV_NC_032088.1:37-90 AC NMV_NC_032088.1:37-90
+#=GS NMV_NC_032088.1:37-90 DE NMV_NC_032088.1:37-90
+NMV_NC_DUMMYY.1:37-90 agucaggccga--------auagccaucugaucc---ggugaagaugcugccugcgaccggccc-----
+#=GS NMV_NC_DUMMYY.1:37-90 AC NMV_NC_DUMMYY.1:37-90
+#=GS NMV_NC_DUMMYY.1:37-90 DE NMV_NC_DUMMYY.1:37-90
+DENV2_EU482568.1:30-91 agucaggucgaau------uaagccauaguacg--ggaaaaacuaugcuaccugugagccccguccaag
+#=GS DENV2_EU482568.1:30-91 AC DENV2_EU482568.1:30-91
+#=GS DENV2_EU482568.1:30-91 DE DENV2_EU482568.1:30-91
+DENV2_OK469345.1:30-91 agucaggucgaau------uaagccauaguacg--gaaaaaacuaugcuaccugugagccccguccaag
+#=GS DENV2_OK469345.1:30-91 AC DENV2_OK469345.1:30-91
+#=GS DENV2_OK469345.1:30-91 DE DENV2_OK469345.1:30-91
+DENV2_JQ045684.1:30-91 agucaggucgagu------uaagccauaguacg--gaaaaaacuaugcuaccugugagccccguccaag
+#=GS DENV2_JQ045684.1:30-91 AC DENV2_JQ045684.1:30-91
+#=GS DENV2_JQ045684.1:30-91 DE DENV2_JQ045684.1:30-91
+DENV2_MN448874.1:30-91 agucaggucggau------uaagccauaguacg--ggaaaaacuaugcuaccugugagccccguccaag
+#=GS DENV2_MN448874.1:30-91 AC DENV2_MN448874.1:30-91
+#=GS DENV2_MN448874.1:30-91 DE DENV2_MN448874.1:30-91
+DENV2_MH822955.2:30-91 agucaggucggac------uaagccauaguacg--ggaaaaacuaugcuaccugugagccccguccaag
+#=GS DENV2_MH822955.2:30-91 AC DENV2_MH822955.2:30-91
+#=GS DENV2_MH822955.2:30-91 DE DENV2_MH822955.2:30-91
+DENV2_FJ810412.1:30-91 agucaggucggau------caagccauaguacg--ggaaaaacuaugcuaccugugagccccguccaag
+#=GS DENV2_FJ810412.1:30-91 AC DENV2_FJ810412.1:30-91
+#=GS DENV2_FJ810412.1:30-91 DE DENV2_FJ810412.1:30-91
+DENV2_FM210229.1:33-94 agucaggucggau------uaagccauaguacg--ggaaaaacuaugcuaccugugagccccguccgag
+#=GS DENV2_FM210229.1:33-94 AC DENV2_FM210229.1:33-94
+#=GS DENV2_FM210229.1:33-94 DE DENV2_FM210229.1:33-94
+DENV2_GQ868549.1:30-91 agucaggucggau------uaagccauaguacg--ggaaaagcuaugcuaccugugagccccguccaag
+#=GS DENV2_GQ868549.1:30-91 AC DENV2_GQ868549.1:30-91
+#=GS DENV2_GQ868549.1:30-91 DE DENV2_GQ868549.1:30-91
+DENV2_FM210204.1:33-94 agucaggucggau------uaagccauagcacg--gaaaaagcuaugcuaccugugagccccguccgag
+#=GS DENV2_FM210204.1:33-94 AC DENV2_FM210204.1:33-94
+#=GS DENV2_FM210204.1:33-94 DE DENV2_FM210204.1:33-94
+DENV2_MT899084.1:30-91 agucaggucggau------uaagccacaguacg--gaaaaaacugugcuaccugugagccccguccaag
+#=GS DENV2_MT899084.1:30-91 AC DENV2_MT899084.1:30-91
+#=GS DENV2_MT899084.1:30-91 DE DENV2_MT899084.1:30-91
+DENV2_KY937186.1:46-107 agucaggucggau------uaggccauaguacg--gaaaaaacuaugcuaccugugauccccguccaag
+#=GS DENV2_KY937186.1:46-107 AC DENV2_KY937186.1:46-107
+#=GS DENV2_KY937186.1:46-107 DE DENV2_KY937186.1:46-107
+DENV2_OM744110.1:32-93 agucaggccguuu------uaagccauaguacg--guaagagcuaugcugccugugagccccguccaag
+#=GS DENV2_OM744110.1:32-93 AC DENV2_OM744110.1:32-93
+#=GS DENV2_OM744110.1:32-93 DE DENV2_OM744110.1:32-93
+DENV1_ON123666.1:50-111 agucaggccgguu------uaagccauaguacg--guaagagcuaugcugccugugagccccguccaag
+#=GS DENV1_ON123666.1:50-111 AC DENV1_ON123666.1:50-111
+#=GS DENV1_ON123666.1:50-111 DE DENV1_ON123666.1:50-111
+DENV3_MZ284953.1:50-111 agucaggccggau------uaagccauagcacg--guaagagcuaugcugccugugagccccguccaag
+#=GS DENV3_MZ284953.1:50-111 AC DENV3_MZ284953.1:50-111
+#=GS DENV3_MZ284953.1:50-111 DE DENV3_MZ284953.1:50-111
+DENV1_KY057368.1:50-111 agucaggccggau------uaagccauagcacg--guaagagcuaugcugccugugagccccguccaag
+#=GS DENV1_KY057368.1:50-111 AC DENV1_KY057368.1:50-111
+#=GS DENV1_KY057368.1:50-111 DE DENV1_KY057368.1:50-111
+DENV1_OL321180.1:21-82 agucaggccggau------uaagccauaguacg--guaagagcuaugcugccugugagccccguccaag
+#=GS DENV1_OL321180.1:21-82 AC DENV1_OL321180.1:21-82
+#=GS DENV1_OL321180.1:21-82 DE DENV1_OL321180.1:21-82
+DENV1_JN697056.1:50-111 agucaggccggau------uaagccauaguacg--guaagaacuaugcugccugugagccccguccaag
+#=GS DENV1_JN697056.1:50-111 AC DENV1_JN697056.1:50-111
+#=GS DENV1_JN697056.1:50-111 DE DENV1_JN697056.1:50-111
+DENV1_KC762651.1:50-111 agucaggccggau------uaagccauaguacg--guaggagcuaugcugccugugagccccguccaag
+#=GS DENV1_KC762651.1:50-111 AC DENV1_KC762651.1:50-111
+#=GS DENV1_KC762651.1:50-111 DE DENV1_KC762651.1:50-111
+DENV1_U88537.1:50-111 agucaggccggau------ugagccauagcacg--guaagagcuaugcugccugugagccccguccaag
+#=GS DENV1_U88537.1:50-111 AC DENV1_U88537.1:50-111
+#=GS DENV1_U88537.1:50-111 DE DENV1_U88537.1:50-111
+DENV1_OL412140.1:50-111 agucaggccggau------ugagccauaguacg--guaagagcuaugcugccugugagccccguccaag
+#=GS DENV1_OL412140.1:50-111 AC DENV1_OL412140.1:50-111
+#=GS DENV1_OL412140.1:50-111 DE DENV1_OL412140.1:50-111
+DENV1_GQ199782.1:50-111 agucaggccggau------uaagccauagcacg--guaagagcuaugcugccugugagccccgucuaag
+#=GS DENV1_GQ199782.1:50-111 AC DENV1_GQ199782.1:50-111
+#=GS DENV1_GQ199782.1:50-111 DE DENV1_GQ199782.1:50-111
+DENV1_JN638342.1:50-111 agucaggccggau------uaagccauagcacg--guaaaagcuaugcugccugugagccccgucuaag
+#=GS DENV1_JN638342.1:50-111 AC DENV1_JN638342.1:50-111
+#=GS DENV1_JN638342.1:50-111 DE DENV1_JN638342.1:50-111
+DENV1_FJ024459.1:50-111 agucaggccagau------uaagccauagcacg--guaagagcuaugcugccugugagccccgucuaag
+#=GS DENV1_FJ024459.1:50-111 AC DENV1_FJ024459.1:50-111
+#=GS DENV1_FJ024459.1:50-111 DE DENV1_FJ024459.1:50-111
+DENV1_MW265683.1:50-111 agucaggccggau------uaagccauagcacg--gcaagagcuaugcugccugugagccccgucuaag
+#=GS DENV1_MW265683.1:50-111 AC DENV1_MW265683.1:50-111
+#=GS DENV1_MW265683.1:50-111 DE DENV1_MW265683.1:50-111
+DENV1_FJ410220.1:50-111 agucaggccggau------uaagccauagcacg--gcaagagcuaugcugccugugagccccguccaag
+#=GS DENV1_FJ410220.1:50-111 AC DENV1_FJ410220.1:50-111
+#=GS DENV1_FJ410220.1:50-111 DE DENV1_FJ410220.1:50-111
+DENV1_KP188548.1:50-111 agucaggccggau------uaagccauagcacg--gaaagagcuaugcugccugugagccccguccaag
+#=GS DENV1_KP188548.1:50-111 AC DENV1_KP188548.1:50-111
+#=GS DENV1_KP188548.1:50-111 DE DENV1_KP188548.1:50-111
+DENV1_MK858130.1:52-113 agucaggccgauc------uaagccauagcacg--guaagagcuaugcugccugugagccccguccaag
+#=GS DENV1_MK858130.1:52-113 AC DENV1_MK858130.1:52-113
+#=GS DENV1_MK858130.1:52-113 DE DENV1_MK858130.1:52-113
+DENV1_MF033257.1:50-111 agucaggccggau------uaagccauaguacg--guaagagcuaugcugccugugagccccgucucag
+#=GS DENV1_MF033257.1:50-111 AC DENV1_MF033257.1:50-111
+#=GS DENV1_MF033257.1:50-111 DE DENV1_MF033257.1:50-111
+DENV3_OP895705.1:26-87 ugucaggucacau------uaagccauaguacg--gaaaaaacuaugcuaccugugagccccguccaag
+#=GS DENV3_OP895705.1:26-87 AC DENV3_OP895705.1:26-87
+#=GS DENV3_OP895705.1:26-87 DE DENV3_OP895705.1:26-87
+DENV3_EU482566.1:26-87 agucaggccacau------uaagccacaguacg--gaagaagcugugcugccugugagccccguccaag
+#=GS DENV3_EU482566.1:26-87 AC DENV3_EU482566.1:26-87
+#=GS DENV3_EU482566.1:26-87 DE DENV3_EU482566.1:26-87
+DENV3_GQ868577.1:26-87 ugucaggccauau------uaagccacaguacg--gaaaaagcugugcugccugugagccccguccaag
+#=GS DENV3_GQ868577.1:26-87 AC DENV3_GQ868577.1:26-87
+#=GS DENV3_GQ868577.1:26-87 DE DENV3_GQ868577.1:26-87
+DENV3_FJ024471.1:26-87 ugucaggccacau------uaagccacaguacg--gaaaaagcugugcugccugugagccccguccaag
+#=GS DENV3_FJ024471.1:26-87 AC DENV3_FJ024471.1:26-87
+#=GS DENV3_FJ024471.1:26-87 DE DENV3_FJ024471.1:26-87
+DENV3_FJ390372.1:23-84 ugucaggccauau------uaagccacaguacg--gaagaagcugugcugccugugagccccguccaag
+#=GS DENV3_FJ390372.1:23-84 AC DENV3_FJ390372.1:23-84
+#=GS DENV3_FJ390372.1:23-84 DE DENV3_FJ390372.1:23-84
+DENV3_GU131954.1:26-87 ugucaggccauau------uaagccacaguacg--gaagaagcugugcugccugugagccccgucuaag
+#=GS DENV3_GU131954.1:26-87 AC DENV3_GU131954.1:26-87
+#=GS DENV3_GU131954.1:26-87 DE DENV3_GU131954.1:26-87
+DENV3_FJ182007.1:26-87 ugucaggccauac------uaagccacaguacg--gaagaagcugugcugccugugagccccguccaag
+#=GS DENV3_FJ182007.1:26-87 AC DENV3_FJ182007.1:26-87
+#=GS DENV3_FJ182007.1:26-87 DE DENV3_FJ182007.1:26-87
+DENV3_MH544649.1:26-87 ugucaggccauau------caagccacaguacg--gaagaagcugugcugccugugagccccguccaag
+#=GS DENV3_MH544649.1:26-87 AC DENV3_MH544649.1:26-87
+#=GS DENV3_MH544649.1:26-87 DE DENV3_MH544649.1:26-87
+DENV3_JF808118.1:26-87 ugucaggccacau------caagccacaguacg--gaagaagcugugcugccugugagccccguccaag
+#=GS DENV3_JF808118.1:26-87 AC DENV3_JF808118.1:26-87
+#=GS DENV3_JF808118.1:26-87 DE DENV3_JF808118.1:26-87
+DENV3_GU131853.1:26-87 ugucaggccgcau------uaagccacaguacg--gaagaagcugugcugccugugagccccguccaag
+#=GS DENV3_GU131853.1:26-87 AC DENV3_GU131853.1:26-87
+#=GS DENV3_GU131853.1:26-87 DE DENV3_GU131853.1:26-87
+DENV3_KJ189296.1:26-87 ugucaggccacau------uaagccacaguacg--gaagaagcugugcugccugugagccccguccaag
+#=GS DENV3_KJ189296.1:26-87 AC DENV3_KJ189296.1:26-87
+#=GS DENV3_KJ189296.1:26-87 DE DENV3_KJ189296.1:26-87
+DENV3_KF971702.1:15-76 ugucaggccacau------uaagccacaguacg--gaaggagcugugcugccugugagccccguccaag
+#=GS DENV3_KF971702.1:15-76 AC DENV3_KF971702.1:15-76
+#=GS DENV3_KF971702.1:15-76 DE DENV3_KF971702.1:15-76
+DENV3_JF920405.1:15-76 ugucaggccacau------uaagccacaguacg--gaagaaacugugcugccugugagccccguccaag
+#=GS DENV3_JF920405.1:15-76 AC DENV3_JF920405.1:15-76
+#=GS DENV3_JF920405.1:15-76 DE DENV3_JF920405.1:15-76
+DENV3_KJ189291.1:26-87 ugucaggccacau------uaagccacaguacg--gaagaagcugugcugccugugagucccguccaag
+#=GS DENV3_KJ189291.1:26-87 AC DENV3_KJ189291.1:26-87
+#=GS DENV3_KJ189291.1:26-87 DE DENV3_KJ189291.1:26-87
+DENV3_GQ868617.1:26-87 ugccaggccacau------uaagccacaguacg--gaagaagcugugcugccugugagccccguccaag
+#=GS DENV3_GQ868617.1:26-87 AC DENV3_GQ868617.1:26-87
+#=GS DENV3_GQ868617.1:26-87 DE DENV3_GQ868617.1:26-87
+DENV3_HM631856.1:15-76 ugucaggccacau------uaagccacaguacg--gaagaagcugugcugccugugagccccgcccaag
+#=GS DENV3_HM631856.1:15-76 AC DENV3_HM631856.1:15-76
+#=GS DENV3_HM631856.1:15-76 DE DENV3_HM631856.1:15-76
+DENV3_FJ898442.1:26-87 ugucaggccacau------uaagccacagugcg--gaagaagcugugcugccugugagccccguccaag
+#=GS DENV3_FJ898442.1:26-87 AC DENV3_FJ898442.1:26-87
+#=GS DENV3_FJ898442.1:26-87 DE DENV3_FJ898442.1:26-87
+DENV3_MW192822.1:26-87 ugucaggccacuu------uaagccacaguacg--gaagaagcugugcugccugugagccccguccaag
+#=GS DENV3_MW192822.1:26-87 AC DENV3_MW192822.1:26-87
+#=GS DENV3_MW192822.1:26-87 DE DENV3_MW192822.1:26-87
+DENV3_MW192824.1:26-87 ugucaggccaccu------uaagccacaguacg--gaagaagcugugcugccugugagccccguccaag
+#=GS DENV3_MW192824.1:26-87 AC DENV3_MW192824.1:26-87
+#=GS DENV3_MW192824.1:26-87 DE DENV3_MW192824.1:26-87
+DENV3_LT898452.1:26-87 ugucaggccaucu------uaagccacaguacg--gaagaagcugugcugccugugagccccguccaag
+#=GS DENV3_LT898452.1:26-87 AC DENV3_LT898452.1:26-87
+#=GS DENV3_LT898452.1:26-87 DE DENV3_LT898452.1:26-87
+DENV3_OP410998.1:18-79 ugucaggccaccu------uaagccacaguacg--gaagaagcugugcugccugugagccccgucuaag
+#=GS DENV3_OP410998.1:18-79 AC DENV3_OP410998.1:18-79
+#=GS DENV3_OP410998.1:18-79 DE DENV3_OP410998.1:18-79
+DENV3_MK858150.1:27-88 ugucaggccaccu------uaagccacaguacg--gaagaagcugugcugccugugagucccguccaag
+#=GS DENV3_MK858150.1:27-88 AC DENV3_MK858150.1:27-88
+#=GS DENV3_MK858150.1:27-88 DE DENV3_MK858150.1:27-88
+DENV3_GQ199887.1:26-87 ugucaggccaccu------caagccacaguacg--gaagaagcugugcugccugugagccccguccaag
+#=GS DENV3_GQ199887.1:26-87 AC DENV3_GQ199887.1:26-87
+#=GS DENV3_GQ199887.1:26-87 DE DENV3_GQ199887.1:26-87
+DENV3_GQ199870.1:15-76 uggcaggccacau------uaagccacaguacg--gaagaagcugugcugccugugagccccguccaag
+#=GS DENV3_GQ199870.1:15-76 AC DENV3_GQ199870.1:15-76
+#=GS DENV3_GQ199870.1:15-76 DE DENV3_GQ199870.1:15-76
+DENV3_GQ868616.1:26-87 ugucaggccacau------uaagccccaguacg--gaagaagcugugcugccugugagccccguccaag
+#=GS DENV3_GQ868616.1:26-87 AC DENV3_GQ868616.1:26-87
+#=GS DENV3_GQ868616.1:26-87 DE DENV3_GQ868616.1:26-87
+DENV3_KF955471.1:26-87 ugucaggccauau------uaagccacaguacg--gaagaagcugugcagccugugagccccgucuaag
+#=GS DENV3_KF955471.1:26-87 AC DENV3_KF955471.1:26-87
+#=GS DENV3_KF955471.1:26-87 DE DENV3_KF955471.1:26-87
+DENV3_KU725665.1:15-76 ugucaggccacau------uaagccacaguacg--gaagaagcugugcagccugugagccccguccaag
+#=GS DENV3_KU725665.1:15-76 AC DENV3_KU725665.1:15-76
+#=GS DENV3_KU725665.1:15-76 DE DENV3_KU725665.1:15-76
+DENV3_MN018379.1:26-87 ugucaggccaccu------uaagccacaguacg--gaaaaagcugugcagccugugagccccguccaag
+#=GS DENV3_MN018379.1:26-87 AC DENV3_MN018379.1:26-87
+#=GS DENV3_MN018379.1:26-87 DE DENV3_MN018379.1:26-87
+DENV3_AY744681.1:26-87 ugucaggccaccu------uaagccacaguacg--gaagaagcugugcagccugugagccccguccaag
+#=GS DENV3_AY744681.1:26-87 AC DENV3_AY744681.1:26-87
+#=GS DENV3_AY744681.1:26-87 DE DENV3_AY744681.1:26-87
+DENV3_MN448983.1:26-87 ugucaggccaccu------uaagccacaguacg--gaaggagcugugcagccugugagccccguccaag
+#=GS DENV3_MN448983.1:26-87 AC DENV3_MN448983.1:26-87
+#=GS DENV3_MN448983.1:26-87 DE DENV3_MN448983.1:26-87
+DENV3_FJ744738.1:26-87 ugucaggccaccu------uaagccacaguacg--gaagaagcugugcagccugugagccccguccgag
+#=GS DENV3_FJ744738.1:26-87 AC DENV3_FJ744738.1:26-87
+#=GS DENV3_FJ744738.1:26-87 DE DENV3_FJ744738.1:26-87
+DENV3_MN448957.1:26-87 ugucaggccrccu------uaagccacaguacg--gaagaagcugugcagccugugagccccgucuaag
+#=GS DENV3_MN448957.1:26-87 AC DENV3_MN448957.1:26-87
+#=GS DENV3_MN448957.1:26-87 DE DENV3_MN448957.1:26-87
+DENV3_MN448953.1:26-87 ugucaggccaccu------uaagccacaguacg--gaagaagcugugcagccugugagccccgucuaag
+#=GS DENV3_MN448953.1:26-87 AC DENV3_MN448953.1:26-87
+#=GS DENV3_MN448953.1:26-87 DE DENV3_MN448953.1:26-87
+DENV3_KC762684.1:17-78 ugucaggccacuc------uaagccacaguacg--gaagaagcugugcagccugugagccccguccaag
+#=GS DENV3_KC762684.1:17-78 AC DENV3_KC762684.1:17-78
+#=GS DENV3_KC762684.1:17-78 DE DENV3_KC762684.1:17-78
+DENV3_AB214882.1:26-87 ugucaggccacuc------uaagccacaguacg--gaagaagcugugcagccugugagccccgucuaag
+#=GS DENV3_AB214882.1:26-87 AC DENV3_AB214882.1:26-87
+#=GS DENV3_AB214882.1:26-87 DE DENV3_AB214882.1:26-87
+DENV3_AY676349.1:26-87 ugucaggccaccc------uaagccacaguacg--gaagaagcugugcagccugugagccccguccaag
+#=GS DENV3_AY676349.1:26-87 AC DENV3_AY676349.1:26-87
+#=GS DENV3_AY676349.1:26-87 DE DENV3_AY676349.1:26-87
+DENV3_AY858037.2:26-87 ugucaggccacuu------uaagccacagcacg--gaagaagcugugcagccugugagccccguccaag
+#=GS DENV3_AY858037.2:26-87 AC DENV3_AY858037.2:26-87
+#=GS DENV3_AY858037.2:26-87 DE DENV3_AY858037.2:26-87
+DENV3_AY496879.2:26-87 ugucaggccaccu------uaagccacagcacg--gaagaagcugugcagccugugagccccguccaag
+#=GS DENV3_AY496879.2:26-87 AC DENV3_AY496879.2:26-87
+#=GS DENV3_AY496879.2:26-87 DE DENV3_AY496879.2:26-87
+DENV3_MW720890.1:26-87 ugucaggccacuu------uaagccacaguacg--gaagaagcugugcagccugugagccccguccaag
+#=GS DENV3_MW720890.1:26-87 AC DENV3_MW720890.1:26-87
+#=GS DENV3_MW720890.1:26-87 DE DENV3_MW720890.1:26-87
+DENV3_MT921575.1:26-87 cgucaggccacuu------uaagccacaguacg--gaagaagcugugcagccugugagccccguccaag
+#=GS DENV3_MT921575.1:26-87 AC DENV3_MT921575.1:26-87
+#=GS DENV3_MT921575.1:26-87 DE DENV3_MT921575.1:26-87
+DENV3_MK005258.1:18-79 ugucaggccacuu------uaagccacaguacg--gaagaagcugugcagccugugagucccguccaag
+#=GS DENV3_MK005258.1:18-79 AC DENV3_MK005258.1:18-79
+#=GS DENV3_MK005258.1:18-79 DE DENV3_MK005258.1:18-79
+DENV3_AY858041.2:26-87 ugucaggccacuu------uaagccacaguacg--gaggaagcugugcagccugugagccccguccaag
+#=GS DENV3_AY858041.2:26-87 AC DENV3_AY858041.2:26-87
+#=GS DENV3_AY858041.2:26-87 DE DENV3_AY858041.2:26-87
+DENV3_KY794789.1:26-87 ugucaggccacuu------uaagccacagugcg--gaagaagcugugcagccugugagccccguccaag
+#=GS DENV3_KY794789.1:26-87 AC DENV3_KY794789.1:26-87
+#=GS DENV3_KY794789.1:26-87 DE DENV3_KY794789.1:26-87
+DENV3_MW396469.1:26-87 ugucaggccacuu------caagccacaguacg--gaagaagcugugcagccugugagccccguccaag
+#=GS DENV3_MW396469.1:26-87 AC DENV3_MW396469.1:26-87
+#=GS DENV3_MW396469.1:26-87 DE DENV3_MW396469.1:26-87
+DENV3_DQ675529.1:26-87 ugucaggccaccu------caagccacaguacg--gaagaagcugugcagccugugagccccguccaag
+#=GS DENV3_DQ675529.1:26-87 AC DENV3_DQ675529.1:26-87
+#=GS DENV3_DQ675529.1:26-87 DE DENV3_DQ675529.1:26-87
+DENV3_MF004386.1:26-87 ugucaggccaucu------caagccacaguacg--gaagaagcugugcagccugugagccccguccaag
+#=GS DENV3_MF004386.1:26-87 AC DENV3_MF004386.1:26-87
+#=GS DENV3_MF004386.1:26-87 DE DENV3_MF004386.1:26-87
+DENV3_MN018389.1:26-87 ugucaggccaccu------uaagccacaguacg--gaaaaagcugugcagccugugagucccguccaag
+#=GS DENV3_MN018389.1:26-87 AC DENV3_MN018389.1:26-87
+#=GS DENV3_MN018389.1:26-87 DE DENV3_MN018389.1:26-87
+DENV3_GU131903.1:26-87 ugucaggccaccu------uaagccacagcacg--gaacaagcugugcagccugugagccccguccaag
+#=GS DENV3_GU131903.1:26-87 AC DENV3_GU131903.1:26-87
+#=GS DENV3_GU131903.1:26-87 DE DENV3_GU131903.1:26-87
+DENV3_KF955461.1:31-92 ugucaggccaccu------uaagccacaguacg--gaacaagcugugcagccugugagccccguccaag
+#=GS DENV3_KF955461.1:31-92 AC DENV3_KF955461.1:31-92
+#=GS DENV3_KF955461.1:31-92 DE DENV3_KF955461.1:31-92
+DENV3_EU482454.1:26-87 ugucaggccaccu------uaagccacaguacg--gaauaagcugugcagccugugagccccguccaag
+#=GS DENV3_EU482454.1:26-87 AC DENV3_EU482454.1:26-87
+#=GS DENV3_EU482454.1:26-87 DE DENV3_EU482454.1:26-87
+DENV3_FJ639730.1:26-87 ugucaggccaccc------uaagccacaguacg--gaacaagcugugcagccugugagccccguccaag
+#=GS DENV3_FJ639730.1:26-87 AC DENV3_FJ639730.1:26-87
+#=GS DENV3_FJ639730.1:26-87 DE DENV3_FJ639730.1:26-87
+DENV3_GU131945.1:26-87 ugucaggccaccu------uaagccacaguacg--gaacaagcugugcagccugugagucccguccaag
+#=GS DENV3_GU131945.1:26-87 AC DENV3_GU131945.1:26-87
+#=GS DENV3_GU131945.1:26-87 DE DENV3_GU131945.1:26-87
+DENV3_JQ045689.1:26-87 ugucaggccaccu------caagccacaguacg--gaacaagcugugcagccugugagccccguccaag
+#=GS DENV3_JQ045689.1:26-87 AC DENV3_JQ045689.1:26-87
+#=GS DENV3_JQ045689.1:26-87 DE DENV3_JQ045689.1:26-87
+DENV3_GU131933.1:26-87 ugucaggccaccu------uaagccacaguacu--gaacaagcugugcagccugugagccccguccaag
+#=GS DENV3_GU131933.1:26-87 AC DENV3_GU131933.1:26-87
+#=GS DENV3_GU131933.1:26-87 DE DENV3_GU131933.1:26-87
+DENV3_JF504679.1:26-87 ugucaggccaccu------uaagccacaguacg--gaagaagcugugcugccugugagccccguccuag
+#=GS DENV3_JF504679.1:26-87 AC DENV3_JF504679.1:26-87
+#=GS DENV3_JF504679.1:26-87 DE DENV3_JF504679.1:26-87
+DENV3_KU509283.1:26-87 ugucaggccaccu------uaagccacaguacg--gaagaagcugugcugccugugagccccgucccag
+#=GS DENV3_KU509283.1:26-87 AC DENV3_KU509283.1:26-87
+#=GS DENV3_KU509283.1:26-87 DE DENV3_KU509283.1:26-87
+DENV3_JQ045693.1:12-73 aaucaggccaccu------uaagccacaguacg--gaacaagcugugcagccugugagccccguccaag
+#=GS DENV3_JQ045693.1:12-73 AC DENV3_JQ045693.1:12-73
+#=GS DENV3_JQ045693.1:12-73 DE DENV3_JQ045693.1:12-73
+DENV3_JN000937.1:15-76 ugucaggccacau------uaagccacaguacg--gaagaagcugugcugccugugagccccgucaagg
+#=GS DENV3_JN000937.1:15-76 AC DENV3_JN000937.1:15-76
+#=GS DENV3_JN000937.1:15-76 DE DENV3_JN000937.1:15-76
+DENV3_GU131865.1:26-87 ugucaggccccau------uaagccacaguccg--gaagaagcugugcugccugugagccccguccaag
+#=GS DENV3_GU131865.1:26-87 AC DENV3_GU131865.1:26-87
+#=GS DENV3_GU131865.1:26-87 DE DENV3_GU131865.1:26-87
+DENV3_KF955505.1:26-87 ugccaggccccau------uaagccccaguccg--gaagaagcugugcugccugugagccccguccaag
+#=GS DENV3_KF955505.1:26-87 AC DENV3_KF955505.1:26-87
+#=GS DENV3_KF955505.1:26-87 DE DENV3_KF955505.1:26-87
+DENV3_ON908237.1:26-86 ugucaggccacu-------uaagccacaguacg--gaagaagcugugcagccugugagccccguccaag
+#=GS DENV3_ON908237.1:26-86 AC DENV3_ON908237.1:26-86
+#=GS DENV3_ON908237.1:26-86 DE DENV3_ON908237.1:26-86
+DENV2_KY937185.1:46-106 agucaggucgga-------uaagccauaguacg--gaaaaaacuaugcuaccugugagccccguccaag
+#=GS DENV2_KY937185.1:46-106 AC DENV2_KY937185.1:46-106
+#=GS DENV2_KY937185.1:46-106 DE DENV2_KY937185.1:46-106
+ZIKV_MH675626.1:16-74 ugucaggccugccag----ucagccacagcuug--gggaaagcugugcagccugugaccccccc-----
+#=GS ZIKV_MH675626.1:16-74 AC ZIKV_MH675626.1:16-74
+#=GS ZIKV_MH675626.1:16-74 DE ZIKV_MH675626.1:16-74
+ZIKV_KU681081.3:16-74 ugucaggccugcuag----ucagccacagcuug--gggaaagcugugcagccugugaccccccc-----
+#=GS ZIKV_KU681081.3:16-74 AC ZIKV_KU681081.3:16-74
+#=GS ZIKV_KU681081.3:16-74 DE ZIKV_KU681081.3:16-74
+ZIKV_KY014300.2:16-74 ugucaggccugcuag----ucagccacagcucg--gggaaagcugugcagccugugaccccccc-----
+#=GS ZIKV_KY014300.2:16-74 AC ZIKV_KY014300.2:16-74
+#=GS ZIKV_KY014300.2:16-74 DE ZIKV_KY014300.2:16-74
+ZIKV_OQ661918.1:16-74 ugucaggccugcugg----ucagccacagcuug--gggaaagcugugcagccugugaccccccc-----
+#=GS ZIKV_OQ661918.1:16-74 AC ZIKV_OQ661918.1:16-74
+#=GS ZIKV_OQ661918.1:16-74 DE ZIKV_OQ661918.1:16-74
+ZIKV_OM964566.1:16-74 ugucaggccugcuag----ccagccacagcuug--gggaaagcugugcagccugugaccccccc-----
+#=GS ZIKV_OM964566.1:16-74 AC ZIKV_OM964566.1:16-74
+#=GS ZIKV_OM964566.1:16-74 DE ZIKV_OM964566.1:16-74
+ZIKV_KY693680.1:16-74 ugucaggccugcuag----ucagccacagcuug--gggagagcugugcagccugugaccccccc-----
+#=GS ZIKV_KY693680.1:16-74 AC ZIKV_KY693680.1:16-74
+#=GS ZIKV_KY693680.1:16-74 DE ZIKV_KY693680.1:16-74
+ZIKV_MF801392.1:16-74 ugucaggccugcuag----ucagccacagcuug--gggaawgcugugcagccugugaccccccc-----
+#=GS ZIKV_MF801392.1:16-74 AC ZIKV_MF801392.1:16-74
+#=GS ZIKV_MF801392.1:16-74 DE ZIKV_MF801392.1:16-74
+ZIKV_KU991811.1:16-74 ugucaggccugcuag----ucagccacagcuug--gggaaagcugugcagccugugacccuccc-----
+#=GS ZIKV_KU991811.1:16-74 AC ZIKV_KU991811.1:16-74
+#=GS ZIKV_KU991811.1:16-74 DE ZIKV_KU991811.1:16-74
+ZIKV_KU497555.1:16-74 ugucaggccugcuag----ucagccacagcuug--gggaaagcugugcagccugugaccccucc-----
+#=GS ZIKV_KU497555.1:16-74 AC ZIKV_KU497555.1:16-74
+#=GS ZIKV_KU497555.1:16-74 DE ZIKV_KU497555.1:16-74
+ZIKV_MF574559.1:16-74 ugucaggccugcuag----ucagccacagcuug--gggaaagcugugcagccuguggccccccc-----
+#=GS ZIKV_MF574559.1:16-74 AC ZIKV_MF574559.1:16-74
+#=GS ZIKV_MF574559.1:16-74 DE ZIKV_MF574559.1:16-74
+ZIKV_OR264633.1:16-74 ugucaggccugcuag----ucagccacagccug--gggaaagcugugcagccugugaccccccc-----
+#=GS ZIKV_OR264633.1:16-74 AC ZIKV_OR264633.1:16-74
+#=GS ZIKV_OR264633.1:16-74 DE ZIKV_OR264633.1:16-74
+ZIKV_KX813683.1:16-74 ugucaggccugcuag----ucagccacagcuug--gggaaaacugugcagccugugaccccccc-----
+#=GS ZIKV_KX813683.1:16-74 AC ZIKV_KX813683.1:16-74
+#=GS ZIKV_KX813683.1:16-74 DE ZIKV_KX813683.1:16-74
+ZIKV_OR264631.1:16-74 ugucaggccugcuag----ucagccacaguuug--gggaaagcugugcagccugugaccccccc-----
+#=GS ZIKV_OR264631.1:16-74 AC ZIKV_OR264631.1:16-74
+#=GS ZIKV_OR264631.1:16-74 DE ZIKV_OR264631.1:16-74
+ZIKV_MH130104.1:16-74 ugucaggccugcuag----ucagccacaguuug--gggaaagcugugcagccuguaaccccccc-----
+#=GS ZIKV_MH130104.1:16-74 AC ZIKV_MH130104.1:16-74
+#=GS ZIKV_MH130104.1:16-74 DE ZIKV_MH130104.1:16-74
+ZIKV_MH061875.1:16-74 ugucaggccugcuag----ucagccacaguuug--gggaaagcugugcagccuguacccccccc-----
+#=GS ZIKV_MH061875.1:16-74 AC ZIKV_MH061875.1:16-74
+#=GS ZIKV_MH061875.1:16-74 DE ZIKV_MH061875.1:16-74
+ZIKV_KU365777.1:16-74 ugucaggccugcuag----ucagccacagcuug--gggaaagcugugcagccugugacccccca-----
+#=GS ZIKV_KU365777.1:16-74 AC ZIKV_KU365777.1:16-74
+#=GS ZIKV_KU365777.1:16-74 DE ZIKV_KU365777.1:16-74
+DENV4_MK858146.2:32-90 agucaggccacu-------ugugccacggcucg---agcaaaccgugcugccuguagcuccgccaaaa-
+#=GS DENV4_MK858146.2:32-90 AC DENV4_MK858146.2:32-90
+#=GS DENV4_MK858146.2:32-90 DE DENV4_MK858146.2:32-90
+DENV4_KF041260.1:32-90 agucaggccacu-------ugugccacggcuug---agcaaaccgugcugccuguagcuccgccaaaa-
+#=GS DENV4_KF041260.1:32-90 AC DENV4_KF041260.1:32-90
+#=GS DENV4_KF041260.1:32-90 DE DENV4_KF041260.1:32-90
+DENV4_OP809586.1:30-88 agucaggccacu-------ugugccacggcuug---agcaaaccgugcugccuguagcuccgcccaaa-
+#=GS DENV4_OP809586.1:30-88 AC DENV4_OP809586.1:30-88
+#=GS DENV4_OP809586.1:30-88 DE DENV4_OP809586.1:30-88
+DENV4_ON799403.1:30-88 agucaggccacu-------ugugccacggcuug---agcaaaccgugcugccuguagcuccgccmaaa-
+#=GS DENV4_ON799403.1:30-88 AC DENV4_ON799403.1:30-88
+#=GS DENV4_ON799403.1:30-88 DE DENV4_ON799403.1:30-88
+DENV4_JQ915084.1:31-89 agucaggccacu-------ugugccacggcuug---agcaaaccgugcugccuguagcuccgcccaau-
+#=GS DENV4_JQ915084.1:31-89 AC DENV4_JQ915084.1:31-89
+#=GS DENV4_JQ915084.1:31-89 DE DENV4_JQ915084.1:31-89
+DENV4_KX224312.2:32-90 agucaggccacu-------ugugccacggcuug---agcaaaccgugcugccuguagcuccgccaaug-
+#=GS DENV4_KX224312.2:32-90 AC DENV4_KX224312.2:32-90
+#=GS DENV4_KX224312.2:32-90 DE DENV4_KX224312.2:32-90
+DENV4_KP188557.1:30-88 agucaggccacu-------ugugccacggcuug---agcaaaccgugcugccuguagcuccgccaaua-
+#=GS DENV4_KP188557.1:30-88 AC DENV4_KP188557.1:30-88
+#=GS DENV4_KP188557.1:30-88 DE DENV4_KP188557.1:30-88
+DENV4_MK614088.1:32-90 agucaggccacu-------ugugccacggcucg---agcaaaccgugcugccuguagcuccgccaaua-
+#=GS DENV4_MK614088.1:32-90 AC DENV4_MK614088.1:32-90
+#=GS DENV4_MK614088.1:32-90 DE DENV4_MK614088.1:32-90
+DENV4_LC410196.1:32-90 agucaggccacu-------cgugccacggcuug---agcaaaccgugcugccuguagcuccgccaaua-
+#=GS DENV4_LC410196.1:32-90 AC DENV4_LC410196.1:32-90
+#=GS DENV4_LC410196.1:32-90 DE DENV4_LC410196.1:32-90
+DENV4_JN819409.1:30-88 agucaggccacu-------ugugccacgguuug---agcaaaccgugcugccuguagcuccgccaaca-
+#=GS DENV4_JN819409.1:30-88 AC DENV4_JN819409.1:30-88
+#=GS DENV4_JN819409.1:30-88 DE DENV4_JN819409.1:30-88
+DENV4_MN449003.1:32-90 agucaggccacu-------ugugccacggcuug---agcaaaccgugcugccuguagcuccgccaaca-
+#=GS DENV4_MN449003.1:32-90 AC DENV4_MN449003.1:32-90
+#=GS DENV4_MN449003.1:32-90 DE DENV4_MN449003.1:32-90
+DENV4_OR389350.1:30-88 agucaggccacu-------ugugccacggcuug---aguaaaccgugcugccuguagcuccgccaaca-
+#=GS DENV4_OR389350.1:30-88 AC DENV4_OR389350.1:30-88
+#=GS DENV4_OR389350.1:30-88 DE DENV4_OR389350.1:30-88
+DENV4_KY672960.1:32-90 agucaggccacc-------ugugccacggcuug---agcaaaccgugcugccuguagcuccgccaaua-
+#=GS DENV4_KY672960.1:32-90 AC DENV4_KY672960.1:32-90
+#=GS DENV4_KY672960.1:32-90 DE DENV4_KY672960.1:32-90
+DENV4_JN638570.1:32-90 agucaggccacc-------ugugccacggcuug---agcaaaccgugcugccuguagcuccgccaaca-
+#=GS DENV4_JN638570.1:32-90 AC DENV4_JN638570.1:32-90
+#=GS DENV4_JN638570.1:32-90 DE DENV4_JN638570.1:32-90
+DENV4_OR162320.1:30-88 agucaggccacu-------ugugccacggucug---agcaaaccgugcugccuguagcuccgccaaua-
+#=GS DENV4_OR162320.1:30-88 AC DENV4_OR162320.1:30-88
+#=GS DENV4_OR162320.1:30-88 DE DENV4_OR162320.1:30-88
+DENV4_GQ199885.1:30-88 agucaggccacu-------ugugccacgguuug---agcaaaccgugcugccuguagcuccgccaaua-
+#=GS DENV4_GQ199885.1:30-88 AC DENV4_GQ199885.1:30-88
+#=GS DENV4_GQ199885.1:30-88 DE DENV4_GQ199885.1:30-88
+DENV4_OR389346.1:30-88 agucaggccacu-------ugugccacgguuug---agcaaacugugcugccuguagcuccgccaaua-
+#=GS DENV4_OR389346.1:30-88 AC DENV4_OR389346.1:30-88
+#=GS DENV4_OR389346.1:30-88 DE DENV4_OR389346.1:30-88
+DENV4_OQ821645.1:30-88 agucaggccacu-------ugugccacgguuug---agcaagccgugcugccuguagcuccgccaaua-
+#=GS DENV4_OQ821645.1:30-88 AC DENV4_OQ821645.1:30-88
+#=GS DENV4_OQ821645.1:30-88 DE DENV4_OQ821645.1:30-88
+DENV4_OQ821646.1:30-88 agucaggccacu-------ugugccacgguuug---agcaagccgugcugccuguagcuccgccaaca-
+#=GS DENV4_OQ821646.1:30-88 AC DENV4_OQ821646.1:30-88
+#=GS DENV4_OQ821646.1:30-88 DE DENV4_OQ821646.1:30-88
+DENV4_FJ196850.1:30-88 agucaggccacu-------ugugccacggcugg---agcaaaccgugcugccuguagcuccgccaaua-
+#=GS DENV4_FJ196850.1:30-88 AC DENV4_FJ196850.1:30-88
+#=GS DENV4_FJ196850.1:30-88 DE DENV4_FJ196850.1:30-88
+DENV4_LC410202.1:32-90 agucaggccacu-------ugugccacggcuug---agcaaaccgugcagccuguagcuccgccaaua-
+#=GS DENV4_LC410202.1:32-90 AC DENV4_LC410202.1:32-90
+#=GS DENV4_LC410202.1:32-90 DE DENV4_LC410202.1:32-90
+DENV4_GQ199882.1:30-88 agucaggccacg-------ugugccacgguuug---agcaaaccgugcugccuguagcuccgccaaua-
+#=GS DENV4_GQ199882.1:30-88 AC DENV4_GQ199882.1:30-88
+#=GS DENV4_GQ199882.1:30-88 DE DENV4_GQ199882.1:30-88
+DENV4_OQ427025.1:32-88 agucaggccacu-------ugugccacggcuug---agcaaaccgugcugccuguagcuccgccag---
+#=GS DENV4_OQ427025.1:32-88 AC DENV4_OQ427025.1:32-88
+#=GS DENV4_OQ427025.1:32-88 DE DENV4_OQ427025.1:32-88
+WESSV_EU707555.1:160-222 agucagcccaucauuu---gaugccauggcuaagcugugaggccaugcuggcugggacagccgcg----
+#=GS WESSV_EU707555.1:160-222 AC WESSV_EU707555.1:160-222
+#=GS WESSV_EU707555.1:160-222 DE WESSV_EU707555.1:160-222
+WESSV_ON157055.1:160-222 agucagcccaucauau---gaugccauggcuaagcugugaggccaugcuggcugggacagccgcg----
+#=GS WESSV_ON157055.1:160-222 AC WESSV_ON157055.1:160-222
+#=GS WESSV_ON157055.1:160-222 DE WESSV_ON157055.1:160-222
+WESSV_JN226796.1:160-222 agucagcccaucaugu---gaugccauggcuaagcugugaggccaugcuggcugggacagccgcg----
+#=GS WESSV_JN226796.1:160-222 AC WESSV_JN226796.1:160-222
+#=GS WESSV_JN226796.1:160-222 DE WESSV_JN226796.1:160-222
+BANV_AY326407.1:151-207 agucaggccacaa------agugccagggguaagcuguaagccccugcugucuguaucagcu-------
+#=GS BANV_AY326407.1:151-207 AC BANV_AY326407.1:151-207
+#=GS BANV_AY326407.1:151-207 DE BANV_AY326407.1:151-207
+UGSV_AY326409.1:47-103 agucaggccacaa------agugcuacagauaagcuguaaaucuguacugucuguuccagca-------
+#=GS UGSV_AY326409.1:47-103 AC UGSV_AY326409.1:47-103
+#=GS UGSV_AY326409.1:47-103 DE UGSV_AY326409.1:47-103
+UGSV_AY326410.1:47-104 agucaggccgcca------agugcuacgauauaacu-gaaaucuguacugucuguuccacca-------
+#=GS UGSV_AY326410.1:47-104 AC UGSV_AY326410.1:47-104
+#=GS UGSV_AY326410.1:47-104 DE UGSV_AY326410.1:47-104
+//

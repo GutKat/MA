@@ -1,0 +1,12 @@
+# STOCKHOLM 1.0
+#=GF SS RNAalifold prediction
+BAGV_MW463911.2:117-180  agucaggccggauaacauguccgccaccggauguuggaugacggugcugccugcaguccaacc
+BAGV_MF380427.1:117-180  agucaggccggauuacauguccgccaccggauguuggaugacggugcugccugcaguccaacc
+BAGV_MF380429.1:117-180  agucaggccggacuacauguccgccaccggauguuggaugacggugcugccugcaguccaacc
+BAGV_LC318701.1:117-180  agucaggccggauuacguguccgccaccggauguuggaugacggugcugccugcaguccaacc
+BAGV_KR108244.1:117-180  agucaggccggacuacguguccgccaccggauguuggaugacggugcugccugcaguccaacc
+BAGV_MF380426.1:117-180  agucaggccugauuucaugugagccaccggauguuggaugacggugcugccugcaguccaacc
+BAGV_LC730845.1:118-181  agucagaccggacuacguguccgccaccggauguuggaugacggugcugccugcaguccaacc
+#=GC RF                  AGUCAGGCCGGAYUACRUGUCCGCCACCGGAUGUUGGAUGACGGUGCUGCCUGCAGUCCAACC
+#=GC SS_cons             ...((((((((((.....))))).(((((............)))))..)))))..........
+//

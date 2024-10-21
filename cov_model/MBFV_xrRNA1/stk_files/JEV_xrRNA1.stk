@@ -1,0 +1,38 @@
+# STOCKHOLM 1.0
+#=GF SS RNAalifold prediction
+JEV_ON875960.1:49-110  agucaggccagcaaaagcugccaccgaauacugaguagacggugcugccugcgucucaguc
+JEV_JN381839.1:48-109  agucaggccagcaaaagcugccaccggauacugaguagacggugcugccugcgucucaguc
+JEV_JF915894.1:70-131  agucaggccgacguaagucgccaccggaugcugaguagacggugcugccugcgccucagcc
+JEV_AF098736.1:63-124  agucaggccagcaaaagcugccaccggauacugggcagacggugcugccugcgucucaguc
+JEV_JN381833.1:49-110  agucaggccagcaaaagcugccaccggauacugaguagacggugcugccugcgccucaguc
+JEV_OP904182.1:56-117  agucaggccagcguuagcugccaccggauacuggguagacggugcugccugcaacucaguc
+JEV_KF667327.1:49-110  agucaggccagcaauagcugccaccggauacugaguagacggugcugccugcgccucaguc
+JEV_KF667318.1:49-110  agucaggccagcaacagcugccaccggauacugaguagacggugcugccugcgccucaguc
+JEV_JF706268.1:49-110  agucaggccagcaaaagcugccaccggacacugaguagacggugcugccugcgccucaguc
+JEV_HM596272.1:75-136  agucaggccgacgcgagucgccaccggaagcugaguagacggugcugccugcgccucagcc
+JEV_LC579814.1:56-117  agucaggccagcguuagcugccaccggaaacuggguagacggugcugccugcaacucaguc
+JEV_KR908702.1:49-110  agucaggccaacaaaagcugccaccggacacugaguagacggugcugccugcgucucaguu
+JEV_EU880214.1:49-109  agucaggccagca-aagcugccaccggauacugaguagacggugcugccugcgucucaguu
+JEV_KU351668.1:49-110  agucaggccaguaaaagcugccaccggauacugaguagacggugcugccugcgucucaguu
+JEV_AB920399.1:40-101  agucaggccagcaaaagcugccaccggauacugaguagacggugcugccugcgucucaguu
+JEV_MH184575.1:49-110  agucaggccagcaaaugcugccaccggauacugaguagacggugcugccugcgucucaguu
+JEV_EU429297.1:49-110  agucaggccagcaaaagcugccaccggacacugaguagacggugcugccugcgucucaguu
+JEV_MT253733.1:51-111  agucaggccagca-aagcugccaccggauacuggguagacggugcugccugcgucucaguc
+JEV_AY585242.1:54-115  agucaggccagcaaaagcugccaccggauacuggguagacggugcugccugcgucucaguc
+JEV_AY316157.1:49-110  agucaggccagcaaaagcugccaccgaauacugaguagacggugcugccugccucucaguu
+JEV_KT447437.1:63-124  agucaggccagcaaaagcugccacuggauacuggguagacagugcugccugcgucucaguc
+JEV_L78128.1:38-99     agucaggccagcaaaagcugccaccggauacuggguagacggugcugccugcgccucaguc
+JEV_JF706284.1:63-124  agucaggccagcaaaagcugccaccggauacuggguagucggugcugccugcgucucaguc
+JEV_KR265316.1:63-124  agucaggccagcaaaagcugccaccggauacuggguagacggugcugccugcgucucacuc
+JEV_ON804798.1:51-112  agucaggccagcaacagcugccaccggauacuggguagacggugcugccugcgccucaguc
+JEV_JN381849.1:49-110  agucaggccagcaaaagcugccaccggauucuggguagacggugcugccugcgucucaguu
+JEV_KF667322.1:49-110  agucaggccagcaaaagcugccaccggauacuggguagacggugcugccugcgucucaguu
+JEV_EU693899.1:49-109  agucaggccagca-aagcugccaccggacacuggguagacggugcugccugcgucucaguu
+JEV_MT253737.1:50-111  agucaggccagcaaacgcugccaccggauacuggguagacggugcugccugcgucucaguu
+JEV_KU508409.1:49-110  agucaggccaguaaaagcugccaccggauacugaguagacugugcugccugcgucucaguu
+JEV_ON804799.1:51-112  agucaggccagcaaaagcugccaccggauacuggguagacggugcugccugcgccucaguu
+JEV_AB569988.2:63-124  agucaggccagcaaaagcugccaccggauacuggguagacggugcugucugcgucucaguc
+JEV_AY508813.1:63-124  agucaggccagcaaaagcugccaccggauacuggguagacggugcugucugcgucccaguc
+#=GC RF                AGUCAGGCCAGCAaAAGCUGCCACCGGAUACUGRGUAGACGGUGCUGCCUGCGUCUCAGUY
+#=GC SS_cons           ...(((((((((....)))).(((((.............)))))..)))))..........
+//
