@@ -33,6 +33,7 @@ The RNA design approaches are besed on two different flavivirus subfamilies: **M
       python create_sample_wo_sample.py -o csv_file.csv
     ```
   where the -o defines the path to the output csv file, where the sequences are stored.
+  
   There is also a `leader_design` folder for creating a leader sequence needed for experimental testing.
 
 ### 2. Covariance Model
