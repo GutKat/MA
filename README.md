@@ -18,8 +18,6 @@ The RNA design approaches are besed on two different flavivirus subfamilies: **M
     ```bash
     python design.py
     ```
-    This starts the design process and outputs a seqeuence.
-    This will generate the designed RNA sequence as output.
   - `utils.py`: Contains important functions for the design process, like `mc_optimize()`.
   - `ir_utils.py`: Contains functions for setting up the Infrared model for the RNA process.
 
@@ -58,3 +56,5 @@ To run the design process for the RNA sequences, navigate to the appropriate des
 
 ```bash
 python design.py
+```
+This starts the design process and outputs a seqeuence.
