@@ -29,13 +29,13 @@ The RNA design approaches are besed on two different flavivirus subfamilies: **M
   ```bash
     python create_sample.py -o path_to_folder
   ```
-where the -o defines the path to the output folder and the sequences are stored as 'designs_before_after_opt_i.csv', where i is replaced by a number.
-
-  ```bash
-    python create_sample_wo_sample.py -o csv_file.csv
-  ```
-where the -o defines the path to the output csv file, where the sequences are stored.
-There is also a `leader_design` folder for creating a leader sequence needed for experimental testing.
+  where the -o defines the path to the output folder and the sequences are stored as 'designs_before_after_opt_i.csv', where i is replaced by a number.
+  
+    ```bash
+      python create_sample_wo_sample.py -o csv_file.csv
+    ```
+  where the -o defines the path to the output csv file, where the sequences are stored.
+  There is also a `leader_design` folder for creating a leader sequence needed for experimental testing.
 
 ### 2. Covariance Model
 - **Path:** `cov_model/MBFV` and `cov_model/TBFV`
@@ -44,7 +44,7 @@ There is also a `leader_design` folder for creating a leader sequence needed for
 ### 3. Thesis Analysis Notebooks
 - **Path:** `thesis`
 - **Description:** This folder contains key Jupyter notebooks used for different types of analysis in the thesis.
-  - `diversity_analysis.ipynb`: Analyzes the diversity of the RNA sequences.
+  - `diversity_analysis.ipynb`: Analyzes the diversity of the RNA sequences of the difference model approaches (Infrared vs. Covariance model)
   - `sequence_analysis.ipynb`: Analyzes the designed RNA sequences.
   - This folder also contains important images used in the thesis.
 
