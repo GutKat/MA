@@ -1,0 +1,15 @@
+# STEM = all base pairs in the stem
+# INTERIOR LOOP = all nt that are not base paired within the stem
+# HAIRPIN LOOP = all nt that are not base paired, excluding the closing base pair
+# BULGE LEFT / RIGHT = all nt that are unpaired, left meaning near 5' (begin), right meaning near 3' (end)
+# MULTI LOOP = all nt that are unpaired, including nt of pseudoknots, excluding closing base pairs, between Stem I and Stem II, between Stem II and Stem III, between Stem III and Stem I
+# NT until PK1 = all nt which are in no structure until the first pseudoknot
+# NT between PK1 and PK2 = all nt between the first and second pseudoknot
+# number of Sequence = number of sequences used for MSA
+# NEGV xrRNA2 truncated at 3'
+# 
+# xrRNA-no: xrRNA 1 or 2
+# Stems: stemA, stemB, stemG, interior loop: ilA, bulge left/right: bl/R, hairpin loop: HLA, HLB, HLG, multi-loop: mlA/II, mlB/III, mlG/I, mlA/III
+# until PK1: uPK1, between PK1 and PK2, PK1bPK2, Pseudoknots present: PKS?, number of sequences: numSeqs
+# name,xrRNA-no,stemA,ilA,blA,brA,stemB,hlB,blB,brB,stemGI,hlG,blG,BRG,mlA/B,mlB/G,mlG/I,mlA/G,uPK1,PK1bPK2,PKs?,numSeqs
+# stemA,stemB,hlB,stemG,hlG,bPK,n_PK,b_PK,a_PK,seq_ml,seq_PKA,seq_PKB

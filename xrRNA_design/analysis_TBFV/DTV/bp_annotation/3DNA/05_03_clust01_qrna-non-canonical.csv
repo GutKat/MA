@@ -1,0 +1,38 @@
+Base-pair;Interaction type;Canonical;Saenger;Leontis-Westhof;BPh;BR;Represented in dot-bracket;Originated in helix
+A.g12 - A.a35;base - base;N;n/a;W/H cis;UNKNOWN;UNKNOWN;N;N
+A.g13 - A.a35;base - base;N;n/a;S/H cis;UNKNOWN;UNKNOWN;N;N
+A.g13 - A.c36;base - base;N;n/a;S/H cis;UNKNOWN;UNKNOWN;N;N
+A.g13 - A.g53;base - base;N;n/a;n/a;UNKNOWN;UNKNOWN;N;N
+A.g13 - A.a54;base - base;N;n/a;W/W cis;UNKNOWN;UNKNOWN;Y;Y
+A.c14 - A.c37;base - base;N;n/a;W/H cis;UNKNOWN;UNKNOWN;N;N
+A.c20 - A.a77;base - base;N;n/a;S/W cis;UNKNOWN;UNKNOWN;N;N
+A.g21 - A.a75;base - base;N;XI;S/H trans;UNKNOWN;UNKNOWN;N;N
+A.g21 - A.a76;base - base;N;XI;S/H trans;UNKNOWN;UNKNOWN;N;N
+A.c22 - A.g27;base - base;N;n/a;H/W trans;UNKNOWN;UNKNOWN;N;N
+A.a23 - A.c30;base - base;N;n/a;W/W cis;UNKNOWN;UNKNOWN;Y;Y
+A.a23 - A.u74;base - base;N;n/a;S/W cis;UNKNOWN;UNKNOWN;N;N
+A.a24 - A.a29;base - base;N;n/a;W/W cis;UNKNOWN;UNKNOWN;Y;Y
+A.a24 - A.u73;base - base;N;n/a;S/W cis;UNKNOWN;UNKNOWN;N;N
+A.u25 - A.a28;base - base;N;n/a;W/W trans;UNKNOWN;UNKNOWN;Y;Y
+A.u25 - A.a68;base - base;N;n/a;H/W trans;UNKNOWN;UNKNOWN;N;N
+A.u25 - A.a70;base - base;N;n/a;W/W trans;UNKNOWN;UNKNOWN;N;N
+A.u25 - A.a71;base - base;N;n/a;n/a;UNKNOWN;UNKNOWN;N;N
+A.u26 - A.a28;base - base;N;n/a;S/W trans;UNKNOWN;UNKNOWN;N;N
+A.u26 - A.a29;base - base;N;n/a;S/W trans;UNKNOWN;UNKNOWN;N;N
+A.u26 - A.a72;base - base;N;n/a;W/W trans;UNKNOWN;UNKNOWN;N;N
+A.g27 - A.c30;base - base;N;n/a;S/H cis;UNKNOWN;UNKNOWN;N;N
+A.g27 - A.g31;base - base;N;VI;W/H cis;UNKNOWN;UNKNOWN;N;N
+A.a29 - A.a71;base - base;N;n/a;S/H trans;UNKNOWN;UNKNOWN;N;N
+A.c30 - A.u73;base - base;N;n/a;S/W trans;UNKNOWN;UNKNOWN;N;N
+A.c30 - A.u74;base - base;N;n/a;n/a;UNKNOWN;UNKNOWN;N;N
+A.g33 - A.a77;base - base;N;n/a;S/H cis;UNKNOWN;UNKNOWN;N;N
+A.g34 - A.a78;base - base;N;n/a;S/H cis;UNKNOWN;UNKNOWN;N;N
+A.a35 - A.a54;base - base;N;n/a;W/W cis;UNKNOWN;UNKNOWN;N;N
+A.a42 - A.u46;base - base;N;n/a;W/H trans;UNKNOWN;UNKNOWN;N;N
+A.u43 - A.g45;base - base;N;n/a;W/H trans;UNKNOWN;UNKNOWN;N;N
+A.a48 - A.c83;base - base;N;n/a;W/W trans;UNKNOWN;UNKNOWN;Y;Y
+A.a48 - A.g84;base - base;N;XI;H/S trans;UNKNOWN;UNKNOWN;N;N
+A.a6 - A.u60;base - base (1H);N;n/a;n/a;UNKNOWN;UNKNOWN;N;?
+A.g7 - A.a59;base - base (1H);N;n/a;n/a;UNKNOWN;UNKNOWN;N;?
+A.c14 - A.g52;base - base (1H);N;n/a;n/a;UNKNOWN;UNKNOWN;N;?
+A.u26 - A.a68;base - base (1H);N;n/a;n/a;UNKNOWN;UNKNOWN;N;?

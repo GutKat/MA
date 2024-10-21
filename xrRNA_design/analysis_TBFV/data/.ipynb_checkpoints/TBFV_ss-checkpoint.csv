@@ -1,0 +1,46 @@
+# STEM = all base pairs in the stem
+# INTERIOR LOOP = all nt that are not base paired within the stem
+# HAIRPIN LOOP = all nt that are not base paired, excluding the closing base pair
+# BULGE LEFT / RIGHT = all nt that are unpaired, left meaning near 5' (begin), right meaning near 3' (end)
+# MULTI LOOP = all nt that are unpaired, including nt of pseudoknots, excluding closing base pairs, between Stem I and Stem II, between Stem II and Stem III, between Stem III and Stem I
+# NT until PK1 = all nt which are in no structure until the first pseudoknot
+# NT between PK1 and PK2 = all nt between the first and second pseudoknot
+# number of Sequence = number of sequences used for MSA
+# NEGV xrRNA2 truncated at 3'
+# 
+# xrRNA-no: xrRNA 1 or 2
+# Stems: ST-I, ST-II, ST-III, interior loop: IL, bulge left/right: BL/R, hairpin loop: HL-I, HL-II, HL-III, multi-loop: ML-I/II, ML-II/III, ML-III/I, ML-I/III
+# until PK1: uPK1, between PK1 and PK2, PK1bPK2, Pseudoknots present: PKS?, number of sequences: numSeqs
+name,xrRNA-no,stemA,ilA,blA,brA,stemB,hlB,blB,brB,stemG,hlG,blG,brG,mlA/B,mlB/G,mlG/I,mlA/G,uPK1,PK1bPK2,PKs?,numSeqs,len
+ALKV,1,11,4,-,-,4,4,-,-,5,10,-,-,6,1,1,-,8,-,1+2,2,84
+DTV,1,12,-,-,-,3,9,-,-,4,11,-,-,6,1,1,-,12,2,1+2,2,90
+DTV,2,10,-,-,1,3,3,-,-,5,10,-,-,6,1,1,-,11,-,1+2,2,-
+GGV,1,12,-,-,-,3,7,1,-,7,4,-,-,6,1,1,-,15,2,1+2,2,88
+GGV,2,12,-,1,2,7,4,-,-,4,11,-,-,6,1,1,-,11,2,1+2,2,-
+KFDV,1,12,2,-,-,4,4,-,-,5,10,-,-,6,1,1,-,8,2,1+2,4,84
+KSIV,1,14,2,-,-,4,3,-,-,4,12,-,-,6,1,1,-,8,2,1+2,3,86
+KSIV,2,13,3+2,-,-,4,9,-,-,5,10,-,-,6,1,1,-,7,-,1+2,3,-
+LGTV,1,12,2+2,-,-,5,3,-,-,5,10,-,-,6,1,1,-,11,-,1+2,2,89
+LGTV,2,14,-,-,1,5,7,-,-,5,10,-,-,6,1,1,-,8,-,1+2,2,-
+LIV,1,12,2,1,-,3,4,-,-,4,12,-,-,6,1,1,-,11,-,1+2,16,85
+LIV,2,13,-,1,1,5,7,-,-,5,10,-,-,6,1,1,-,13,-,2,16,-
+MPFV,1,8,-,-,1,2,7,-,-,7,5,1,-,3,1,1,-,9,-,2,-,-
+MPFV,2,8,-,-,1,2,7,-,-,7,5,1,-,3,1,1,-,9,-,2,-,-
+MPFV,3,8,-,-,1,2,7,-,-,7,5,1,-,3,1,1,-,9,-,2,-,-
+NEGV,1,13,-,1,-,3,4,-,-,4,12,-,-,6,1,1,-,11,-,1+2,1,85
+NEGV,2,13,2,-,-,5,7,-,-,5,10,-,-,6,1,1,-,7,-,1,-,-
+OHFV,1,12,2,2,-,3,4,-,-,4,12,-,-,6,1,1,-,11,-,1+2,11,86
+OHFV,2,11,4,-,-,5,7,-,-,5,10,-,-,6,1,1,-,9,-,1+2,8,-
+POWV,1,12,-,-,-,3,9,-,-,4,11,-,-,6,1,1,-,14,2,1+2,23,89
+POWV,2,11,-,-,1,3,3,-,-,5,10,-,-,6,1,1,-,13,-,1+2,45,-
+SGEV,1,13,2,1,-,3,4,-,-,4,12,-,-,6,1,1,-,10,-,1+2,1,86
+SGEV,2,13,-,1,1,5,7,-,-,5,10,-,-,6,1,1,-,7,2,1+2,1,-
+SREV,1,10,4+2,-,-,-,-,-,-,6,8,-,-,-,-,1,11,6,2,1+2,1,-
+TBEV,1,11,2+2,1,-,3,4,-,-,4,12,-,-,6,1,1,-,11,-,1+2,65,85
+TBEV,2,13,-,1,1,5,7,-,-,4,13,-,-,6,1,1,-,9,2,1+2,97,-
+TYUV,1,14,-,-,-,-,-,-,-,6,8,-,-,-,-,1,11,5,2,1+2,-,-
+XiFV,1,6,-,-,-,3,6,-,-,4,9,-,-,2,1,1,-,12,-,2,1,-
+XiFV,2,6,-,-,-,3,6,-,-,4,9,-,-,2,1,1,-,12,-,2,1,-
+XiFV,3,6,-,-,-,3,6,-,-,4,9,-,-,2,1,1,-,12,-,2,1,-
+XiFV,4,6,-,-,-,3,6,-,-,4,9,-,-,2,1,1,-,12,-,2,1,-
+XiFV,5,6,-,-,-,3,6,-,-,4,9,-,-,2,1,1,-,12,-,2,1,-

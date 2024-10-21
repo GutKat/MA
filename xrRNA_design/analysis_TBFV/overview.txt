@@ -1,0 +1,44 @@
+       012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890
+       0        10         20       30        40        50        60        70        80        90       100       110
+	XXXXXXXXXcXXXXXXXXXXXcggcaXcXcXcXaXugagaXXXgXgacgggaXaXXuggucgXXcccgacgXaXcXXXXXXXXXXXXaaXcXaXXuuXgugagaccXXXXg		/Users/katringutenbrunner/Desktop/MA/code/DENIS/TBFV/data/TBFV_xrRNA1_all/TBFV_xrRNA1_mafft.aln
+	............(((((((((((......(((...........))).((((.(..........))))).))))).))))))..............................    	/Users/katringutenbrunner/Desktop/MA/code/DENIS/TBFV/data/TBFV_xrRNA1_all/alifold_out/alifold.out
+PK1	................................((...(((((..............................................).....)))).))..........		/Users/katringutenbrunner/Desktop/MA/code/DENIS/TBFV/data/TBFV_xrRNA1_all/alifold_out_pk_test/alifold.out
+PK2     .........................................................((((.........................................)))).....  	/Users/katringutenbrunner/Desktop/MA/code/DENIS/TBFV/data/TBFV_xrRNA1_all/alifold_out_pk2/alifold.out
+ML                            (......(               ).(                   ).)                                                
+ST-I	            (((((((((((----------------------------------------------))))).))))))                                                
+ST-II				     (((-----------)))                                                                
+ST-III	 					       ((((.(----------)))))                                                  
+
+
+ML = ['GGCAGCGC', 'GAC', 'GAC']
+pk1 = ['GCGC', 'CGCG']
+
+pk1_bp = [(38, 96, 'GU'), (40, 94, 'GU'), (39, 95, 'AU'), (41, 88, 'UA'), (37, 97, 'AU'), (32, 100, 'CG'), (33, 99, 'AU')]  #/Users/katringutenbrunner/Desktop/MA/code/DENIS/TBFV/data/TBFV_xrRNA1_all/alifold_out_pk_test/alifold.out
+pk2_bp = [(59, 103, 'UA'), (60, 102, 'CG'), (58, 104, 'GC'), (57, 105, 'GC')]                                               #/Users/katringutenbrunner/Desktop/MA/code/DENIS/TBFV/data/TBFV_xrRNA1_all/alifold_out_pk2/alifold.out
+
+pk1 = '................................((...(((((..............................................).....)))).))..........'     #/Users/katringutenbrunner/Desktop/MA/code/DENIS/TBFV/data/TBFV_xrRNA1_all/alifold_out_pk_test/alifold.out
+pk2 = '.........................................................((((.........................................)))).....'     # /Users/katringutenbrunner/Desktop/MA/code/DENIS/TBFV/data/TBFV_xrRNA1_all/alifold_out_pk2/alifold.out
+
+important stuff:
+pk1 within ST-II / HL-II
+pk2 within ST-III / HL-III
+
+ST-III and HL-III    -> negative correlation	-0.97
+ST-III and III 	  -> negative correlation	-0.93
+I and II	       -> negative correlation	-0.90
+IL-I and HL-II	  -> negative correlation	-0.70
+
+III and HL-III	  -> positive correlation	 0.99
+II and HL-II	       -> positive correlation	 0.95
+HL-II and uPK        -> positive correlation	 0.70
+
+interpretations:
+long hairpin means short stems in II and III
+long first structure means short second structure
+if structure long, hairpin is long
+if HL II is long, also many nt until PK1
+
+I mostly dependent on IL-I
+II mostly dependent on HL-II
+III mostly dependent on HL-III (also of ST-III)
+so long structures are caused by the internal loops of hairpin loops

@@ -1,0 +1,14 @@
+
+
+target structure:             (((((((..(((((((......(((((.........))))).(((((((..............))))))).)))))))..)))))))..........................
+sequence:                     GACGAG-C-GACCGUGGCAGCACCUUGGACA-----CAAGGACCGUGACUC----GGUC-U--GUCAUGGACACGGUCU--CUCGUCAAAAGAAAA------UGU---GACC-
+cullled structure:            ((((((.(((((((......(((((....))))).(((((((.......))))))).))))))).))))))................
+cullled sequence:             GACGAGCGACCGUGGCAGCACCUUGGACACAAGGACCGUGACUCGGUCUGUCAUGGACACGGUCUCUCGUCAAAAGAAAAUGUGACC
+
+RNAFold predictions
+folding:                      ((((((.(((((((......(((((....))))).(((((((.......))))))).))))))).))))))................
+MFE:                          -39.20
+length:                       87
+energy:                       -39.20
+frequency:                    0.9401
+objective funtion:            0.9401

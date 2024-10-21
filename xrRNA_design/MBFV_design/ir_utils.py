@@ -27,116 +27,6 @@ extended_iupac_nucleotides = {
     '.': '-'
 }
 
-
-def iupacvalues(symbol):
-    return [ rna.nucleotide_to_value(x) for x in extended_iupac_nucleotides[symbol] ]
-
-# pairs     = [(A, U), (C, G), (G, C), (G, U), (U, A), (U, G)]
-_bpcomp_tab = [(0, 3), (1, 2), (2, 1), (2, 3), (3, 0), (3, 2)]
-_bpcomp_tab_gap = [(0, 3), (1, 2), (2, 1), (2, 3), (3, 0), (3, 2), (4,4)]
-
-
-########## Start - BP/NotBP/Gap/NotGap ###################
-ir.def_function_class( 
-    'NotGap',
-    lambda i: [i],
-    lambda x: 1 if x != 4 else 0,
-    "ir_utils"
-) 
-
-ir.def_constraint_class( 
-    'BPComp',
-    lambda i,j: [i,j],
-    lambda x,y: 1 if (x,y) in _bpcomp_tab_gap else 0,
-    "ir_utils"
-) 
-
-ir.def_constraint_class( 
-    'BPNotComp',
-    lambda i,j: [i,j],
-    lambda x,y: 0 if (x,y) in _bpcomp_tab_gap else 1,
-    "ir_utils"
-)
-
-ir.def_function_class( 
-    'Gap',
-    lambda i: [i],
-    lambda x: 1 if x == 4 else 0,
-    "ir_utils"
-)
-ir.def_constraint_class(
-    'GapsRight',
-    lambda i: [i,i+1],
-    lambda left,right: 0 if left == 4 and right != 4 else 1,
-    "ir_utils"
-    # NNN-- True
-    # --NNN False
-)
-ir.def_constraint_class(
-    'GapsLeft',
-    lambda i: [i,i+1],
-    lambda left,right: 0 if left != 4 and right == 4 else 1,
-    "ir_utils"
-    # --NNN True
-    # NNN-- False
-)
-########## End - BP/NotBP/Gap/NotGap ###################
-
-
-########## START - Y for counting NT over possible gaps ###################
-ir.def_constraint_class(
-    'Is',
-    lambda i, A, var, name: var([(name,i-1)]),
-    lambda y, A: 1 if y == A else 0,
-    "ir_utils"
-)
-ir.def_constraint_class(
-    'InRange',
-    lambda i, A, B, var, name: var([(name,i-1)]),
-    lambda y, A, B: 1 if A <= y <= B else 0,
-    "ir_utils"
-)
-ir.def_constraint_class(
-    'IncrementIfNotGap',
-    lambda x, pos, var, name: [*var([('X',x)]), *var([(name,pos-1), (name,pos)])],
-    lambda nt, y0, y1: 1 if (nt != 4 and y0 + 1 == y1) or (nt == 4 and y0 == y1) else 0,
-    "ir_utils"
-)
-ir.def_constraint_class(
-    'SmallerThan',
-    lambda i, A, var, name: var([(name,i-1)]),
-    lambda z, A: 1 if z <= A else 0,
-    "ir_utils"
-)
-ir.def_constraint_class(
-    'DiffInRange', 
-    lambda pos_i, pos_j, A, B, var, name:  var([(name, pos_i), (name, pos_j)]),
-    lambda y0, y1, A, B: 1 if A<= (y1-y0) <= B else 0,
-    "ir_utils"
-)
-########## END - Y for counting NT over possible gaps ###################
-
-
-
-########## Start - Energy class ###################
-ir.def_function_class(
-    'BPEnergy',
-    lambda i, j, is_terminal: [i, j],
-    lambda x, y, is_terminal: bpenergy(x, y, is_terminal),
-    "ir_utils"
-)
-########## End - Energy class ###################
-
-
-
-def bpenergy(x, y, is_terminal=False):
-    if x == 4 or y == 4:
-        return 0
-    bpidx = bpindex_tab[x][y]
-    return (params_bp[bpidx//2 + (3 if is_terminal else 0)]
-            if bpidx >= 0 else -math.inf)
-
-
 params_bp = [
     -0.52309,
     -2.10208,
@@ -172,9 +62,137 @@ bpindex_tab = [[-1, -1, -1, 0],
                [-1, 3, -1, 4],
                [1, -1, 5, -1]]
 
+# pairs     = [(A, U), (C, G), (G, C), (G, U), (U, A), (U, G)]
+_bpcomp_tab = [(0, 3), (1, 2), (2, 1), (2, 3), (3, 0), (3, 2)]
+_bpcomp_tab_gap = [(0, 3), (1, 2), (2, 1), (2, 3), (3, 0), (3, 2), (4,4)]
 
-def create_model(model_input):
 
+def iupacvalues(symbol):
+    return [ rna.nucleotide_to_value(x) for x in extended_iupac_nucleotides[symbol] ]
+
+
+def bpenergy(x, y, is_terminal=False):
+    if x == 4 or y == 4:
+        return 0
+    bpidx = bpindex_tab[x][y]
+    return (params_bp[bpidx//2 + (3 if is_terminal else 0)]
+            if bpidx >= 0 else -math.inf)
+
+
+########## Start - BP/NotBP/Gap/NotGap ###################
+
+ir.def_function_class( 
+    'NotGap',
+    lambda i: [i],
+    lambda x: 1 if x != 4 else 0,
+    "ir_utils"
+) 
+
+ir.def_constraint_class( 
+    'BPComp',
+    lambda i,j: [i,j],
+    lambda x,y: 1 if (x,y) in _bpcomp_tab_gap else 0,
+    "ir_utils"
+) 
+
+ir.def_constraint_class( 
+    'BPNotComp',
+    lambda i,j: [i,j],
+    lambda x,y: 0 if (x,y) in _bpcomp_tab_gap else 1,
+    "ir_utils"
+)
+
+ir.def_function_class( 
+    'Gap',
+    lambda i: [i],
+    lambda x: 1 if x == 4 else 0,
+    "ir_utils"
+)
+
+ir.def_constraint_class(
+    'GapsRight',
+    lambda i: [i,i+1],
+    lambda left,right: 0 if left == 4 and right != 4 else 1,
+    "ir_utils"
+    # NNN-- True
+    # --NNN False
+)
+
+ir.def_constraint_class(
+    'GapsLeft',
+    lambda i: [i,i+1],
+    lambda left,right: 0 if left != 4 and right == 4 else 1,
+    "ir_utils"
+    # --NNN True
+    # NNN-- False
+)
+
+########## End - BP/NotBP/Gap/NotGap ###################
+
+
+########## START - Y for counting NT over possible gaps ###################
+
+ir.def_constraint_class(
+    'Is',
+    lambda i, A, var, name: var([(name,i-1)]),
+    lambda y, A: 1 if y == A else 0,
+    "ir_utils"
+)
+
+ir.def_constraint_class(
+    'InRange',
+    lambda i, A, B, var, name: var([(name,i-1)]),
+    lambda y, A, B: 1 if A <= y <= B else 0,
+    "ir_utils"
+)
+
+ir.def_constraint_class(
+    'IncrementIfNotGap',
+    lambda x, pos, var, name: [*var([('X',x)]), *var([(name,pos-1), (name,pos)])],
+    lambda nt, y0, y1: 1 if (nt != 4 and y0 + 1 == y1) or (nt == 4 and y0 == y1) else 0,
+    "ir_utils"
+)
+
+ir.def_constraint_class(
+    'SmallerThan',
+    lambda i, A, var, name: var([(name,i-1)]),
+    lambda z, A: 1 if z <= A else 0,
+    "ir_utils"
+)
+
+ir.def_constraint_class(
+    'DiffInRange', 
+    lambda pos_i, pos_j, A, B, var, name:  var([(name, pos_i), (name, pos_j)]),
+    lambda y0, y1, A, B: 1 if A<= (y1-y0) <= B else 0,
+    "ir_utils"
+)
+
+########## END - Y for counting NT over possible gaps ###################
+
+
+
+########## Start - Energy class ###################
+
+ir.def_function_class(
+    'BPEnergy',
+    lambda i, j, is_terminal: [i, j],
+    lambda x, y, is_terminal: bpenergy(x, y, is_terminal),
+    "ir_utils"
+)
+
+########## End - Energy class ###################
+
+
+
+def create_model(model_input, feature_weights):
+    '''
+    Args:
+        model_input (dict): 
+        feature_weights (dict): 
+
+    Returns:
+        model (infrared.model):
+    '''
     ################## MODEL SET-UP ##################
 
     n = len(model_input.structures[0])
@@ -191,7 +209,6 @@ def create_model(model_input):
     # get all possible gap position for variable Y
     possible_gaps = [i for i in range(len(iupac)) if iupac[i] == 'X']
     possible_gaps.sort()
-
 
     ################## CONSTRAINTS ##################
 
@@ -221,16 +238,16 @@ def create_model(model_input):
 
     # energy constraint
     model.add_functions([BPEnergy(i, j, (i-1, j+1) not in bps) for (i,j) in bps], 'energy')
+    model.set_feature_weight(feature_weights['energy'].weight, 'energy')
 
+    model.add_functions([BPEnergy(i, j, (i-1, j+1) not in bps) for (i,j) in rna.parse(model_input.structures[2])], 'energy_pk2')
+    model.set_feature_weight(-1.5, 'energy_pk2')
+    # model.set_feature_weight(feature_weights['energy_pk2'].weight, 'energy_pk2')
 
 
     ######## length constraints and constraints for hair pin loop beta ########
 
-    # ## target length with possible gaps
-
-
-
-
+    ## target length with possible gaps
     min_beta = 2
     max_beta = 10
     min_gamma = 8
@@ -243,7 +260,6 @@ def create_model(model_input):
         ss_beta = model_input.structure_span['gaps']['beta']
         ss_gamma = model_input.structure_span['gaps']['gamma']
         
-
         # set up variable for counting over possible gap position
         n_y = len(possible_gaps)+1
         model.add_variables(n_y, n_y+1, name='Y')
@@ -257,8 +273,7 @@ def create_model(model_input):
         # go over possible gap position and increase Y if position is not a gap
         for i, pos in enumerate(possible_gaps, start=1):
             model.add_constraints(IncrementIfNotGap(pos, i, var, 'Y'))
-        
-        
+
         if type(target_length) == int:      
         # if target length should be exact number
             # check if Y is same as n_no_gaps
@@ -273,19 +288,17 @@ def create_model(model_input):
             model.add_constraints(InRange(n_y, target_A, target_B, var, 'Y'))
 
         # limit beta to be between min_beta + 5 and max_beta + 5 --> 7 and 15
-        pos_A = possible_gaps.index(ss_beta[0]) + 1     # plus one because we have an artificial zero in variable Y
+        pos_A = possible_gaps.index(ss_beta[0])         # plus one because we have an artificial zero in variable Y
         pos_B = possible_gaps.index(ss_beta[1]) + 1     # plus one because we have an artificial zero in variable Y
         model.add_constraints(DiffInRange(pos_A, pos_B, min_beta, max_beta, var, 'Y'))
 
-
         # limit gamma to be between min_gamma + 12 and max_gamma + 12 --> 20 and 23
-        pos_A = possible_gaps.index(ss_gamma[0]) + 1     # plus one because we have an artificial zero in variable Y
+        pos_A = possible_gaps.index(ss_gamma[0])         # plus one because we have an artificial zero in variable Y
         pos_B = possible_gaps.index(ss_gamma[1]) + 1     # plus one because we have an artificial zero in variable Y
         model.add_constraints(DiffInRange(pos_A, pos_B, min_gamma, max_gamma, var, 'Y'))
 
-
         # limit hairpin loop gamma to be between min_hl_gamma_nt + 4 and max_hl_gamma_nt + 4 --> 5 and 15
-        pos_A = possible_gaps.index(hl_gamma[0]) + 1     # plus one because we have an artificial zero in variable Y
+        pos_A = possible_gaps.index(hl_gamma[0])         # plus one because we have an artificial zero in variable Y
         pos_B = possible_gaps.index(hl_gamma[1]) + 1     # plus one because we have an artificial zero in variable Y
         model.add_constraints(DiffInRange(pos_A, pos_B, min_hl_gamma_nt, max_hl_gamma_nt, var, 'Y'))
 
@@ -305,7 +318,6 @@ def create_model(model_input):
         # limit beta to be between min_beta + 5 and max_beta + 5 --> 7 and 15
         model.add_constraints(InRange(n_beta, min_beta, max_beta, var, 'Z_B'))
 
-
         # get all possible gap position within gamma and set up variable Z_G
         gaps_in_gamma = [i for i in range(ss_gamma[0],ss_gamma[1]) if iupac[i] == 'X']
         n_gamma = len(gaps_in_gamma) + 1
@@ -313,18 +325,106 @@ def create_model(model_input):
         model.restrict_domains([('Z_G', 0)], (0, 0))
         var = model.idx
         for i, pos in enumerate(gaps_in_gamma, start=1):
-            model.add_constraints(IncrementIfNotGap(pos, i, var, 'Z_G'))           
+            model.add_constraints(IncrementIfNotGap(pos, i, var, 'Z_G'))
         # limit hairpin loop gamma to be between min_gamma + 12 and max_gamma + 12 --> 20 and 23
         model.add_constraints(InRange(n_gamma, min_gamma, max_gamma, var, 'Z_G'))
 
         # limit hairpin loop gamma to be between min_hl_gamma_nt + 4 and max_hl_gamma_nt + 4 --> 5 and 15
-        pos_A = gaps_in_gamma.index(hl_gamma[0]) + 1     # plus one because we have an artificial zero in variable Y
+        pos_A = gaps_in_gamma.index(hl_gamma[0])         # plus one because we have an artificial zero in variable Y
         pos_B = gaps_in_gamma.index(hl_gamma[1]) + 1     # plus one because we have an artificial zero in variable Y
         model.add_constraints(DiffInRange(pos_A, pos_B, min_hl_gamma_nt, max_hl_gamma_nt, var, 'Z_G'))
 
-
-        # Total Length
+        # set weight for total Length
         model.add_functions([NotGap(i) for i in range(n)], 'totLength')
-        model.set_feature_weight(-1.7, 'totLength')
+        model.set_feature_weight(feature_weights['totLength'].weight, 'totLength')
 
     return model
+
+
+def create_model_target(model_input):
+    '''
+    same as function create model, but instead it sets no feature weights
+    used to find weight for feature by target sampling
+    for detailed information take a look at function "create_model"
+    '''
+    
+    ################## MODEL SET-UP ##################
+    n = len(model_input.structures[0])
+    model = ir.Model()
+    model.add_variables(n, 5, name='X')
+    iupac = str(model_input.iupac)
+
+    bps = []
+    for structure in model_input.structures:
+        bps += rna.parse(structure)
+
+    possible_gaps = [i for i in range(len(iupac)) if iupac[i] == 'X']
+    possible_gaps.sort()
+
+    ################## CONSTRAINTS ##################
+    ######## general constraints ########
+    # sequence constraints
+    for i, x in enumerate(iupac):
+        model.add_constraints(ir.ValueIn(i, iupacvalues(x)))
+
+    # base pairs constraints
+    for target in model_input.structures:
+        ss = rna.parse(target)
+        model.add_constraints(BPComp(i, j) for (i, j) in ss)
+
+    # redundancy constraints
+    for stem_a, stem_b in model_input.var_stem_regions:
+        x, y = stem_a
+        model.add_constraints(GapsRight(i) for i in range(x, y))
+
+        x,y = stem_b
+        model.add_constraints(GapsLeft(i) for i in range(x, y))
+
+    for x, y in model_input.var_loop_regions:
+        model.add_constraints(GapsRight(i) for i in range(x, y))
+
+    # energy
+    model.add_functions([BPEnergy(i, j, (i-1, j+1) not in bps) for (i,j) in bps], 'energy')
+    model.add_functions([BPEnergy(i, j, (i-1, j+1) not in bps) for (i,j) in rna.parse(model_input.structures[2])], 'energy_pk2')
+
+    ######## length constraints and constraints for hair pin loop beta ########
+    min_beta = 2
+    max_beta = 10
+    min_gamma = 8
+    max_gamma = 11
+    min_hl_gamma_nt = 1
+    max_hl_gamma_nt = 11
+    hl_gamma = model_input.structure_span['loop']['hl3']
+
+    ss_beta = model_input.structure_span['ss']['beta']
+    ss_gamma = model_input.structure_span['ss']['gamma']
+
+    # beta length
+    gaps_in_beta = [i for i in range(ss_beta[0],ss_beta[1]) if iupac[i] == 'X']
+    n_beta = len(gaps_in_beta) + 1
+    model.add_variables(n_beta, n_beta + 1, name='Z_B')
+    model.restrict_domains([('Z_B', 0)], (0, 0))
+    var = model.idx
+    for i, pos in enumerate(gaps_in_beta, start=1):
+        model.add_constraints(IncrementIfNotGap(pos, i, var, 'Z_B'))           
+    model.add_constraints(InRange(n_beta, min_beta, max_beta, var, 'Z_B'))
+
+    # gamma length
+    gaps_in_gamma = [i for i in range(ss_gamma[0],ss_gamma[1]) if iupac[i] == 'X']
+    n_gamma = len(gaps_in_gamma) + 1
+    model.add_variables(n_gamma, n_gamma + 1, name='Z_G')
+    model.restrict_domains([('Z_G', 0)], (0, 0))
+    var = model.idx
+    for i, pos in enumerate(gaps_in_gamma, start=1):
+        model.add_constraints(IncrementIfNotGap(pos, i, var, 'Z_G'))           
+    model.add_constraints(InRange(n_gamma, min_gamma, max_gamma, var, 'Z_G'))
+
+    # gamma hairpin length
+    pos_A = gaps_in_gamma.index(hl_gamma[0]) + 1
+    pos_B = gaps_in_gamma.index(hl_gamma[1]) + 1
+    model.add_constraints(DiffInRange(pos_A, pos_B, min_hl_gamma_nt, max_hl_gamma_nt, var, 'Z_G'))
+
+    # total Length
+    model.add_functions([NotGap(i) for i in range(n)], 'totLength')
+    return model
+

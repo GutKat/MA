@@ -1,0 +1,20 @@
+sequence:                     AGUCAGGCCGUGGGAUG---CCAUGCCACUCU---------GAAGUCC-GA-----AGAGUGCUGCCUGU------GGGUUUUUU
+IUPAC:                        WGUCAGGCCXXXXNNNXXXXXXXXGCYACNXXXXXXXXXXXNNNXXXXXNXXXXXXXXNGUGCWGCCUGXXXXXXXXXXXNNNNN
+target structure:             ...((((((((((.......))))).((((((((....................))))))))..)))))................
+
+culled
+sequence:                     AGUCAGGCCGUGGGAUGCCAUGCCACUCUGAAGUCCGAAGAGUGCUGCCUGUGGGUUUUUU
+base structure:               ...((((((((((....))))).((((((.........))))))..)))))..........
+pk1 structure:                ((..........................................))...............
+pk2 structure:                .............................(((((((................)))))))..
+
+RNAFold predictions
+target structure:             ...((((((((((....))))).((((((.........))))))..)))))..........
+MFE structure:                ...((((((((((....))))).((((((.........))))))..)))))..........
+structure == MFE:             True
+MFE:                          -18.00
+length:                       61
+energy:                       -18.00
+PK2 energy:                   -0.8000
+frequency:                    0.6733
+ensemble defect:              0.0294

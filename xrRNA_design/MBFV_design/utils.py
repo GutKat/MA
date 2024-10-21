@@ -35,20 +35,22 @@ def target_frequency(sequence, model_input):
     return fc.pr_structure(ss)
 
 
+def ensemble_defect(sequence, model_input):
+    ss = remove_positioned_gaps(sequence, model_input.structures[0])
+    fc = RNA.fold_compound(sequence.replace('-',''))
+    fc.pf()
+    return - fc.ensemble_defect(ss)
 
 
-def objective_function(sequence, model_input):
+def print_pk2_energy(sequence, model_input):
     ss = remove_positioned_gaps(sequence, model_input.structures[0])
     ss_pk2 = remove_positioned_gaps(sequence, model_input.structures[2])
     fc = RNA.fold_compound(sequence.replace('-',''))
     fc.pf()
-    ensemble_defect = fc.ensemble_defect(ss)
-    freq = fc.pr_structure(ss)
-
     pk2_e = fc.eval_structure(ss_pk2)    
-    pk2_e_sig = sigmoid(pk2_e)
-    result = freq - (ensemble_defect + pk2_e_sig)
-    return result
+
+    print(pk2_e)
+    return 
 
 
 def mc_optimize(model, model_input, objective, steps, temp, start=None):
@@ -58,59 +60,79 @@ def mc_optimize(model, model_input, objective, steps, temp, start=None):
     curval = objective(cur_seq)
     best, bestval = cur, curval
     ccs = model.connected_components()
-    weights = [1 / len(cc) for cc in ccs]
-    for i in tqdm((range(steps))):  # tqdm
+    # 9 is first gap in component, simple but just for now i will keep it like that
+    #weights = [1 if not 9 in cc else 1/10 for cc in ccs]
+    weights = [1/len(cc) for cc in ccs]
+    for i in (range(steps)):  # tqdm
+     #   print(i,end='\r')
         cc = random.choices(ccs, weights)[0]
         new = sampler.resample(cc, cur)
 
         new_seq = rna.values_to_seq(new.values()[:len(model_input.structures[0])])
         newval = objective(new_seq)
+        
         if (newval >= curval or random.random() <= math.exp((newval - curval) / temp)):
+            # cur_seq = rna.values_to_seq(cur.values()[:len(model_input.structures[0])])
+            # print(new_seq == cur_seq)
             cur, curval = new, newval
             if curval > bestval:
+                
                 best, bestval = cur, curval
+    #            print(bestval)
+                best_seq = rna.values_to_seq(best.values()[:len(model_input.structures[0])])
 
-    return (best, bestval), sampler
+
+    return (best, bestval)
 
 
 ######################################
 # for testing the objective function #
 ######################################
 
-def objective_function0(sequence, model_input):
-    ss = remove_positioned_gaps(sequence, model_input.structures[0])
-    ss_pk2 = remove_positioned_gaps(sequence, model_input.structures[2])
-    fc = RNA.fold_compound(sequence.replace('-',''))
-    fc.pf()
-    freq = fc.pr_structure(ss)
+# def objective_function0(sequence, model_input):
+#     ss = remove_positioned_gaps(sequence, model_input.structures[0])
+#     ss_pk2 = remove_positioned_gaps(sequence, model_input.structures[2])
+#     fc = RNA.fold_compound(sequence.replace('-',''))
+#     fc.pf()
+#     freq = fc.pr_structure(ss)
 
-    pk2_e = fc.eval_structure(ss_pk2)    
-    pk2_e_sig = sigmoid(pk2_e)
-    result = freq - pk2_e_sig
-    return result
+#     pk2_e = fc.eval_structure(ss_pk2)    
+#     pk2_e_sig = sigmoid(pk2_e)
+#     result = freq # - pk2_e_sig
+#     return result
 
-def objective_function1(sequence, model_input):
-    ss = remove_positioned_gaps(sequence, model_input.structures[0])
-    ss_pk2 = remove_positioned_gaps(sequence, model_input.structures[2])
-    fc = RNA.fold_compound(sequence.replace('-',''))
-    fc.pf()
-    ensemble_defect = fc.ensemble_defect(ss)
+# def objective_function1(sequence, model_input):
+#     ss = remove_positioned_gaps(sequence, model_input.structures[0])
+#     ss_pk2 = remove_positioned_gaps(sequence, model_input.structures[2])
+#     fc = RNA.fold_compound(sequence.replace('-',''))
+#     fc.pf()
+#     ensemble_defect = fc.ensemble_defect(ss)
 
-    pk2_e = fc.eval_structure(ss_pk2)    
-    pk2_e_sig = sigmoid(pk2_e)
-    result = - (ensemble_defect + pk2_e_sig)
-    return result
+#     pk2_e = fc.eval_structure(ss_pk2)    
+#     pk2_e_sig = sigmoid(pk2_e)
+#     result = - (ensemble_defect + pk2_e_sig)
+#     return result
 
 
-def objective_function2(sequence, model_input):
-    ss = remove_positioned_gaps(sequence, model_input.structures[0])
-    ss_pk2 = remove_positioned_gaps(sequence, model_input.structures[2])
-    fc = RNA.fold_compound(sequence.replace('-',''))
-    fc.pf()
-    ensemble_defect = fc.ensemble_defect(ss)
-    freq = fc.pr_structure(ss)
+# def objective_function2(sequence, model_input):
+#     ss = remove_positioned_gaps(sequence, model_input.structures[0])
+#     fc = RNA.fold_compound(sequence.replace('-',''))
+#     fc.pf()
+#     ensemble_defect = fc.ensemble_defect(ss)
+#     freq = fc.pr_structure(ss)
 
-    pk2_e = fc.eval_structure(ss_pk2)    
-    pk2_e_sig = sigmoid(pk2_e)
-    result = freq - (ensemble_defect + pk2_e_sig)
-    return result
+#     result = freq - (ensemble_defect)
+#     return result
+
+# def objective_function_old(sequence, model_input):
+#     ss = remove_positioned_gaps(sequence, model_input.structures[0])
+#     ss_pk2 = remove_positioned_gaps(sequence, model_input.structures[2])
+#     fc = RNA.fold_compound(sequence.replace('-',''))
+#     fc.pf()
+#     ensemble_defect = fc.ensemble_defect(ss)
+#     freq = fc.pr_structure(ss)
+
+#     pk2_e = fc.eval_structure(ss_pk2)    
+#     pk2_e_sig = sigmoid(pk2_e)
+#     result = freq - (ensemble_defect + pk2_e_sig)
+#     return result

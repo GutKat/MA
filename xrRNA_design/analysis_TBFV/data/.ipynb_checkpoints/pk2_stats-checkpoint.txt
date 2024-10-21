@@ -1,0 +1,14 @@
+# nt until PK2 starts within HLIII = untik,nt paired within HLIII: nt,positioning of the nt of PK2 within HLIII: posA,nt after PK2 within HLIII: after,position of the nt of PK2 at 3': posB
+name,until,n_PK,posA,after,total,posB
+ALKV,3,6,5-1-1,0,10,1-1-5
+DTV,2,7,4-2-3,0,11,7
+GGV,0,4,4,0,4,4
+KFDV,4,5,5,2,11,5
+KSIV,5,4,4,3,12,4
+LGTV,4,5,4-1-1,0,10,1-1-4
+LIV,5,5,4-1-1,1,12,1-1-4
+NEGV,5,5,4-1-1,1,12,1-1-4
+OHFV,5,5,4-1-1,1,12,1-1-4
+POWV,4,4,4,3,11,4
+SGEV,5,5,4-1-1,1,12,1-1-4
+TBEV,5,5,4-1-1,1,12,1-1-4
