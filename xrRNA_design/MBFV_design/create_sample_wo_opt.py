@@ -1,3 +1,4 @@
+# %%
 import design
 import pandas as pd
 from tqdm import tqdm
@@ -37,9 +38,8 @@ def append_to_csv(csv_file, new_df):
     return updated_df
 
 
-
-csv_file = '/scr/aldea/kgutenbrunner/working/xrRNA_design/MBFV_design/seqs/multiple_designs_wo_opt.csv'
-sequences = design.creating_samples()
+csv_file = '/scr/aldea/kgutenbrunner/working/xrRNA_design/MBFV_design/data/seqs/multiple_designs_wo_opt.csv'
+sequences = design.creating_samples(1000)
 df = pd.DataFrame(sequences, columns =['sequence'])
-print(df)
+#print(df)
 df.to_csv(csv_file)

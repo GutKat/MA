@@ -44,7 +44,7 @@ def mc_optimization(model_input, target_structure, start=None, steps = 100000):
     # biological data ranges from 50 - 62 (mean=57)
     # need to add 2 because we have 2 unpaired nt in beginning --> 52 - 64, mean = 59
     # using 56, because it tends to get longer, idk
-    sampler.set_target(56, 7, 'totLength')
+    sampler.set_target(55, 7, 'totLength')
     sampler.set_target( -18, 12, 'energy')
     # sampler.set_target( -4, 3, 'energy_pk2')
     samples = [sampler.targeted_sample() for _ in range(10000)]
@@ -139,10 +139,9 @@ def creating_samples(steps=1000):
     # biological data ranges from 50 - 62 (mean=57)
     # need to add 2 because we have 2 unpaired nt in beginning --> 52 - 64, mean = 59
     # using 56, because it tends to get longer, idk
-    sampler.set_target(56, 7, 'totLength')
+    sampler.set_target(55, 7, 'totLength')
     sampler.set_target( -18, 12, 'energy')
     samples = [sampler.targeted_sample() for _ in range(10000)]
-
     # create model for sequence design
     model = ir_ut.create_model(model_input, sampler.model.features)
     sampler = ir.Sampler(model)

@@ -40,152 +40,155 @@ def ensemble_defect(sequence, model_input):
     return - fc.ensemble_defect(ss)
 
 
-def neighbor_optimize_top10(sampler, model, model_input, objective, steps, temp, shift, variance, dist_func, start=None):
-    n = len(model_input.structures[0])
-    curSampler = sampler
-    top_n = 10
-    steps = 50
-
-    if start == None:
-        curSample = curSampler.targeted_sample()
-        cur_seq = rna.values_to_seq(curSample.values()[:n])
-        curval = objective(cur_seq)
-
-        best, bestval = curSample, curval
-        oldVals = curSample.values()[:n]
-        curSampler = ir.getNeighborSampler(curSampler, oldVals, dist_func, shift, variance)
-
-        top_neighbors = []
-        for _ in range(top_n-1):
-            new_neighbor = curSampler.targeted_sample()
-            top_neighbors.append(new_neighbor)
-        neighbors = [best, *top_neighbors] 
-
-    else:
-        curSample = start[0]
-        oldVals = curSample.values()[:n]
-        top_neighbors = start
-        neighbors = [*top_neighbors] 
-
-    old_top = top_neighbors
-           
-
-    for _ in range(steps):
-        for neighbor in top_neighbors:
-            # print(rna.values_to_seq(neighbor.values()[:len(model_input.structures[0])]))
-            # neighborSampler = ir.Sampler(curSampler.model)
-            # neighborSampler = curSampler.copySampler()
-
-            neighborVal = neighbor.values()[:n]
-            ir.updateNeighborSampler(curSampler, neighborVal, oldVals, dist_func, shift, variance)
-            
-            for _ in range(top_n):
-                # new_neighbor = curSampler.targeted_sample()
-                new_neighbor = curSampler.sample()
-                # print(rna.values_to_seq(new_neighbor.values()[:len(model_input.structures[0])]))
-                neighbors.append(new_neighbor)
-
-            oldVals = neighborVal
-
-
-        heap = []
-        for neighbor in neighbors:
-            neighbor_seq = rna.values_to_seq(neighbor.values()[:n])
-            neighbor_val = objective(neighbor_seq)
-            
-            if len(heap) < top_n:
-                heapq.heappush(heap, (neighbor_val, neighbor))
-            else:
-                heapq.heappushpop(heap, (neighbor_val, neighbor))
-
-        
-        top_elements = heapq.nlargest(top_n, heap)
-        top_neighbors = [item for _, item in top_elements]
-        best, best_seq, bestval = top_elements[0][1], rna.values_to_seq(top_elements[0][1].values()[:n]), top_elements[0][0]
-
-        print(redundant_elements(old_top, top_neighbors))
-        old_top = top_neighbors
-
-        bestVals = best.values()[:n]
-        ir.updateNeighborSampler(curSampler, bestVals, oldVals, dist_func, shift, variance)
-        oldVals = bestVals
-
-        print(best_seq, len(best_seq.replace('-','')), round(bestval,4))
-    
-    sampler = curSampler
-    return (best, bestval), top_neighbors, sampler
-
-
 # def neighbor_optimize_top10(sampler, model, model_input, objective, steps, temp, shift, variance, dist_func, start=None):
 #     n = len(model_input.structures[0])
-
 #     curSampler = sampler
-#     if start is None:
-#         top_neighbors = [curSampler.targeted_sample() for _ in range(10)] 
+#     top_n = 10
+#     steps = 50
+
+#     if start == None:
+#         curSample = curSampler.targeted_sample()
+#         cur_seq = rna.values_to_seq(curSample.values()[:n])
+#         curval = objective(cur_seq)
+
+#         best, bestval = curSample, curval
+#         oldVals = curSample.values()[:n]
+#         curSampler = ir.getNeighborSampler(curSampler, oldVals, dist_func, shift, variance)
+
+#         top_neighbors = [best]
+#         for _ in range(top_n-1):
+#             new_neighbor = curSampler.targeted_sample()
+#             top_neighbors.append(new_neighbor)
+
 #     else:
+#         curSample = start[0]
+#         cur_seq = rna.values_to_seq(curSample.values()[:n])
+
+#         best, bestval = curSample, curval
+#         oldVals = curSample.values()[:n]
+
 #         top_neighbors = start
 
-#     bestval = -100
-#     best = None
-#     for neighbor in top_neighbors:
-#         neighbor_seq = rna.values_to_seq(neighbor.values()[:n])
-#         neighbor_val = objective(neighbor_seq)
-        
-#         if neighbor_val > bestval:
-#             bestval = neighbor_val
-#             best = neighbor
-
-#     # newSample, neweval = curSample, curval
-#     oldVals = best.values()[:n]
-#     curSampler = ir.getNeighborSampler(curSampler, oldVals, dist_func, shift, variance)
-
 #     old_top = top_neighbors
-#     neighbors = []
+           
 
-#     for _ in range(2):
+#     for _ in range(steps):
+#         neighbors = [*top_neighbors]
+
 #         for neighbor in top_neighbors:
-#             # print(rna.values_to_seq(neighbor.values()[:len(model_input.structures[0])]))
-#             # neighborSampler = ir.Sampler(curSampler.model)
-#             # neighborSampler = curSampler.copySampler()
-
 #             neighborVal = neighbor.values()[:n]
 #             ir.updateNeighborSampler(curSampler, neighborVal, oldVals, dist_func, shift, variance)
-            
-#             for _ in range(10):
-#                 # new_neighbor = curSampler.targeted_sample()
-#                 new_neighbor = curSampler.sample()
-#                 # print(rna.values_to_seq(new_neighbor.values()[:len(model_input.structures[0])]))
-#                 neighbors.append(new_neighbor)
-
 #             oldVals = neighborVal
+
+#             for _ in range(top_n):
+#                 new_neighbor = curSampler.targeted_sample()
+#                 neighbors.append(new_neighbor)
 
 #         heap = []
 #         for neighbor in neighbors:
 #             neighbor_seq = rna.values_to_seq(neighbor.values()[:n])
 #             neighbor_val = objective(neighbor_seq)
             
-#             if len(heap) < 10:
+#             if len(heap) < top_n:
 #                 heapq.heappush(heap, (neighbor_val, neighbor))
 #             else:
 #                 heapq.heappushpop(heap, (neighbor_val, neighbor))
 
         
-#         top_elements = heapq.nlargest(10, heap)
+#         top_elements = heapq.nlargest(top_n, heap)
 #         top_neighbors = [item for _, item in top_elements]
 #         best, best_seq, bestval = top_elements[0][1], rna.values_to_seq(top_elements[0][1].values()[:n]), top_elements[0][0]
-
 
 #         print(redundant_elements(old_top, top_neighbors))
 #         old_top = top_neighbors
 
-#         # bestVals = best.values()[:n]
-#         # ir.updateNeighborSampler(curSampler, bestVals, oldVals, dist_func, shift, variance)
-#         # oldVals = bestVals
-
 #         print(best_seq, len(best_seq.replace('-','')), round(bestval,4))
+    
+#     sampler = curSampler
+#     return (best, bestval), top_neighbors, sampler
 
-#     return (best, bestval),top_neighbors,  sampler
+
+def sort_tuple(tup): 
+ 
+    # reverse = None (Sorts in Ascending order) 
+    # key is set to sort using second element of 
+    # sublist lambda has been used 
+    return sorted(tup, key = lambda x: x[1], reverse=True)
+
+
+def sort_tuple(tup): 
+ 
+    # reverse = None (Sorts in Ascending order) 
+    # key is set to sort using second element of 
+    # sublist lambda has been used 
+    return sorted(tup, key = lambda x: x[1], reverse=True)
+
+
+
+def neighbor_optimize_top10(sampler, model, model_input, objective, steps, temp, shift, variance, dist_func, start=None):
+    n = len(model_input.structures[0])
+    curSampler = sampler
+    top_n = 10
+    steps = 25
+    if start == None:
+        curSample = curSampler.targeted_sample()
+        cur_seq = rna.values_to_seq(curSample.values()[:n])
+        oldVals = curSample.values()[:n]
+        curSampler = ir.getNeighborSampler(curSampler, oldVals, dist_func, shift, variance)
+
+        top_neighbors = [curSample]
+        for _ in range(top_n-1):
+            new_neighbor = curSampler.targeted_sample()
+            top_neighbors.append(new_neighbor)
         
+        neighbors = [(neigh, objective(rna.values_to_seq(neigh.values()[:n]))) for neigh in top_neighbors]
+        top_neighbors = neighbors
+
+
+    else:
+        curSample = start[0][0]
+        oldVals = curSample.values()[:n]
+        top_neighbors = neighbors = start
+
+    # old_top = top_neighbors
+           
+
+    for _ in range(steps):
+        neighbors = top_neighbors[:int(len(top_neighbors))]
+
+
+        for neighbor in top_neighbors:
+            neighborVal = neighbor[0].values()[:n]
+            ir.updateNeighborSampler(curSampler, neighborVal, oldVals, dist_func, shift, variance)
+            oldVals = neighborVal
+
+            for _ in range(top_n):
+                new_neighbor = curSampler.targeted_sample()
+
+                if len(neighbors) < 10:
+                    neigh_seq = rna.values_to_seq(new_neighbor.values()[:n])
+                    neighbors.append((new_neighbor, objective(neigh_seq)))
+                    neighbors = sort_tuple(neighbors)
+
+                else:
+                    neigh_seq = rna.values_to_seq(new_neighbor.values()[:n])
+                    neigh_obj = objective(neigh_seq) 
+                    if neigh_obj > neighbors[-1][1]:
+                        neighbors[-1] = (new_neighbor, neigh_obj)
+                        neighbors = sort_tuple(neighbors)
+        
+        
+        top_neighbors = neighbors
+        
+        
+        best, bestval = top_neighbors[0]
+        best_seq = rna.values_to_seq(best.values()[:n])
+        print(best_seq, len(best_seq.replace('-','')), round(bestval,4))
+    
+    sampler = curSampler
+    return (best, bestval), top_neighbors, sampler
+
+
 
 def redundant_elements(list1, list2):
     # Convert both lists to sets to remove duplicates and then find intersection
@@ -199,37 +202,3 @@ def redundant_elements(list1, list2):
     return len(common_elements)
 
 
-
-def neighbor_optimize(sampler, model, model_input, objective, steps, temp, shift, variance, dist_func, start=None):
-    curSampler = sampler
-    curSample = curSampler.targeted_sample() if start is None else start
-
-    cur_seq = rna.values_to_seq(curSample.values()[:len(model_input.structures[0])])
-    curval = objective(cur_seq)
-
-    best, bestval = curSample, curval
-    newSample, neweval = curSample, curval
-    oldVals = curSample.values()
-
-    curSampler = ir.getNeighborSampler(curSampler, curSample.values(), dist_func, shift, variance)
-    curSampler.sample()
-    # for i in (range(steps)):
-    for i in tqdm(range(steps)):
-        if (curSample == newSample):
-            ir.updateNeighborSampler(curSampler, curSample.values(), oldVals, dist_func, shift, variance)
-            oldVals = curSample.values()
-        newSample = curSampler.targeted_sample()
-        new_seq = rna.values_to_seq(newSample.values()[:len(model_input.structures[0])])
-        newval = objective(new_seq)
-
-        if (newval >= curval or random.random() <= math.exp((newval - curval) / temp)):
-            # cur_seq = rna.values_to_seq(cur.values()[:len(model_input.structures[0])])
-            # print(new_seq == cur_seq)
-            curSample, curval = newSample, neweval
-            if curval > bestval:
-
-                best, bestval = curSample, curval
-    #            print(bestval)
-                best_seq = rna.values_to_seq(best.values()[:len(model_input.structures[0])])
-
-    return (best, bestval), sampler

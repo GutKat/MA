@@ -25,7 +25,7 @@ loops = {'hl2': (15,22), 'hl3': (36, 56), 'upk1': (71, 77)} # range
 # all the different regions of the structure saved
 # ss and gaps are used for limiting the length of beta and gamma
 # ss is the whole range of the beta and gamma structure, gaps is the position of the first and last possible gap within the structure
-structure_span = {'stem': stems, 'loop': loops, 'ss':{'beta':(11, 27), 'gamma':(28, 64)}, 'gaps':{'beta':(11, 25), 'gamma':(32, 59)}}
+structure_span = {'stem': stems, 'loop': loops, 'ss':{'beta':(11, 27), 'gamma':(28, 64)}, 'gaps':{'beta':(12, 25), 'gamma':(32, 59)}}
 target_structure = structures[0]
 
 # monte carlo optimization of the sequence design - objective function is frequency of target structure
@@ -37,8 +37,9 @@ def mc_optimization(model_input, target_structure, start=None, steps=100000):
     # start Monte carlo optimization
     tic = time.time()
     sampler = ir.Sampler(model)
-    # sampler.set_target( 62, 10, 'totLength', -1)
-    sampler.set_target(62, 7, 'totLength', -1)
+    # biological data ranges from 50 - 62 (mean=57)
+    # need to add 2 because we have 2 unpaired nt in beginning --> 52 - 64, mean = 59
+    sampler.set_target(59, 7, 'totLength')
     sampler.set_target( -18, 12, 'energy', -1)
     (best, bestval),neighbors_top10, sampler = ut.neighbor_optimize_top10(sampler,
                                                               model,

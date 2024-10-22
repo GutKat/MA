@@ -42,7 +42,7 @@ def mc_optimization_testing(model_input, steps = 100000):
     sampler = ir.Sampler(model_target)
     # biological data ranges from 53 - 63 (mean=60)
     # need to add 2 because we have 2 unpaired nt in beginning --> 55 - 65, mean =62
-    sampler.set_target(59, 7, 'totLength')
+    sampler.set_target(55, 7, 'totLength')
     sampler.set_target( -18, 12, 'energy')
     # sampler.set_target( -4, 3, 'energy_pk2')
     samples = [sampler.targeted_sample() for _ in range(5000)]
@@ -98,7 +98,7 @@ import concurrent.futures
 import multiprocessing
 
 if __name__ == "__main__":
-    folder_name = '/scr/aldea/kgutenbrunner/working/xrRNA_design/MBFV_design/seqs/before_after_opt/'
+    folder_name = '/scr/aldea/kgutenbrunner/working/xrRNA_design/MBFV_design/data/seqs/before_after_opt/22_10_24/'
     csv_file = 'designs_before_after_opt'
     model_input = ir_ut.ModelInput(structures=structures,
                                 anti_structures=[],
