@@ -6,26 +6,19 @@ import ir_utils as ir_ut
 from tqdm import tqdm
 import numpy as np
 
-# iupac_cons =  'NNNNNNNNXXXNNNNNXGGCAGCRCRCXXNNNXXXXXXXXGYGACGGGXXXXXXXXXGGUCXXXXXXCCCGACXNNNNNXXXNNNNNNNNNNNNXXXXXXXUUYGUGAXGACCXX'
-# structures = ['..(((((((..(((((((......(((((.........))))).(((((((.............))))))).)))))))..)))))))...........................',
-# 		       '.....................(((...............................................................................))).........',
-# 		       '.......................................................(((((((..............................................)))))))']
-# #   		    01234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345
-# #    		    0        10        20        30        40        50        60        70        80        90       100       110
 
-iupac_cons =  'NNNNNNNNXXXNNNNXXGGCAGCRCRCXXNNNXXXXXXXXGYGACGGGXXXXXXXXXGGUCXXXXXXCCCGACXXNNNNXXXNNNNNNNNNNNNXXXXXXXUUYGUGAXGACCXX'
-structures = ['..(((((((..(((((((......(((((.........))))).(((((((.............))))))).)))))))..)))))))...........................',
-		      '.....................(((...............................................................................))).........',
-		      '.......................................................(((((((..............................................)))))))']
+
+iupac_cons =  'NNNNNNNNXXXNNNNXXGGCAGCRCRCXXNNNXXXXXXXXGYGACGGGXXXXXXXXGGUCXXXXXXCCCGACXXNNNNXXXNNNNNNNNNNNNXXXXXXXUUYGUGAXGACCXX'
+structures = ['..(((((((..(((((((......(((((.........))))).(((((((............))))))).)))))))..)))))))...........................',
+		      '.....................(((..............................................................................))).........',
+		      '......................................................(((((((..............................................)))))))']
 #   		   01234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345
 #    		   0        10        20        30        40        50        60        70        80        90       100       110
 
-var_stem_regions = [[(15,16), (73,74)], [(27,28), (38,39)], [(48,50), (64,66)], [(55,56), (113,114)]] # start, stop -> including stop
-var_loop_regions = [(9, 10), (32, 37), (51, 54), (62, 63), (79,80), (94,100)] # start, stop -> including stop
+var_stem_regions = [[(15,16), (72,73)], [(27,28), (38,39)], [(48,50), (63,65)], [(54,55), (112,113)]] # start, stop -> including stop
+var_loop_regions = [(9, 10), (32, 37), (51, 53), (61, 62), (78,79), (93,99)] # start, stop -> including stop
 
-stems = {0: [[(2,9), (11, 18)], [(72, 79), (81, 88)]], 1: [(24,29), (38, 43)], 2: [(44, 51), (64, 71)]} # range
-loops = {'hl2': (29,38), 'hl3': (51, 64), 'upk1': (88, 103)} # range
-structure_span = {'stem': stems, 'loop': loops, 'gaps':{'beta':(27, 39), 'gamma':(48, 66)}}
+gaps = {'alpha': (8, 16, 72, 80), 'beta':(27, 39), 'gamma':(48, 65), 'gamma_hl': (51, 62), 'gamma_stem': (8, 50, 63, 65)}
 # 'ss':{'beta':(8, 25), 'gamma':(26, 62)}
 target_len = False # 89
 target_structure = structures[0]
@@ -35,21 +28,8 @@ target_structure = structures[0]
 def mc_optimization(model_input, target_structure, start=None, steps = 1000):
     n = len(model_input.structures[0])
 
-    # create targeted model to find weights for energy and length feature
-    model_target = ir_ut.create_model_target(model_input)
-    
-
-    sampler = ir.Sampler(model_target)
-    # min = 84, max = 90, mean = 86
-    # need to add 2, have 2 nts in the beginning
-    # 86 - 92
-    sampler.set_target( 88, 4, 'totLength')
-    sampler.set_target( -30, 10, 'energy')
-    samples = [sampler.targeted_sample() for _ in range(1000)]
-    print("Weights",{k:f'{f.weight:.3f}' for k,f in sampler.model.features.items()})
-
     # create model
-    model = ir_ut.create_model(model_input, sampler.model.features)
+    model = ir_ut.create_model(model_input)
 
     # start Monte carlo optimization
     (best_ed, best_val), sampler = ut.mc_optimize(model,
@@ -114,24 +94,14 @@ def creating_samples(steps = 1000):
                                 iupac=iupac_cons,
                                 var_stem_regions=var_stem_regions,
                                 var_loop_regions=var_loop_regions,
-                                structure_span = structure_span,
+                                gaps = gaps,
                                 target_length = target_len
                                 )
 
     n = len(model_input.structures[0])
 
-    # create targeted model to find weights for energy and length feature
-    model_target = ir_ut.create_model_target(model_input)
-    sampler = ir.Sampler(model_target)
-    # min = 84, max = 90, mean = 86
-    # need to add 2, have 2 nts in the beginning
-    # 86 - 92
-    sampler.set_target( 88, 4, 'totLength')
-    sampler.set_target( -25, 15, 'energy')
-    samples = [sampler.targeted_sample() for _ in range(1000)]
-
     # create model for sequence design
-    model = ir_ut.create_model(model_input, sampler.model.features)
+    model = ir_ut.create_model(model_input)
     sampler = ir.Sampler(model)
     samples = [sampler.sample() for _ in range(steps)]
     sequences = [rna.values_to_seq(sample.values()[:n]) for sample in samples]
@@ -144,11 +114,13 @@ def main():
                                 iupac=iupac_cons,
                                 var_stem_regions=var_stem_regions,
                                 var_loop_regions=var_loop_regions,
-                                structure_span = structure_span,
+                                gaps = gaps,
                                 target_length = target_len
                                 )
 
-    mc_optimization(model_input, target_structure=target_structure, steps=100000)
+    mc_optimization(model_input, target_structure=target_structure, steps=400000)
 
 if __name__ == "__main__":
     main()
+    #sequences = creating_samples(5)
+

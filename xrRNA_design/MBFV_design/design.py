@@ -38,19 +38,8 @@ target_structure = structures[0]
 #monte carlo optimization of the sequence design - objective function is frequency of target structure
 def mc_optimization(model_input, target_structure, start=None, steps = 100000):
     n = len(model_input.structures[0])
-    # create targeted model to find weights for energy and length feature
-    model_target = ir_ut.create_model_target(model_input)
-    sampler = ir.Sampler(model_target)
-    # biological data ranges from 50 - 62 (mean=57)
-    # need to add 2 because we have 2 unpaired nt in beginning --> 52 - 64, mean = 59
-    # using 56, because it tends to get longer, idk
-    sampler.set_target(55, 7, 'totLength')
-    sampler.set_target( -18, 12, 'energy')
-    # sampler.set_target( -4, 3, 'energy_pk2')
-    samples = [sampler.targeted_sample() for _ in range(10000)]
-
     # create model for sequence design
-    model = ir_ut.create_model(model_input, sampler.model.features)
+    model = ir_ut.create_model(model_input)
 
     # start Monte carlo optimization
     (best_ed, best_val), sampler = ut.mc_optimize(model,
@@ -106,7 +95,23 @@ def mc_optimization(model_input, target_structure, start=None, steps = 100000):
         ut.margin_left('frequency:', f'{freq:2.4f}', 30)
         ut.margin_left('ensemble defect:', f'{ed:2.4f}', 30)
 
+def creating_samples(steps=1000):
+    model_input = ir_ut.ModelInput(structures=structures,
+                                anti_structures=[],
+                                iupac=iupac_cons,
+                                var_stem_regions=var_stem_regions,
+                                var_loop_regions=var_loop_regions,
+                                structure_span = structure_span,
+                                target_length = target_len
+                                )
 
+    n = len(model_input.structures[0])
+    # create model for sequence design
+    model = ir_ut.create_model(model_input)
+    sampler = ir.Sampler(model)
+    samples = [sampler.sample() for _ in range(steps)]
+    sequences = [rna.values_to_seq(sample.values()[:n]) for sample in samples]
+    return sequences
 
 
 def main():
@@ -120,34 +125,6 @@ def main():
                                 )
 
     mc_optimization(model_input, target_structure=target_structure, steps=100000)
-
-
-def creating_samples(steps=1000):
-    model_input = ir_ut.ModelInput(structures=structures,
-                                anti_structures=[],
-                                iupac=iupac_cons,
-                                var_stem_regions=var_stem_regions,
-                                var_loop_regions=var_loop_regions,
-                                structure_span = structure_span,
-                                target_length = target_len
-                                )
-
-    n = len(model_input.structures[0])
-    # create targeted model to find weights for energy and length feature
-    model_target = ir_ut.create_model_target(model_input)
-    sampler = ir.Sampler(model_target)
-    # biological data ranges from 50 - 62 (mean=57)
-    # need to add 2 because we have 2 unpaired nt in beginning --> 52 - 64, mean = 59
-    # using 56, because it tends to get longer, idk
-    sampler.set_target(55, 7, 'totLength')
-    sampler.set_target( -18, 12, 'energy')
-    samples = [sampler.targeted_sample() for _ in range(10000)]
-    # create model for sequence design
-    model = ir_ut.create_model(model_input, sampler.model.features)
-    sampler = ir.Sampler(model)
-    samples = [sampler.sample() for _ in range(steps)]
-    sequences = [rna.values_to_seq(sample.values()[:n]) for sample in samples]
-    return sequences
 
 
 if __name__ == "__main__":
