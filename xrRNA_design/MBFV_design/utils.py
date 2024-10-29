@@ -82,7 +82,7 @@ def mc_optimize(model, model_input, objective, steps, temp, start=None):
                 best_seq = rna.values_to_seq(best.values()[:len(model_input.structures[0])])
 
 
-    return (best, bestval)
+    return (best, bestval), sampler
 
 
 ######################################

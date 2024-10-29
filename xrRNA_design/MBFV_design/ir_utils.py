@@ -184,15 +184,29 @@ ir.def_function_class(
 
 
 
-def create_model(model_input, feature_weights):
+def create_model(model_input):
     '''
     Args:
         model_input (dict): 
-        feature_weights (dict): 
 
     Returns:
         model (infrared.model):
     '''
+    ################## CREATE FEATURES ##################
+
+    # create targeted model to find weights for energy and length feature
+    model_target = create_features(model_input)
+    sampler = ir.Sampler(model_target)
+    # biological data ranges from 50 - 62 (mean=57)
+    # need to add 2 because we have 2 unpaired nt in beginning --> 52 - 64, mean = 59
+    # using 56, because it tends to get longer, idk
+    sampler.set_target(55, 7, 'totLength')
+    sampler.set_target( -18, 12, 'energy')
+    # sampler.set_target( -4, 3, 'energy_pk2')
+    samples = [sampler.targeted_sample() for _ in range(10000)]
+    feature_weights = sampler.model.features
+
+
     ################## MODEL SET-UP ##################
 
     n = len(model_input.structures[0])
@@ -341,7 +355,7 @@ def create_model(model_input, feature_weights):
     return model
 
 
-def create_model_target(model_input):
+def create_features(model_input):
     '''
     same as function create model, but instead it sets no feature weights
     used to find weight for feature by target sampling
