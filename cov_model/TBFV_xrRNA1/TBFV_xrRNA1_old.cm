@@ -8,7 +8,7 @@ ALPH     RNA
 RF       no
 CONS     yes
 MAP      yes
-DATE     Tue Oct 29 10:01:36 2024
+DATE     Fri Oct 18 10:26:55 2024
 COM      [1] cmbuild /scr/aldea/kgutenbrunner/working/cov_model/TBFV_xrRNA1/TBFV_xrRNA1.cm /scr/aldea/kgutenbrunner/data/tbfv_stk/TBEV_xrRNA1.stk
 PBEGIN   0.05
 PEND     0.05
@@ -427,7 +427,7 @@ MM    no
 CONS  yes
 CS    yes
 MAP   yes
-DATE  Tue Oct 29 10:01:36 2024
+DATE  Fri Oct 18 10:26:55 2024
 COM   [1] cmbuild /scr/aldea/kgutenbrunner/working/cov_model/TBFV_xrRNA1/TBFV_xrRNA1.cm /scr/aldea/kgutenbrunner/data/tbfv_stk/TBEV_xrRNA1.stk
 NSEQ  65
 EFFN  1.646423
