@@ -1,0 +1,55 @@
+# STOCKHOLM 1.0
+#=GF SS RNAalifold prediction
+DENV1_MN018285.1:123-175  agucaggccgaaagccacgguuugaguaaaccgugcugccuguagcuccauc
+DENV1_OK159949.1:123-175  agucaggccgaaagccacggcuugaguaaaccgugcugccuguagcuccauc
+DENV1_MW793678.1:124-176  agucaggccgaaagccacggcuugagcaaaccgugcugccuguagcuccgcc
+DENV1_KT827368.1:123-175  agucaggccgaaagccacgguuggagcaaaccgugcugccuguagcuccauc
+DENV1_FJ547087.1:123-175  agucaggccgaaagccacggguugagcaagccgugcugccuguggcuccauc
+DENV1_JN638339.1:123-175  agucaggccgaaagccacgguuugagcaaaccgugcugccuguggcuccauc
+DENV1_FJ196847.1:123-175  agucaggccgaaagccacgguuagagcaaaccgugcugccuguaucuccauc
+DENV1_EU482535.1:123-175  agucaggccgaaagccacgguuugagcaaaccgugcugccuguagcuccauc
+DENV1_AY762084.1:123-175  agucaggccgaaagccacggcgugagcaaaccgugcugccuguggcuccauc
+DENV1_KX951690.1:123-175  agucaggccgaaagccacggucugagcaaaccgugcugccuguagcuccauc
+DENV1_FJ432749.1:123-175  agucaggccuaaagccacgguuugagcaaaccgugcugccuguagcuccauc
+DENV1_KM403599.1:102-154  agucaggccgaaagccacggcuugagcaaaccgugcugccuguggcuccauc
+DENV1_KC762633.1:123-175  agucaggccaaaagccacgguuugagcaaaccgugcugccuguagcuccauc
+DENV1_JF937617.1:123-175  agucaggccgaaagccacggcuugagcaaaccgugcugccuguagcuccauc
+DENV1_MF033214.1:123-175  agucaggccgaaagccacgguuugagcauaccgugcugccuguagcuccauc
+DENV1_GQ199828.1:123-175  agucaggccgaaagccacgguuugagcaaacugugcugccuguagcuccauc
+DENV1_FJ024449.1:123-175  agucaggccgaaagccacggcuugagcagaccgugcugccuguagcuccauc
+DENV1_MW793690.1:123-175  agucaggccaaaagccacggcuugagcaaaccgugcugccuguagcuccauc
+DENV1_KP398852.1:123-175  agucaggccgaaagccacggcuugagcgaaccgugcugccuguagcuccauc
+DENV1_EF457905.1:123-175  agucaggcuagaaaccacggcuugagcaaaccgugcugccuguagcuccauc
+DENV1_GQ868560.1:123-175  agucaggccgaaagccacggauugagcaagccgugcugccuguggcuccauc
+DENV1_MK506262.1:123-175  agucaggccggaagccacgguuugagcaaaccgugcugccuguagcuccauc
+DENV1_GU131750.1:123-175  agucaggccgaaagccacggcuugagcaaaccgugccgccuguagcuccauc
+DENV1_GU056033.1:123-175  agucaggccgaaagccacggauugagcaagccgugcugccuguagcuccauc
+DENV1_OP310803.1:123-175  agucaggccgaaagccacggcucgagcaaaccgugcugccuguggcuccauc
+DENV1_OK159938.1:123-175  agucaggccgraagccacggcuugagcaaaccgugcugccuguagcuccauc
+DENV1_MT076932.1:123-175  agucaggccgaaagccacgguuugagcaagccgugcugccuguggcuccauc
+DENV1_EF025110.1:123-175  agucaggccgaaagccacgguuugggcaagccgugcugccuguagcuccauc
+DENV1_FJ182002.1:123-175  agucaggccgaaagccacggacugagcaagccgugcugccuguggcuccauc
+DENV1_LC707382.1:123-175  agucaggccgaaagccacggcucgagcaaaccgugcugccuguagcuccauc
+DENV1_FJ898385.1:123-175  agucaggccgaaagccacgauuugagcaaaccgugcugccuguagcuccauc
+DENV1_FJ196841.1:123-175  agucaggccgaaagccacgguuugagcaagccgugcugccuguagcuccauc
+DENV1_KY672941.1:123-175  agucaggccgaaagccacgguuugagcaauccgugcugccuguagcuccauc
+DENV1_KY672943.1:123-175  agucaggccggaagccacggcuugagcaaaccgugcugccuguagcuccauc
+DENV1_GU131678.1:123-175  agucaggccgaaagccacggcuugagcaaaccgugcugccuggagcuccauc
+DENV1_ON123666.1:123-175  agucaggccgaaagccacggcuugagcaagccgugcugccuguggcuccauc
+DENV1_JX669470.1:123-175  agucaggccgaaagccacggcuugagcaagccgugcugccuguagcuccauc
+DENV1_GU131753.1:123-175  agucaggccgaaagccacgguuugagcaaaucgugcugccuguagcuccauc
+DENV1_U88537.1:123-175    agucaggccgaaagccacgguucgagcaagccgugcugccuguagcuccauc
+DENV1_FJ810419.1:123-175  agucaggccggaagccacggauugagcaagccgugcugccuguggcuccauc
+DENV1_OM281591.1:123-175  agucaggccgauagccacggcuugagcaaaccgugcugccuguagcuccauc
+DENV1_MF033239.1:123-175  agucaggccgagagccacggcuugagcaaaccgugcugccuguagcuccauc
+DENV1_ON038483.1:123-175  agucaggccgaaagccgcggcuugagcaaaccgugcugccuguagcuccauc
+DENV1_MN923077.1:123-175  agucaggccuauagccacggcuugagcaaaccgugcugccuguagcuccauc
+DENV1_KJ468234.1:123-175  auucaggccgaaagccacggcuugagcaaaccgugcugccuguagcuccauc
+DENV1_OL411496.1:123-175  agucaggccgaaagccauggcuugagcaaaccgugcugccuguagcuccauc
+DENV1_MW265676.1:123-175  agucaggccgaaagccacgacuugagcaaaccgugcugccuguagcuccauc
+DENV1_JQ287661.1:123-175  agucaggccgaaagccacgguuugagcaaaccgugcugccuguaguggggau
+DENV1_EU677168.1:123-175  agucaggccgaaagccacggcuugagcaaaccgcgcugccuguagcuccauc
+DENV1_KF955446.1:123-175  agucagcccgaaagccacggcuugagcaaaccgugcuggcuggagcuccauc
+#=GC RF                   AGUCAGGCCGaAAGCCACGGYUUGAGCAAACCGUGCUGCCUGUAGCUCCAUC
+#=GC SS_cons              ...((((((....).(((((..........)))))..)))))..........
+//

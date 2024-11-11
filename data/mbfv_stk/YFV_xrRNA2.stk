@@ -1,0 +1,14 @@
+# STOCKHOLM 1.0
+#=GF SS RNAalifold prediction
+YFV_OP508695.1:181-251  ugucagcccagaaacccg--------cguggguucugccacugcuaagcugugaggcagugcaggcugggacagccgc
+YFV_ON323054.1:181-251  ugucagcccagaacucca--------uacgaguuuugccacugcuaagcugugaggcagugcaggcugggacaaccga
+YFV_MH633691.1:195-273  cgucagcccaggauccaaaauuuuauuaugggucuugccaccgcuaagcugugaggcggugcgggcugggacagccgu
+YFV_AY572535.1:181-251  ugucagcccagaacucca--------uacgagucuugccacugcuaagcugugaggcagugcaggcugggacagccga
+YFV_MZ595189.1:175-245  ugucagcccagaacucca--------cacgaguuuugccacugcuaagcugugaggcagugcaggcugggacagccga
+YFV_MW249074.1:181-251  ugucagcccagaacccca--------cacgaguuuugccacugcuaagcugugaggcagugcaggcugggacagccga
+YFV_MN211303.1:181-251  ugucagcccagaacucca--------uacgaguuuugccacugcuaagcugugaggcagugcaggcugggacagccga
+YFV_JX898870.1:181-251  ugucagcccagaacuccg--------cacgaguuuugccacugcuaagcugugaggcagugcaggcugggacagccga
+YFV_OP508715.1:181-251  ugucagcccagaaaccca--------cacgaguucugucacugcuaagcugugaggcagugcaggcugggacagccgc
+#=GC RF                 UGUCAGCCCAGAAMYCCA--------YAYGAGUUUUGCCACUGCUAAGCUGUGAGGCAGUGCAGGCUGGGACAGCCGA
+#=GC SS_cons            ...(((((((((((((.............)))))))).(((((((.........)))))))..)))))..........
+//

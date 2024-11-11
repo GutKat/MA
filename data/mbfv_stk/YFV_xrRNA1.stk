@@ -1,0 +1,29 @@
+# STOCKHOLM 1.0
+#=GF SS RNAalifold prediction
+YFV_MW158349.1:111-181  ugucagcccagaaacccg--------cguggguucugccacugcuaagcugugaagcagugcaggcugggacagccgc
+YFV_MW158365.1:111-181  ugucagcccagaaacccg--------cguggguucugccacugcuaagcugugaagcagugcaggcuggaacagccgc
+YFV_MW158361.1:113-183  ugucagcccagaaaccca--------uguggguucugccacugcuaagcugugaggcagugcaggcugggacagccgc
+YFV_MN643083.1:111-181  ugucagcccagaaacccg--------cgugaguucugccacugcuaagcugugaggcagugcaggcugggacagccgc
+YFV_MK583160.1:111-181  ugucagcccagaaacccg--------cguggguucugccacugcuaagcugugaggcagugcaggcugggacagccgc
+YFV_JF912188.1:111-181  ugucagcccagaaacccg--------cguggauucugccacugcuaagcugugaggcagugcaggcugggacagccgc
+YFV_MF370545.1:111-181  ugucagcccagaaacucg--------cguggauucugccacugcuaagcugugaggcagugcaggcugggacagccgc
+YFV_MW158341.1:62-132   ugucagcccagaaacccg--------cgcggguucugccacugcuaagcugugaggcagugcaggcugggacagccgc
+YFV_MW158339.1:111-181  ugucagcccagaauccca--------cguggguucugccacugcuaagcugugaggcagugcaggcugggacagccgc
+YFV_JF912181.1:113-183  ugucagcccagaacccca--------uguggguucugccacugcuaagcugugaggcagugcaggcugggacagccgc
+YFV_MW158340.1:111-181  ugucagcccagaaucccg--------cguggguucugccacugcuaagcugugaggcagugcaggcugggacagccgc
+YFV_OQ077983.1:134-208  cgucagcccaggacccuagaau----uaggagucuugccaccgcuaagcugugaggcggugcgggcugggacagccgu
+YFV_MG589641.1:133-209  cgucagcccaggauccaaaauuuu--aaugggucuugccaccgcuaagcugugaggcggugcgggcugggacagccgu
+YFV_KU921608.1:133-209  cgucagcccaggauccaaaauuug--aaugggucuugccaccgcuaagcugugaggcggugcgggcugggacagccgu
+YFV_KX010995.1:133-210  cgucagcccaggauccaaaaauuug-aaugggucuugccaccgcuaagcugugaggcggugcgggcugggacagccgu
+YFV_KY587416.1:135-213  cgucagcccaggauccaaaauuuuauuaugggucuugccaccgcuaagcugugaggcggugcgggcugggacagccgu
+YFV_AY572535.1:181-251  ugucagcccagaacucca--------uacgagucuugccacugcuaagcugugaggcagugcaggcugggacagccga
+YFV_MZ595189.1:175-245  ugucagcccagaacucca--------cacgaguuuugccacugcuaagcugugaggcagugcaggcugggacagccga
+YFV_MW249074.1:181-251  ugucagcccagaacccca--------cacgaguuuugccacugcuaagcugugaggcagugcaggcugggacagccga
+YFV_MN211303.1:181-251  ugucagcccagaacucca--------uacgaguuuugccacugcuaagcugugaggcagugcaggcugggacagccga
+YFV_JX898870.1:181-251  ugucagcccagaacuccg--------cacgaguuuugccacugcuaagcugugaggcagugcaggcugggacagccga
+YFV_MH560359.1:111-181  ugucagcccagaaacccg--------cguggguucugccacugcuaagcugugaggcagugcaggcugggacagucag
+YFV_MF370541.1:111-181  ugucagcccagaaacccg--------cguggguucugccacugcuaagcugugaggcaguguaggcugggacagccgc
+YFV_OQ675592.1:111-181  ugucagcccagaaacccg--------cguggguucugucacugcuaagcugugaggcagugcaggcugggacagccgc
+#=GC RF                 UGUCAGCCCAGAAHCCCR-a-u----YRUGRGUUYUGCCACUGCUAAGCUGUGAGGCAGUGCAGGCUGGGACAGCCGH
+#=GC SS_cons            ...(((((((((((((.............)))))))).(((((((.........)))))))..)))))..........
+//

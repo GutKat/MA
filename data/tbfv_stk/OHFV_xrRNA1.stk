@@ -1,0 +1,16 @@
+# STOCKHOLM 1.0
+#=GF SS RNAalifold prediction
+OHFV_MT354626.1:245-344  uaacgaaucaugggaauggagcggcagcgcacgagagugacggggaacuggucgcacccgacgcaccauccaugaagcaccauuucgugagaccccccg
+OHFV_MT354614.1:61-159   uuacagaccauggaaguggugcggcagcgcacgagagugacgggg-acuggucgcacccgacgcaccauccaugaagcacaacuucgugagaccccccg
+OHFV_OL689371.1:245-344  uaacgaaucauggagauggagcggcagcgcacgagagugacggggaacuggucgcacccgacgcaccauccaugaagcaccauuucgugagaccccccg
+OHFV_MT354615.1:245-344  uaacgaaucaugggaauggagcggcagcgcacgagagugacggggaacuggucgcacccgacgcaccauccaugaagcaccuuuucgugagaccccccg
+OHFV_AY323489.1:61-159   uuacagaccauggaaguggugcggcagcgcacgagagugacgggg-accggucgcacccgacgcaccauccaugaagcacaacuucgugagaccccccg
+OHFV_MT350781.1:64-163   aaacaaucaacgggaauggagcggcagcgcacgagagugacggggaacuggucgcacccgacgcaccauccaugaagcaccauuucgugagaccccccg
+OHFV_OP037815.1:49-147   ggaaagaccauggaaauggugcggcagcgcacgagagugacgggg-accggucgcacccgacgcaccauccaugaagcacaacuucgugagaccccccg
+OHFV_MT354621.1:245-344  uaacgaaucaugggaauggagcggcagcgcacgagagugacggggaacuggucgcacccgacgcaccaaccaugaagcaccauuucgugagaccccccu
+OHFV_MT354620.1:245-343  gaacaaaccauggaaauggagcggcagcgcacgagagugacgggg-acuggucgcacccgacgcaccauccaugaagcaucacuucgugagaccccccg
+OHFV_MW773725.1:245-343  gaacaaaccauggaaauggagcggcagcgcacgagagugacgggg-acuggucgcacccgacgcaccauccaugaagcauuacuucgugagaccccccg
+OHFV_MT354622.1:245-344  uaacgaaucaugggaauggagcggcagcgcacgagagugacggggaacuggucgcacccgacgcacuacccaugaagcaccauuucgugagaccccccg
+#=GC RF                  UWACRAAYCAUGGRAAUGGWGCGGCAGCGCACGAGAGUGACGGGGaACUGGUCGCACCCGACGCACCAUCCAUGAAGCAYMAYUUCGUGAGACCCCCCG
+#=GC SS_cons             ........((((((..(((.(((......(((....))).((((............)))).))).))))))))).........................
+//

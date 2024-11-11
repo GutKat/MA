@@ -1,0 +1,16 @@
+# STOCKHOLM 1.0
+#=GF SS RNAalifold prediction
+TMUV_KX686579.1:254-306  ugucgggccacagguuuugugccacuagcgugcagugcagcccggacaaaag
+TMUV_MF522174.1:253-305  ugucgggccacagguuuugugccauuagcgugcagugcagcccggacaaaag
+TMUV_MW143073.1:254-307  ugucgggccacagguuuugugccacuagcgugcagugcagcccggacaaaag
+TMUV_OP856754.1:254-306  ugucgggccacagguuuugugccacuagcgugcggugcagcccggacaaaag
+TMUV_MN649266.1:254-306  ugucgggccacagguuuugugccacuagcgugcagugcagcccggauaaaag
+TMUV_KX686576.1:254-306  ugucgggccacagguucugugccacuagcgugcagugcagcccggacaaaag
+TMUV_MZ355579.1:257-309  ugucgggccacagguuuugugccacuagcgugcggugcagcccgaacaaaag
+TMUV_KX686575.1:254-306  ugucgggccacggguuuugugccacuagcgugcagugcagcccggacaaaag
+TMUV_MN649261.1:253-305  ugucgggccacagguuuugugccaucagcgugcagugcagcccggacaaaag
+TMUV_MZ355580.1:254-306  ugucgggccacagguuuugugccacuagcgugcggugcagcccggauaaaag
+TMUV_KX977553.1:253-305  ugucgggccacagguuuugugccgcuagcgugcagugcagcccggacaaaag
+#=GC RF                  UGUCGGGCCACAGGUUUUGUGCCACUAGCGUGCAGUGCAGCCCGGACAAAAG
+#=GC SS_cons             ...((((((((((...))))).((((.......))))..)))))........
+//

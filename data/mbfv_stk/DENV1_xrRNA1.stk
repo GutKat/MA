@@ -1,0 +1,20 @@
+# STOCKHOLM 1.0
+#=GF SS RNAalifold prediction
+DENV1_OL321180.1:21-82   agucaggccggauuaagccauaguacgguaagagcuaugcugccugugagccccguccaag
+DENV1_ON123666.1:50-111  agucaggccgguuuaagccauaguacgguaagagcuaugcugccugugagccccguccaag
+DENV1_MF033257.1:50-111  agucaggccggauuaagccauaguacgguaagagcuaugcugccugugagccccgucucag
+DENV1_GQ199782.1:50-111  agucaggccggauuaagccauagcacgguaagagcuaugcugccugugagccccgucuaag
+DENV1_JN638342.1:50-111  agucaggccggauuaagccauagcacgguaaaagcuaugcugccugugagccccgucuaag
+DENV1_KY057368.1:50-111  agucaggccggauuaagccauagcacgguaagagcuaugcugccugugagccccguccaag
+DENV1_JN697056.1:50-111  agucaggccggauuaagccauaguacgguaagaacuaugcugccugugagccccguccaag
+DENV1_MW265683.1:50-111  agucaggccggauuaagccauagcacggcaagagcuaugcugccugugagccccgucuaag
+DENV1_KP188548.1:50-111  agucaggccggauuaagccauagcacggaaagagcuaugcugccugugagccccguccaag
+DENV1_KC762651.1:50-111  agucaggccggauuaagccauaguacgguaggagcuaugcugccugugagccccguccaag
+DENV1_U88537.1:50-111    agucaggccggauugagccauagcacgguaagagcuaugcugccugugagccccguccaag
+DENV1_FJ024459.1:50-111  agucaggccagauuaagccauagcacgguaagagcuaugcugccugugagccccgucuaag
+DENV1_MK858130.1:52-113  agucaggccgaucuaagccauagcacgguaagagcuaugcugccugugagccccguccaag
+DENV1_FJ410220.1:50-111  agucaggccggauuaagccauagcacggcaagagcuaugcugccugugagccccguccaag
+DENV1_OL412140.1:50-111  agucaggccggauugagccauaguacgguaagagcuaugcugccugugagccccguccaag
+#=GC RF                  AGUCAGGCCGGAUUAAGCCAUAGYACGGUAAGAGCUAUGCUGCCUGUGAGCCCCGUCYAAG
+#=GC SS_cons             ...((((((.......).((((((.........))))))..)))))...............
+//

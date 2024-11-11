@@ -1,0 +1,28 @@
+# STOCKHOLM 1.0
+#=GF SS RNAalifold prediction
+POWV_OP037817.1:27-131  cccuaacacaggggaugguguggcagcgcacaacgacaucgugacgggagugggucgcccccgacgcaccauccucuugggaaaaauuuucgugagacccucac
+POWV_HM440563.1:27-129  cccuaauauagggggugguguggcagcgcacaaugacaucgugacgggagugggucgcccccgacgcaccauccucuugggaaaa--cuucgugagacccucau
+POWV_OP823408.1:27-131  cccuaacauaggggaugguguggcagcgcacaacgacaucgugacgggagugggucgcccccgacgcaccauccucuugggaaaaauuuucgugagacccucac
+POWV_OP823409.1:27-130  cccuaacacaggggaugguguggcagcgcacaacgacaucgugacgggagugggucgcccccgacgcaccauccucuugggaaaaa-uuucgugagacccucac
+POWV_OL704313.1:27-129  acccacuacagggggugaugcggcagcgcaccacgacaucgugacgggaagaggucguccccgacgcaucaucucucuagagcau--uuucgugagacccucau
+POWV_OP823415.1:27-129  acccacuacagggggugaugcggcagcgcaccacgacaucgugacgggaagaggucguccccgacgcaucaucucucuagggcau--uuucgugagacccucau
+POWV_OL704390.1:27-129  acccacuacagggggugauguggcagcgcaccacaacaucgugacgggaagaggucguccccgacgcaucaucucucuaggauuu--uuucgugagacccucau
+POWV_OP823404.1:27-130  cccuaacacaggggaugguguggcagcgcacaacgacaucgugacgggagugggucggccccgacgcaccauccucuugggaaaaa-uuucgugagacccucac
+POWV_OP823406.1:27-130  cccuaacacaggggaugguguggcagcgcacaacgacaucgugacgggagugggucggccccgacgcaccauccucuugggaaaaa-uuucgugagaccuucac
+POWV_OP823440.1:27-129  acccacuacagggggugauguggcagcgcaccacgacaucgugacgggaagaggucguccccgacgcaucaucucucuaaggcau--uuucgugagacccucau
+POWV_OP823476.1:25-127  acccgcuauagggggugauguggcagcgcaccacgacaucgugacgggaaaaggucguccccgacgcaucaucccucuagggcau--uuucgugagacccucac
+POWV_OL704334.1:27-129  acccacuacagggggugauguggcagcgcaccacgacaucgugacgggaagaggucguccccgacgcaucaucucuuuagggcau--uuucgugagacccucau
+POWV_OL704374.1:27-129  acccacuacagggggugauguggcagcgcacuacgacaucgugacgggaagaggucguccccgacgcaucaucucucuagggcau--uuucgugagacccucau
+POWV_OL704297.1:27-129  acccacuacagggggugauguggcagcgcaccacgayaucgugacgggaagaggucguccccgacgcaucaucucucuagggcau--uuucgugagacccucau
+POWV_OL704180.1:27-129  acccacuacagggggugauguggcagcgcaccaugacaucgugacgggaagaggucguccccgacgcaucaucucucuagggcau--uuucgugagacccucau
+POWV_OL704271.1:27-129  acccacuacagggggugauguggcagcgcaccacgacaucgugacgggaagaggucguccccgacgcaucaucucucuagggcau--uuucgugagacccucau
+POWV_OL704330.1:27-129  acccacuacagggggugauguggcagcgcaccacgacaucgugacgggaagaggucguccccgacgcaucaucucccuagggcau--uuucgugagacccucau
+POWV_OL704278.1:27-129  acccacuacagggggugauguggcagcgcaccacaacaucgugacgggaagaggucguccccgacgcaucaucucucuagggcau--uuucgugagacccucau
+POWV_OP823470.1:27-129  acccacuacagggggugauguggcagcgcaccacgacaucgugacgggaagaggucguccccgacgcaucaucucucuagggcac--uuucgugagacccucau
+POWV_OL704189.1:27-129  acccaccacagggggugauguggcagcgcaccacgacaucgugacgggaagaggucguccccgacgcaucaucucucuagggcau--uuucgugagacccucau
+POWV_OL704144.1:27-129  acccacuauagggggugauguggcagcgcaccacgacaucgugacgggaagaggucguccccgacgcaucaucucucuagggcau--uuucgugagacccucau
+POWV_MW665120.1:27-129  acccacuacagggggugaugcggcagcgcaccacgacaucgugacgggaagaggucguccccgacacaucaucucucuagggcau--uuucgugagacccucau
+POWV_OL704335.1:27-129  acccacuacagggggugauguggcagcgcaccacgacaucgugacgggaagaggucguccccgacgcaucauuucucuagggcau--uuucgugagacccucau
+#=GC RF                 ACCYAMUACAGGGGGUGAUGUGGCAGCGCACMACGAcAUCGUGACGGGAAKAGGUCGUCCCCGACGCAUCAUCYYYYUAGGRMAW--UUUCGUGAGACCCUCAU
+#=GC SS_cons            ..........((((((((((((......(((.........))).((((...........)))).))))))))))))............................
+//

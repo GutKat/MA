@@ -1,0 +1,55 @@
+# STOCKHOLM 1.0
+#=GF SS RNAalifold prediction
+DENV3_MZ284953.1:120-175  ugaagucagg-ccgaaagccacgguucgagcaagccgugcugccuguagcuccauc
+DENV3_ON123662.1:99-155   agaagucaggccccaaagccacgguuugagcaaaccgugcugccuguagcuccauc
+DENV3_AY858040.2:99-155   agaagucaggccaaaaagccacgguuugagcaaaccgugcugccuguagcuccguc
+DENV3_MW720890.1:99-155   agaagucaggcccaaaagccacgguuugagcaaaccgugcugccuguagcuccguc
+DENV3_OK598123.1:99-155   agaagucaggcccaaaagccacggcuugagcaaaccgugcugccuguagcuccguc
+DENV3_OP410995.1:99-155   agaagucaggccuaaaagccacgguuugagcaaaccgugcugccuguagcuccguc
+DENV3_ON123655.1:99-155   agaagucaggccccaaagccacgguuugagcaaaccgugcugccuguggcuccauc
+DENV3_OP410998.1:91-147   agaagucaggcccuaaagccacgguuugagcaaaccgugcugccuguagcuccguc
+DENV3_MN448953.1:99-155   agaagucaggcccaaaagccacggauugagcaaaccgugcugccuguagcuccguc
+DENV3_KJ189296.1:99-155   agaagucaggccccaaagccacgguuugagcaaaccgugcugccuguagcuccguc
+DENV3_KU509282.1:99-155   aaaagucaggccccaaagccacgguuugagcaaaccgugcugccuguagcuccguc
+DENV3_FJ882578.1:99-155   agaagucaggccccaaagccacggcuugagcaaaccgugcugccuguagcuccguc
+DENV3_GU131866.1:99-155   agaagucaggccuuaaagccacgguuugagcaaaccgugcugccuguagcuccguc
+DENV3_MK858149.1:99-155   agaagucaggccacaaagccacgguuugagcaaaccgugcugccuguagcuccguc
+DENV3_EU482459.1:89-145   agaagucaggcccaaaagccacgguuugagcaagccgugcugccuguagcuccguc
+DENV3_MN448975.1:99-155   agaagucaggcccaaaagccacggauugagcaarccgugcugccuguagcuccguc
+DENV3_ON891145.1:99-155   agaagucaggccucaaagccacgguuugagcaaaccgugcugccuguagcuccguc
+DENV3_AY744681.1:99-155   agaagucaggcccaaaagccacgguuugagcaaaccgugcugccuguggcuccguc
+DENV3_JQ920485.1:99-155   agaagucaggccuaaaagccacgguuugagcaaaccgugcugccuguggcuccguc
+DENV3_EU482457.1:99-155   agaagucaggcccaaaagccacgguucgagcaaaccgugcugccuguagcuccguc
+DENV3_MH051732.1:99-155   agaagucaggcccaaaagccacggucugagcaaaccgugcugccuguagcuccguc
+DENV3_MH823209.1:99-155   agaagucaggcccaacagccacgguuugagcaaaccgugcugccuguagcuccguc
+DENV3_MF682970.1:99-155   agaagucaggcccaaaagccacgguuugaguaaaccgugcugccuguagcuccguc
+DENV3_MN448941.1:99-155   agaagucaggcccaaaagccayggauugagcaaaccgugcugccuguagcuccguc
+DENV3_FJ547083.1:99-155   agaagucaggccccaaagccacgguuugagcaagccgugcugccuguagcuccguc
+DENV3_OM258630.1:99-155   aaaagucaggcccaaaagccaugguuugagcaaaccaugcugccuguagcuccguc
+DENV3_MG721064.1:99-155   agaagucaggccccaaagccacgguuugagcaaaccgugcugccuguggcuccguc
+DENV3_FJ744739.1:99-155   agaagucagguccaaaagccacgguuugagcaaaccgugcuaccuguagcuccguc
+DENV3_KC425219.1:99-155   agaagucaggccccaaagccacgguuagagcaaaccgugcugccuguagcuccguc
+DENV3_OQ727062.1:99-155   agaagucaggccuugaagccacgguuugagcaaaccgugcugccuguagcuccguc
+DENV3_DQ401694.1:99-155   agaagucaggcccaaaagccacgguuugagcaaaccgugcugccuguaucuccguc
+DENV3_JF920400.1:88-144   agaagucaggccccaaagccacggucugagcaaaccgugcugccuguagcuccguc
+DENV3_GU131905.1:99-155   agaagucaggcccaaaagccacgguuugagcaaaucgugcugccuguagcuccguc
+DENV3_EU529690.1:99-155   agaagucaggccccaaagccacgguuugagcaaaccgugcugccugcagcuccguc
+DENV3_AB214882.1:99-155   agaagucaggcccaaaagccacgguuugagcaaacugugcugccuguagcuccguc
+DENV3_KJ189282.1:99-155   agaagucaggccccagagccacgguuugagcaaaccgugcugccuguagcuccguc
+DENV3_FJ898456.1:99-155   agaagucaggcccauaagccacgguuugagcaaaccgugcugccuguggcuccguc
+DENV3_KJ737429.1:99-155   agaagucaggcccaaaagccacgggaugagcaaaccgugcugccuguagcuccguc
+DENV3_MN922036.1:91-147   agaagucaggccccaaggccacgguuugagcaaaccgugcugccuguagcuccguc
+DENV3_OQ339138.1:99-155   agaagucaggccccaaagccacgguuugagcaaaccgugcugccuguaacuccguc
+DENV3_EF629369.1:99-155   agaagucaggccccaaagccacgguuugagcaaaccgugcugccuguaucuccguc
+DENV3_HQ705623.1:88-144   agaagucaggccccaaagccaugguuugagcaaaccgugcugccuguagcuccguc
+DENV3_DQ401690.1:99-155   agaagucaggcccaaaagccacgguuugagcaaaccgugcugccuguauuuccguc
+DENV3_AF317645.1:88-144   agaagucaggcccaaacgccacgguuugagcaaaccgugcugccuguaucuccguc
+DENV3_KJ189277.1:99-155   agaagucaggccccaaagccacgauuugagcaaaccgugcugccuguagcuccguc
+DENV3_EF629370.1:88-144   agaagucaggcccaaaagccacggugugagaaaaccgugcugccuguagcuccguc
+DENV3_KF955476.1:99-155   agaagucaggcccaaaagccacgguuugagacaaccgugcugccuguagcuccguc
+DENV3_GU131865.1:99-155   agaagucaggccccaaagccccgguuugagcaaaccgugcugccuguagcuccguc
+DENV3_GU131873.1:99-155   agaagucaggccccaaagccacgguuugagcaaaccgugcugcauguagcuccguc
+DENV3_OP895705.1:99-155   agaagucaggccccaaagccauaguuugagcaaacuaugcagccuguagcuccguc
+#=GC RF                   AGAAGUCAGGcCCMAAAGCCAcGGUUUGAGCAAaCCGUGCUGCCUGUAGCUCCGUC
+#=GC SS_cons              ......((((((.....).((((((((....))))))))..)))))..........
+//

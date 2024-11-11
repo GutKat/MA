@@ -1,0 +1,28 @@
+# STOCKHOLM 1.0
+#=GF SS RNAalifold prediction
+DENV4_MK858146.2:32-90  agucaggccacuugugccacggcucgagcaaaccgugcugccuguagcuccgccaaaa
+DENV4_OP809586.1:30-88  agucaggccacuugugccacggcuugagcaaaccgugcugccuguagcuccgcccaaa
+DENV4_JQ915084.1:31-89  agucaggccacuugugccacggcuugagcaaaccgugcugccuguagcuccgcccaau
+DENV4_ON799403.1:30-88  agucaggccacuugugccacggcuugagcaaaccgugcugccuguagcuccgccmaaa
+DENV4_KF041260.1:32-90  agucaggccacuugugccacggcuugagcaaaccgugcugccuguagcuccgccaaaa
+DENV4_KX224312.2:32-90  agucaggccacuugugccacggcuugagcaaaccgugcugccuguagcuccgccaaug
+DENV4_OR162320.1:30-88  agucaggccacuugugccacggucugagcaaaccgugcugccuguagcuccgccaaua
+DENV4_GQ199885.1:30-88  agucaggccacuugugccacgguuugagcaaaccgugcugccuguagcuccgccaaua
+DENV4_OQ821645.1:30-88  agucaggccacuugugccacgguuugagcaagccgugcugccuguagcuccgccaaua
+DENV4_JN819409.1:30-88  agucaggccacuugugccacgguuugagcaaaccgugcugccuguagcuccgccaaca
+DENV4_OQ821646.1:30-88  agucaggccacuugugccacgguuugagcaagccgugcugccuguagcuccgccaaca
+DENV4_MK614088.1:32-90  agucaggccacuugugccacggcucgagcaaaccgugcugccuguagcuccgccaaua
+DENV4_GQ199882.1:30-88  agucaggccacgugugccacgguuugagcaaaccgugcugccuguagcuccgccaaua
+DENV4_OR389346.1:30-88  agucaggccacuugugccacgguuugagcaaacugugcugccuguagcuccgccaaua
+DENV4_FJ196850.1:30-88  agucaggccacuugugccacggcuggagcaaaccgugcugccuguagcuccgccaaua
+DENV4_KP188557.1:30-88  agucaggccacuugugccacggcuugagcaaaccgugcugccuguagcuccgccaaua
+DENV4_OR389350.1:30-88  agucaggccacuugugccacggcuugaguaaaccgugcugccuguagcuccgccaaca
+DENV4_MN449003.1:32-90  agucaggccacuugugccacggcuugagcaaaccgugcugccuguagcuccgccaaca
+DENV4_KY672960.1:32-90  agucaggccaccugugccacggcuugagcaaaccgugcugccuguagcuccgccaaua
+DENV4_LC410196.1:32-90  agucaggccacucgugccacggcuugagcaaaccgugcugccuguagcuccgccaaua
+DENV4_JN638570.1:32-90  agucaggccaccugugccacggcuugagcaaaccgugcugccuguagcuccgccaaca
+DENV4_OQ427025.1:32-88  agucaggccacuugugccacggcuugagcaaaccgugcugccuguagcuccgccag--
+DENV4_LC410202.1:32-90  agucaggccacuugugccacggcuugagcaaaccgugcagccuguagcuccgccaaua
+#=GC RF                 AGUCAGGCCACUUGUGCCACGGYUUGAGCAAACCGUGCUGCCUGUAGCUCCGCCaAwa
+#=GC SS_cons            ...(((((((....)).(((((..........)))))..)))))..............
+//

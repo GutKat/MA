@@ -1,0 +1,7 @@
+# STOCKHOLM 1.0
+#=GF SS RNAalifold prediction
+SLEV_KT823415.1:195-255  agucagaccagaaaugccaccugaaagcaugcuaaaggugcugucuguacaugccccagg
+SLEV_DUMMYYY5.1:195-255  agucagaccagaaaugccaccugaaagcaugcuaaaggugcugucuguacaugccccagg
+#=GC RF                  AGUCAGACCAGAAAUGCCACCUGAAAGCAUGCUAAAGGUGCUGUCUGUACAUGCCCCAGG
+#=GC SS_cons             ...(((((((....)).(((((.............)))))..))))).............
+//

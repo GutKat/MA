@@ -1,0 +1,7 @@
+# STOCKHOLM 1.0
+#=GF SS RNAalifold prediction
+NMV_NC_032088.1:197-259  agucagaccacuuagugccaccaguaugaugauaagcuggugcugucuguccucauccccag
+NMV_NC_DUMMYY.1:197-259  agucagaccacuuagugccaccaguaugaugauaagcuggugcugucuguccucauccccag
+#=GC RF                  AGUCAGACCACUUAGUGCCACCAGUAUGAUGAUAAGCUGGUGCUGUCUGUCCUCAUCCCCAG
+#=GC SS_cons             ...(((((((.....)).(((((((..........)))))))..))))).............
+//

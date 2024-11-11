@@ -1,0 +1,8 @@
+# STOCKHOLM 1.0
+#=GF SS RNAalifold prediction
+WESSV_EU707555.1:160-222  agucagcccaucauuugaugccauggcuaagcugugaggccaugcuggcugggacagccgcg
+WESSV_ON157055.1:160-222  agucagcccaucauaugaugccauggcuaagcugugaggccaugcuggcugggacagccgcg
+WESSV_JN226796.1:160-222  agucagcccaucaugugaugccauggcuaagcugugaggccaugcuggcugggacagccgcg
+#=GC RF                   AGUCAGCCCAUCAUDUGAUGCCAUGGCUAAGCUGUGAGGCCAUGCUGGCUGGGACAGCCGCG
+#=GC SS_cons              ...(((((((((....)))).((((((...........))))))..)))))...........
+//
