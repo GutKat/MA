@@ -7,6 +7,7 @@ import numpy as np
 import pandas as pd
 
 
+
 # base Triples     -  +                   + -                                -     + 
 # db =        '..[[.((((((((((.......))))).((((((((.......{{{{{{{{.....))))))))]])))))......}}}}}}}}..'
 iupac_cons =  'NNWGUCAGGCCXXXXNNNXXXXXXXXGCYACNXXXXXXXXXXXNNNXXXXXNXXXXXXXXNGUGCWGCCUGXXXXXXXXXXXNNNNN'
