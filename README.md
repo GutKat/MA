@@ -5,7 +5,7 @@ This repository contains the files and code associated with my Master’s thesis
 ## Project Structure
 
 ### 1. xrRNA Design
-The RNA design approaches are besed on two different flavivirus subfamilies: **MBFV** and **TBFV**.
+The RNA design approaches are based on two different flavivirus subfamilies: **MBFV** and **TBFV**.
 
 #### Sequence Analysis
 - **Path:** `xrRNA_design/analysis_MBFV` and `xrRNA_design/analysis_TBFV`
@@ -43,8 +43,9 @@ The RNA design approaches are besed on two different flavivirus subfamilies: **M
 ### 3. Thesis Analysis Notebooks
 - **Path:** `thesis`
 - **Description:** This folder contains key Jupyter notebooks used for different types of analysis in the thesis.
-  - `diversity_analysis.ipynb`: Analyzes the diversity of the RNA sequences of the difference model approaches (Infrared vs. Covariance model)
-  - `sequence_analysis.ipynb`: Analyzes the designed RNA sequences.
+  - `diversity_analysis.ipynb`: Analyzes the diversity of the RNA sequences of the difference model approaches (Infrared vs. Covariance model) either based on MBFV or TBFV
+  - `sequence_analysis.ipynb`: Analyzes the designed RNA sequences either based on MBFV or TBFV
+  - `working.ipynb`: used to generate different images used in the thesis
   - This folder also contains important images used in the thesis.
 
 ### 4. Scripts
