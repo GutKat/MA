@@ -1,0 +1,22 @@
+# STOCKHOLM 1.0
+#=GF SS RNAalifold prediction
+LIV_MK007540.1:37-135  aagguaaccauggaaugaugcggcagcgcgcgacagcgacggggaaauggucgcacccgacgcaccauccaugaggcaacaauucgugagaccccccc
+LIV_MK007546.1:37-135  aaggagaccauggaaugaugcggcagcgcgcagcagcgacggggaaauggucgcacccgacgcaccauccaugaggcaacaauucgugagaccccccc
+LIV_MK007544.1:37-135  aaggggaccauggagugaugcggcagcgcgcgacagcgacgggggaauggucgcacccgacgcaccauccaugaggcaacaauucgugagaccccccc
+LIV_MK007533.1:37-135  aaggagaccauggaaugaugcggcagcgcgcagcagcgacggggaaauggucgcacccgacgcaccauccaugaggcagcaauucgugagaccccccc
+LIV_MK007542.1:37-135  aaggggaccauggaaugaugcggcagcgcgcagcagcgacggggaaauggucgcacccgacgcaccauccaugaagcagcaauucgugagaccccccc
+LIV_MK007536.1:37-135  aaggagaacauggaaugaugcggcagcgcgcagcagcgacggggaaauggucgcacccgacgcaccauccaugaggcagcaauucgugagaccccccc
+LIV_MK007537.1:37-135  agugagaccauggaaugaugcggcagcgcgcagcagcgacggggaaauggucgcacccgacgcaccauccaugaggcagcaauucgugagaccccccc
+LIV_MK007549.1:37-135  aaggggaccauggagugaugcggcagcgcgcgacagcgacgggggaauggucgcacccgacgcaucauccaugaggcaacaauucgugagaccccccc
+LIV_Y07863.1:40-138    aaggaaaccauggaaugaugcggcacggcgcgacagcgacggggaaauggucgcacccgacgcaccauccaugaggcagcaauucgugagaccccccu
+LIV_MK007551.1:37-135  aaggaaaccauggaaugaugcggcagcgcgcagcagcgacggggaaauggucgcacccgacgcaccauccaugaggcagcaauucgugagaccccccc
+LIV_KJ495985.1:37-135  aaggagaccauggaauggugcggcagcgcgcagcagcgacggggaaauggucgcacccgacgcaccauccaugaggcagcaauucgugagaccccccu
+LIV_MK007534.1:37-135  aaggagaccauggaaugaugcggcagcgcgcagcagcgacggggaaauggucgcacccgacgcaccauccaugaggcagcaauucgugagacccccuc
+LIV_KT224354.1:37-135  aaggagaccauggaauggugcggcagcgcgcagcagcgacggggaaauggucgcacccgacgcaccauccaugaggcagcaauucgugagaccccccc
+LIV_MH537791.1:37-135  aaggagaccauggagugaugcggcagcgcgcagcagcgacggggaaauggucgcacccgacgcaccauccaugaggcagcaauucgugagaccccccc
+LIV_MK007535.1:37-135  gaggagaccauggaaugaugcggcagcgcgcagcagcgacggggaaauggucgcacccgacgcaccauccaugaggcagcaauucgugagacccccuc
+LIV_MK007539.1:37-135  aaggauaccauggaauggugcggcagcgcgcagcagcgacggggaaauggucgcacccgacgcaccauccaugaggcagcaauucgugagaccccccc
+LIV_MK007532.1:37-135  aaggggaccauggagugaugcggcagcgcgcagcagcgacggggaaauggucgcacccgacgcaccauccaugaggcagcaauucgugagaccccccc
+#=GC RF                AAGGAGACCAUGGAAUGAUGCGGCAGCGCGCAGCAGCGACGGGGAAAUGGUCGCACCCGACGCACCAUCCAUGAGGCAGCAAUUCGUGAGACCCCCYY
+#=GC SS_cons           ........((((((.((.((((......(((....))).((((............)))).)))).)))))))).........................
+//

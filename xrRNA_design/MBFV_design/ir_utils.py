@@ -79,6 +79,18 @@ def bpenergy(x, y, is_terminal=False):
             if bpidx >= 0 else -math.inf)
 
 
+def number_in_relation(x, relation):
+    range_ = relations_range[relation]
+    if range_[0] <= x <= range_[1]:
+        return 1
+    return 0
+
+# first - third quartile
+relations_range = {
+        'stemG_hlG': [0.75, 1.2],
+    }
+
+
 ########## Start - BP/NotBP/Gap/NotGap ###################
 
 ir.def_function_class( 
@@ -169,6 +181,15 @@ ir.def_constraint_class(
 
 ########## END - Y for counting NT over possible gaps ###################
 
+########## START - Y for calculating relations ###################
+ir.def_constraint_class(
+    # if one region is not continous (first one is seperated)
+    'CalculateRelation',
+    lambda pos_I, I_min, pos_II, II_min, relation, var, name:  var([(name, pos_I[0]), (name, pos_I[1]), (name, pos_I[2]), (name, pos_I[3]), (name, pos_II[0]), (name, pos_II[1])]),
+    lambda y0, y1, y2, y3, x0, x1, I_min, II_min, relation: 1 if ((x1-x0) + II_min) and number_in_relation( (((y1-y0) + (y3-y2) + I_min) / ((x1 - x0) + II_min)), relation) else 0,
+    "ir_utils"
+)
+########## END - Y for calculating relations ###################
 
 
 ########## Start - Energy class ###################
@@ -268,12 +289,12 @@ def create_model(model_input):
     max_gamma = 11
     min_hl_gamma_nt = 1
     max_hl_gamma_nt = 11
-    hl_gamma = model_input.structure_span['loop']['hl3']
-
-    if target_length:
-        ss_beta = model_input.structure_span['gaps']['beta']
-        ss_gamma = model_input.structure_span['gaps']['gamma']
+    hl_gamma = model_input.structure_span['gaps']['gamma_hl']
+    stem_gamma = model_input.structure_span['gaps']['gamma_stem']
+    ss_beta = model_input.structure_span['gaps']['beta']
+    ss_gamma = model_input.structure_span['gaps']['gamma']
         
+    if target_length:
         # set up variable for counting over possible gap position
         n_y = len(possible_gaps)+1
         model.add_variables(n_y, n_y+1, name='Y')
@@ -312,17 +333,19 @@ def create_model(model_input):
         model.add_constraints(DiffInRange(pos_A, pos_B, min_gamma, max_gamma, var, 'Y'))
 
         # limit hairpin loop gamma to be between min_hl_gamma_nt + 4 and max_hl_gamma_nt + 4 --> 5 and 15
-        pos_A = possible_gaps.index(hl_gamma[0])         # plus one because we have an artificial zero in variable Y
-        pos_B = possible_gaps.index(hl_gamma[1]) + 1     # plus one because we have an artificial zero in variable Y
-        model.add_constraints(DiffInRange(pos_A, pos_B, min_hl_gamma_nt, max_hl_gamma_nt, var, 'Y'))
+        hl_gamma_pos = [possible_gaps.index(hl_gamma[i]) if i%2==0 else possible_gaps.index(hl_gamma[i])+1 for i in range(len(hl_gamma)) ]
+        model.add_constraints(DiffInRange(*hl_gamma_pos, min_hl_gamma_nt, max_hl_gamma_nt, var, 'Y'))
+
+
+        # add correlation between gamma hairpin and stem
+        stem_gamma_pos = [possible_gaps.index(stem_gamma[i]) if i%2==0 else possible_gaps.index(stem_gamma[i])+1 for i in range(len(stem_gamma)) ]
+        model.add_constraints(CalculateRelation(stem_gamma_pos, 8, hl_gamma_pos, 4, 'stemG_hlG', var, 'Y')) # stem gamma / hl gamma
+
 
     # if no target length was set, Y is not needed for counting gaps
     else:
-        ss_beta = model_input.structure_span['ss']['beta']
-        ss_gamma = model_input.structure_span['ss']['gamma']
-
         # get all possible gap position within beta and set up variable Z_B
-        gaps_in_beta = [i for i in range(ss_beta[0],ss_beta[1]) if iupac[i] == 'X']
+        gaps_in_beta = [i for i in range(ss_beta[0],ss_beta[1]+1) if iupac[i] == 'X']
         n_beta = len(gaps_in_beta) + 1
         model.add_variables(n_beta, n_beta + 1, name='Z_B')
         model.restrict_domains([('Z_B', 0)], (0, 0))
@@ -333,7 +356,7 @@ def create_model(model_input):
         model.add_constraints(InRange(n_beta, min_beta, max_beta, var, 'Z_B'))
 
         # get all possible gap position within gamma and set up variable Z_G
-        gaps_in_gamma = [i for i in range(ss_gamma[0],ss_gamma[1]) if iupac[i] == 'X']
+        gaps_in_gamma = [i for i in range(ss_gamma[0],ss_gamma[1]+1) if iupac[i] == 'X']
         n_gamma = len(gaps_in_gamma) + 1
         model.add_variables(n_gamma, n_gamma + 1, name='Z_G')
         model.restrict_domains([('Z_G', 0)], (0, 0))
@@ -344,9 +367,13 @@ def create_model(model_input):
         model.add_constraints(InRange(n_gamma, min_gamma, max_gamma, var, 'Z_G'))
 
         # limit hairpin loop gamma to be between min_hl_gamma_nt + 4 and max_hl_gamma_nt + 4 --> 5 and 15
-        pos_A = gaps_in_gamma.index(hl_gamma[0])         # plus one because we have an artificial zero in variable Y
-        pos_B = gaps_in_gamma.index(hl_gamma[1]) + 1     # plus one because we have an artificial zero in variable Y
-        model.add_constraints(DiffInRange(pos_A, pos_B, min_hl_gamma_nt, max_hl_gamma_nt, var, 'Z_G'))
+        hl_gamma_pos = [gaps_in_gamma.index(hl_gamma[i]) if i%2==0 else gaps_in_gamma.index(hl_gamma[i])+1 for i in range(len(hl_gamma)) ]
+        model.add_constraints(DiffInRange(*hl_gamma_pos, min_hl_gamma_nt, max_hl_gamma_nt, var, 'Z_G'))
+
+        # add correlation between gamma hairpin and stem
+        stem_gamma_pos = [gaps_in_gamma.index(stem_gamma[i]) if i%2==0 else gaps_in_gamma.index(stem_gamma[i])+1 for i in range(len(stem_gamma)) ]
+        model.add_constraints(CalculateRelation(stem_gamma_pos, 8, hl_gamma_pos, 4, 'stemG_hlG', var, 'Z_G')) # stem gamma / hl gamma
+
 
         # set weight for total Length
         model.add_functions([NotGap(i) for i in range(n)], 'totLength')
@@ -409,12 +436,11 @@ def create_features(model_input):
     min_hl_gamma_nt = 1
     max_hl_gamma_nt = 11
     hl_gamma = model_input.structure_span['loop']['hl3']
-
     ss_beta = model_input.structure_span['ss']['beta']
     ss_gamma = model_input.structure_span['ss']['gamma']
 
     # beta length
-    gaps_in_beta = [i for i in range(ss_beta[0],ss_beta[1]) if iupac[i] == 'X']
+    gaps_in_beta = [i for i in range(ss_beta[0],ss_beta[1]+1) if iupac[i] == 'X']
     n_beta = len(gaps_in_beta) + 1
     model.add_variables(n_beta, n_beta + 1, name='Z_B')
     model.restrict_domains([('Z_B', 0)], (0, 0))
@@ -424,7 +450,7 @@ def create_features(model_input):
     model.add_constraints(InRange(n_beta, min_beta, max_beta, var, 'Z_B'))
 
     # gamma length
-    gaps_in_gamma = [i for i in range(ss_gamma[0],ss_gamma[1]) if iupac[i] == 'X']
+    gaps_in_gamma = [i for i in range(ss_gamma[0],ss_gamma[1]+1) if iupac[i] == 'X']
     n_gamma = len(gaps_in_gamma) + 1
     model.add_variables(n_gamma, n_gamma + 1, name='Z_G')
     model.restrict_domains([('Z_G', 0)], (0, 0))

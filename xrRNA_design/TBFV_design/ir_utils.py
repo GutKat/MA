@@ -191,7 +191,7 @@ bpindex_tab = [[-1, -1, -1, 0],
                [-1, 3, -1, 4],
                [1, -1, 5, -1]]
 
-# min max
+# first - third quartile
 relations_range = {
         'stemG_hlG': [0.6, 1],
         'A_B': [2.0, 2.75],

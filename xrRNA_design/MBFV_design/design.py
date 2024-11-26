@@ -7,7 +7,6 @@ import numpy as np
 import pandas as pd
 
 
-
 # base Triples     -  +                   + -                                -     + 
 # db =        '..[[.((((((((((.......))))).((((((((.......{{{{{{{{.....))))))))]])))))......}}}}}}}}..'
 iupac_cons =  'NNWGUCAGGCCXXXXNNNXXXXXXXXGCYACNXXXXXXXXXXXNNNXXXXXNXXXXXXXXNGUGCWGCCUGXXXXXXXXXXXNNNNN'
@@ -28,7 +27,7 @@ loops = {'hl2': (15,22), 'hl3': (36, 56), 'upk1': (71, 77)} # range
 # all the different regions of the structure saved
 # ss and gaps are used for limiting the length of beta and gamma
 # ss is the whole range of the beta and gamma structure, gaps is the position of the first and last possible gap within the structure
-structure_span = {'stem': stems, 'loop': loops, 'ss':{'beta':(11, 27), 'gamma':(28, 64)}, 'gaps':{'beta':(12, 25), 'gamma':(32, 59)}}
+structure_span = {'stem': stems, 'loop': loops, 'ss':{'beta':(10, 27), 'gamma':(28, 64)}, 'gaps':{'beta':(11, 25), 'gamma':(32, 59), 'gamma_stem': (32, 35, 56, 59), 'gamma_hl': (36,55)}}
 
 # target_len can be an int, a range, or False
 # int = excat sequence length, range = sequence length is within range, False = no length constraint target_len = False #False # [52, 70]
@@ -129,11 +128,11 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
-    #
-    # sequences = creating_samples()
-    # df = pd.DataFrame(sequences, columns =['sequence'])
-    # print(df)
-    # df.to_csv(csv_file)
+    #main()
+    sequences = creating_samples()
+    csv_file = '/Users/katringutenbrunner/Desktop/MA/github/MA/xrRNA_design/MBFV_design/data/seqs/multiple_designs_wo_opt.csv'
+    df = pd.DataFrame(sequences, columns =['sequence'])
+    print(df)
+    df.to_csv(csv_file)
 
 

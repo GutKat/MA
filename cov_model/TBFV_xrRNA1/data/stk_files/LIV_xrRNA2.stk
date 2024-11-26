@@ -1,0 +1,21 @@
+# STOCKHOLM 1.0
+#=GF SS RNAalifold prediction
+LIV_MK007532.1:173-276  acgcccccagggugcaccacggcagcacgccagugagaguggcgacgggaaaauggucgaucccgacguagggcacucugcaaaa-uuugugagacccccu-gca
+LIV_KP144331.1:175-279  acgccuccagagugcaccacggcagcacgccagugagaguggcgacgggagaauggucgaucccgacguagggcacucugcaaaauuuugcgagacccccc-gcc
+LIV_Y07863.1:172-276    acacccccagagugcaccacggcaacacgccagugagaguggcgacggggagauggucgaucccgacguagggcacucugcaagauuuugcgagacccccc-gcc
+LIV_MK007539.1:174-277  acgcccccagagugcaccacggcagcacgccagugagaguggcgacgggagaauggucgaucccgacguagggcacucugcaaaa-uuugugagacccccc-gcc
+LIV_MK007544.1:173-276  augcccccagggugcaccacggcagcacgccagugagaguggcgacgggagaauggucgaucccgacguagggcacucugugaaa-uuugugagacccccc-gca
+LIV_MK007542.1:176-279  acgcccccagagugcaccacggcagcacgccagugagaguggcgacgggagaauggucgaucccgacguagggcacucuguaaaa-uuugcgagacccccc-gcc
+LIV_MK007546.1:174-277  acgcccccagagugcaccacggcagcacgccagugagaguggcgacgggagaauggucgaucccgacguagggcacucugcaaaa-uuugcgagacccccc-gcc
+LIV_MK007545.1:174-277  acgcccccagagugcaccacggcagcacgccagugagaguggcgacgggagaauggucgaucccgacguagggcacucuguaaaa-uuugcgagaccccuc-gcc
+LIV_MK007534.1:174-277  aagcccccagagugcaccacggcagcacgccagugagaguggcgacgggagaauggucgaucccgacguagggcacucugcaaaa-uuugcgagacccccc-gcc
+LIV_MK007536.1:174-277  acgcccccagagugcaccacggcagcacgccagugagaguggcgacgggagaauggucggucccgacguagggcacucugcaaaa-uuugcgagacccccc-gcc
+LIV_MK007543.1:173-276  acgcccccagagugcaccacggcagcacgccagugagaguggugacgggagaauggucgaucccgacguagggcacucuguaaaa-uuugcgagacccccc-gcc
+LIV_MH537791.1:174-277  acgcccccagagugcaccacggcagcacgccagugagaguggcgacgggagauuggucgaucccgacguagggcacucugcaaaa-uuugcgagacccccc-gcc
+LIV_MK007541.1:175-278  acgcccccagagugcaccacggcagcacgccagugagaguggcgacgggagaauggucgaucccgacguagggcauucugcaaaa-uuugcgagacccccc-gcc
+LIV_MK007540.1:174-277  acgcccccggagugcaccacggcagcacgccagugagaguggcgacgggaaagcggucgcucccgacguagggcacucugcgaaa-uuugugagaccccua-gca
+LIV_MK007533.1:173-277  acgcccccagggugcaccacggcagcacgccagugagaguggcgacgggagaauggucgaucccgacguagggcacucugcaaaa-uuugcgagacccccccgcc
+LIV_KF056331.1:174-276  acgcccccagagugcaccacggcagcacgccagugagaguggcgacgggag-auggucgaucccgacguagggcacucggcaaaa-uuugcgagaccccca-gcc
+#=GC RF                 ACGCCCCCAGAGUGCACCACGGCAGCACGCCAGUGAGAGUGGCGACGGGAGaAUGGUCGAUCCCGACGUAGGGCACUCUGYAAAAuUUUGYGAGACCCCYC-GCC
+#=GC SS_cons            .......((((((((.(((((......(((((.......))))).(((((..........))))).))).)))))))))).........................
+//

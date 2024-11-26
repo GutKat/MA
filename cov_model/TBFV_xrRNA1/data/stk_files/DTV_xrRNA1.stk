@@ -1,0 +1,7 @@
+# STOCKHOLM 1.0
+#=GF SS RNAalifold prediction
+DTV_OP037825.1:27-129  acccacuacagggggugauguggcagcgcaccacgacaucgugacgggaagaggucguccccgacgcaucaucucucuagggcauuuucgugagacccucau
+DTV_AF311056.1:27-129  acccacuacagggggugauguggcagcgcaccacgacaucgugacgggaagaggucgucccccacgcaucaucucucuagggcauuuucgugagacccucau
+#=GC RF                ACCCACUACAGGGGGUGAUGUGGCAGCGCACCACGACAUCGUGACGGGAAGAGGUCGUCCCCSACGCAUCAUCUCUCUAGGGCAUUUUCGUGAGACCCUCAU
+#=GC SS_cons           ..........((((((((((((......(((.........)))..(((...........)))..))))))))))))..........................
+//

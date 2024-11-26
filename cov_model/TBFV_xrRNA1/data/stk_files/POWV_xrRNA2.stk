@@ -1,0 +1,52 @@
+# STOCKHOLM 1.0
+#=GF SS RNAalifold prediction
+POWV_OL704248.1:160-256  -gaacgccccgaccuacugcggcagcacacacagugacgggaaguuggucgcucccgacgcaguuaggucag--aaaaaauuuugugagaccaaaaggc-
+POWV_OL704285.1:160-256  -gaaggcccugaccuacugcggcagcacacacagugacgggaaguuggucgcucccgacgcaguuaggucag--agaaaauuuugugagaccaaaaggc-
+POWV_OP823408.1:162-257  --aaggcccuggcccagugcggcagcacacucagugacgggaaaguggucgcucccgacgcaacugggucaa--aaggaacuuugugagaccaaaaggc-
+POWV_OL704318.1:162-256  ---aggccccgaccuaccgcggcagcacacacagugacgggaaguuggucgcucccgacgcaguuaggucag--aaaaaauuuugugagaccaaaaggc-
+POWV_MK309362.1:159-256  agaaggccccgaccuacugcggcagcacacacagugacgggaaguuggucgcucccgacgcaguuaggucag--gaaaaauuuugugagaccaaaaggc-
+POWV_OL704239.1:160-256  -gaaggccccgaccuacugcggcagcacacacagugacgggaaguuggucgcucccgacgcaguuaggucag--gaaaaauuuugugagaccaaaaggc-
+POWV_OL704215.1:159-256  agaaggccccgaccuacugcggcagcacacacagugacgggaaguuggucgcucccgacgcaguuaggucag--graaaauuuugugagaccaaaaggc-
+POWV_OL704271.1:162-256  ---aggccccgaccuacugcggcagcacacacagugacgggaaguuggucgcucccgacgcaguuaggucag--aaaaaauuuugugagaccaaaaggc-
+POWV_OP823406.1:161-256  --aaggcccuggcccagugcggcagcacacucagugacgggaaaguggucgcucccgacguaacugggucaa--aaggaacuuugugagaccaaaaggc-
+POWV_HM440563.1:160-255  --aaggcccugacccagagcggcagcacacuuagugacgggaaaguggucgcucccgacgcaacugggucaa--aaggaacuuugugagaccaaaaggc-
+POWV_OL704277.1:162-256  ---aggccccgaccuacugcggcagcacacacagugacgggaaguuggucgcucccgacgcaguuaggucag--aaaaaawuuugugagaccaaaaggc-
+POWV_OL704240.1:159-256  agaaggccccgaccuacugcggcagcacacacagugacgggaaguuggucgcucccgacgcaguuaggucag--gaaarauuuugugagaccaaaaggc-
+POWV_OL704121.1:162-256  ---aggccccgaccuacugcggcagcacacacagugacgggaaguuggucgcucccgacgcaguuaggucag--agaaaauuuugugagaccaaaaggg-
+POWV_OP823425.1:162-256  ---aggccccgaccuacugcggcagcacacacagugacgggaaguuggucgcucccgacgcaguuaggucag--aaaaaauuuugugagaccagaaggc-
+POWV_OL704241.1:163-257  ---aggccccgaccuacugcggcagcacacacagugacgggaaguuggucgcucccgacgcagcuaggucag--aaaaaauuuugugagaccaaaaggc-
+POWV_OL704144.1:162-256  ---aggccccgaccuaccgcggcagcacacacagugacgggaaguuggucgcucccgacgcaguuaggucag--agaaaauuuugugagaccaaaaggc-
+POWV_OL704130.1:162-256  ---aggccccgaccuacugcggcagcacacacagugacgggaaguuggucgcucccgacgcaguuaggucag--agaaaauuuugugagaccaaagggc-
+POWV_OL704129.1:161-257  -gagggccccgaccuacugcggcagcacacacagugacgggaaguuggucgcucccgacgcaguuaggucag--aaaaaauuuugugagaccaaaaggc-
+POWV_OL704311.1:163-257  ---aggccccgaccuacugcggcagcacacacggugacgggaaguuggucgcucccgacgcaguuaggucag--agaaaauuuugugagaccaaaaggc-
+POWV_OP823403.1:162-256  ---aggccccgaccuacugcggcagcacacacagugacgggaaguuggucgcucccgacgcaguuaggucag--agaaaauuuugugagaccaaaaggc-
+POWV_OP823434.1:159-256  agaaggccccgaccuacugcggcagcacacacagugacgggaaguuggucgcucccgacgcaguuaggucag--gaaaaauuuugugagaccaaaaagg-
+POWV_OL704122.1:162-257  ---aggccccgaccuacugcggcagcacacacagugacgggaaguuggucgcucccgacgcaguugggucag--aaaaaauuuugugagaccaaaaggca
+POWV_OL704268.1:162-256  ---aggccccgaccuacugcggcagcacacacagugacgggaaguuggucgcucccgacgcaguuaggucag--aagaaauuuugugagaccaaaaggc-
+POWV_OL704377.1:162-256  ---aggccccgaccuacugcggcagcacacacagugacgggaaguuggucgcucccgacgcaguuaggucag--aaaaaauuuugugagaccaaaaagg-
+POWV_OL704343.1:160-255  -gaaggccccgaccuacugcggcagcacacacagugacgggaaguuggucgcucccgacgcaguuaggucag-aaaaaaauuuugugagaccaaaaa---
+POWV_OL704150.1:162-256  ---aggccccgacuuacugcggcagcacacacagugacgggaaguuggucgcucccgacgcaguuaggucag--aaaaaauuuugugagaccaaaaggc-
+POWV_OL704272.1:162-257  ---aggccccgaccuacugcggcagcacacacagugacgggaaguuggucgcucccgacgcaguuaggucag-aaaaaaauuuugugagaccaaaaggc-
+POWV_OL704390.1:161-257  -gaaggccccgaccuacugcggcagcacacacagugacgggaaguuggucgcucccgacgcaguuaggucag--agaaacuuuugugagaccaaaaggc-
+POWV_OP823469.1:160-256  -gaaggccccgaccuacugcggcagcacacacagugacgggaaguuggucgcucccgacgcaguuaggucag--aaaagauuuugugagaccaaaaggc-
+POWV_OL704389.1:163-257  ---aggccccgaccuacugcggcagcacgcacagugacgggaaguuggucgcucccgacgcaguuaggucag--agaaaauuuugugagaccaaaaggc-
+POWV_OL704230.1:162-253  ---aggccccgaccuacugcggcagcacacacagugacgggaaguuggucgcucccgacgcaguuaggucag--aaaaaauuuugugagaccaaaa----
+POWV_OL704361.1:160-256  -gaaggccccgaccuacugcggcagcacacacagugacgggaaguuggucgcucccgacgcaguuaggucag--aaaaaauuuuuugagaccaaaaggc-
+POWV_OP823416.1:160-255  -gaaggccccgaccuacugcggcagcacacacagugacgggaaguuggucgcucccgacgcaguuaggucag-aaaaaauuuuugugagaccaaaag---
+POWV_HM440559.1:162-256  ---aggccccgaccuacugcggcagcacacacagugacgggaaguuggucgcucccgacgcagucaggucag--agaaaauuuugugagaccaaaaggc-
+POWV_OP823409.1:161-256  --aaggcccuggcccagugcggcagcacacucagugacgggaaaguggucgcucccgacgcaucugggucaa--aaggaaccuugugagaccaaaaggc-
+POWV_OL695842.1:158-253  --aaggcccuggccuacugcggcagcacacauagugacgggaaauuggucgcucccgacgcaguuaggucaa--agagaaauuugugagaccaaaaggc-
+POWV_OL704184.1:162-256  ---aggccccgaccuacugcggcagcacacacagugacgggaaguuggucgcucccgacgcaguuagguuag--agaaaauuuugugagaccaaaaggc-
+POWV_OL695841.1:158-253  --aaggcccuggccuacugcggcagcacacacagugacgggaaauuggucgcucccgacgcaguuaggucaa--agagaaauuugugagaccaaaaggc-
+POWV_OL704296.1:162-258  ---aggccccgaccuacugcggcagcacacacagugacgggaaguuggucgcucccgacgcaguuaggucagaaaaaaaauuuugugagaccaaaaggc-
+POWV_OL704225.1:162-256  ---aggccccgaccuacuacggcagcacacacagugacgggaaguuggucgcucccgacgcaguuaggucag--aaaaaauuuugugagaccaaaaggc-
+POWV_OP037817.1:162-257  --aaggcccuggcccagugcggcagcacacucagugacgggaaaguggucgcucccgacguaacuggguaaa--aacgaacuuugugagaccaaaaggc-
+POWV_OL704352.1:162-256  ---aggccccgaccuacugcggcagcacacacagugacgggaaguuggucgcucccgacgcaguuaggccag--aaaaaauuuugugagaccaaaaggc-
+POWV_OP823422.1:160-258  -gaaggccccgaccuacugcggcagcacacacagugacgggaaguuggucgcucccgacgcaguuaggucagaaaaaaauuuuugugagaccaaaaggc-
+POWV_OP823405.1:161-256  --aaggcccuggcccagugcggcagcacacucagugacgggaaaguggucgcccccgacgcaucugggucaa--aaggaacuuugugagaccaaaaggc-
+POWV_OP823476.1:158-253  --aaggcccuggccuacuguggcagcacacacagugacgggaaauuggucgcucccgacgcaguuaggucaa--agagaaauuugugagaccaaaaggc-
+POWV_KU886216.1:162-256  ---aggccccgaccuacugcagcagcacacacagugacgggaaguuggucgcucccgacgcaguuaggucag--agaaaauuuugugagaccaaaaggc-
+POWV_OP823479.1:158-253  --aaggcccuggccuacugcggcagcacacacagugacgggaaauuggucgcucccgacgcaguuaguucaa--agagaaauuugugagaccaaaaggc-
+#=GC RF                  -gaAGGCCCYGACCUACUGCGGCAGCACACACAGUGACGGGAAGUUGGUCGCUCCCGACGCAGUUAGGUCAG--ARAAAAUUUUGUGAGACCAAAAGgc-
+#=GC SS_cons             ..........(((((((((((......(((...))).(((((.((.....))))))).))))).))))))..............................
+//

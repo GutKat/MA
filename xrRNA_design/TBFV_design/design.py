@@ -18,7 +18,7 @@ structures = ['..(((((((..(((((((......(((((.........))))).(((((((............))
 var_stem_regions = [[(15,16), (72,73)], [(27,28), (38,39)], [(48,50), (63,65)], [(54,55), (112,113)]] # start, stop -> including stop
 var_loop_regions = [(9, 10), (32, 37), (51, 53), (61, 62), (78,79), (93,99)] # start, stop -> including stop
 
-gaps = {'alpha': (8, 16, 72, 80), 'beta':(27, 39), 'gamma':(48, 65), 'gamma_hl': (51, 62), 'gamma_stem': (8, 50, 63, 65)}
+gaps = {'alpha': (8, 16, 72, 80), 'beta':(27, 39), 'gamma':(48, 65), 'gamma_hl': (51, 62), 'gamma_stem': (48, 50, 63, 65)}
 # 'ss':{'beta':(8, 25), 'gamma':(26, 62)}
 target_len = False # 89
 target_structure = structures[0]
