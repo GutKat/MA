@@ -3,6 +3,7 @@ import infrared.rna as rna
 from collections import namedtuple
 import math
 
+
 ModelInput = namedtuple("ModelInput", "structures anti_structures iupac var_stem_regions var_loop_regions gaps target_length")
 
 extended_iupac_nucleotides = {

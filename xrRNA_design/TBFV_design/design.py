@@ -5,8 +5,30 @@ import utils as ut
 import ir_utils as ir_ut
 from tqdm import tqdm
 import numpy as np
+import argparse
 
 
+parser = argparse.ArgumentParser(
+    description=(
+        "A script to design sequences based on Mosquito-borne Flavivirus.\n\n"
+        "Example usage:\n"
+        "  python script.py\n"
+        "  python script.py -o design.out\n"
+    ),
+    formatter_class=argparse.RawTextHelpFormatter
+)
+
+parser.add_argument("-o", "--output", metavar="FILE",help="Optional: Output-file for design (default: print to terminal).")
+parser.add_argument("-q", "--quiet",action="store_false",default=True,dest="verbose", help="Optional: Disable verbose output (default: verbose is ON).")
+parser.add_argument("--steps", "-s",type=int,help="Optional: Monte-Carlo steps for the Design optimization (default: 100000).")
+args = parser.parse_args()
+
+verbose = args.verbose
+output_file = args.output
+
+settings = RNA.md()
+RNA.read_parameter_file('data/rna_andronescu2007.par')
+#NA.read_parameter_file('data/rna_turner2004.par')
 
 iupac_cons =  'NNNNNNNNXXXNNNNXXGGCAGCRCRCXXNNNXXXXXXXXGYGACGGGXXXXXXXXGGUCXXXXXXCCCGACXXNNNNXXXNNNNNNNNNNNNXXXXXXXUUYGUGAXGACCXX'
 structures = ['..(((((((..(((((((......(((((.........))))).(((((((............))))))).)))))))..)))))))...........................',
@@ -30,16 +52,21 @@ def mc_optimization(model_input, target_structure, start=None, steps = 1000):
 
     # create model
     model = ir_ut.create_model(model_input)
-
+    if verbose:
+        print("Finished building Model.")
+        print("MC optimization (Ensemble Defect) started:")
     # start Monte carlo optimization
     (best_ed, best_val), sampler = ut.mc_optimize(model,
                                     model_input,
                                     lambda sequence: ut.ensemble_defect(sequence, model_input),
                                     round(steps * 0.5),
                                     0.01,
-                                    start
+                                    start,
+                                    verbose
                                     )
 
+    if verbose:
+        print("MC optimization (Target Frequency) started:")
 
     # start Monte carlo optimization
     (best, best_val), sampler = ut.mc_optimize(model,
@@ -47,8 +74,12 @@ def mc_optimization(model_input, target_structure, start=None, steps = 1000):
                                     lambda sequence: ut.target_frequency(sequence, model_input),
                                     round(steps * 0.5),
                                     0.01,
-                                    best_ed
+                                    best_ed,
+                                    verbose
                                     )
+
+    if verbose:
+        print('Finished Design process\n')
 
     # get sequence from the MC optimization
     sample = rna.values_to_seq(best.values()[:n])
@@ -65,7 +96,7 @@ def mc_optimization(model_input, target_structure, start=None, steps = 1000):
     ed = fc.ensemble_defect(ss)
 
     # print all information about best sample
-    if True:
+    if verbose:
         print('\n')
         ut.margin_left('sequence:', sample, 30)
         ut.margin_left('IUPAC:', iupac_cons, 30)
@@ -86,6 +117,13 @@ def mc_optimization(model_input, target_structure, start=None, steps = 1000):
         ut.margin_left('PK2 energy:', f'{pk2_e:2.4f}', 30)
         ut.margin_left('frequency:', f'{freq:2.4f}', 30)
         ut.margin_left('ensemble defect:', f'{ed:2.4f}', 30)
+
+    # save file if a output file was set
+    if output_file:
+        with open(output_file, "w") as file:
+            file.write(sample)
+        if verbose:
+            print('\nDesign was successfully saved to:', output_file)
 
 
 def creating_samples(steps = 1000):
@@ -118,7 +156,11 @@ def main():
                                 target_length = target_len
                                 )
 
-    mc_optimization(model_input, target_structure=target_structure, steps=400000)
+    if args.steps:
+        steps=args.steps
+    else:
+        steps=100000
+    mc_optimization(model_input, target_structure=target_structure, steps=steps)
 
 if __name__ == "__main__":
     main()
