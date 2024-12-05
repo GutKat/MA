@@ -1,3 +1,48 @@
+>ALKV_JF416965.1:77-171
+gccccaacgacgaacuguggcagcacaccauuuggugacgggaaacuggucgcucccgacgcaggccgucguaagaacuuugugagaccaaagc
+......((((((..(((((......((((....)))).(((((..........))))).)))))..))))))...................... #S
+>ALKV_JX271893.1:77-171
+gccccaacgacgaacuguggcagcacaccauuuggugacgggaagcuggucgcucccgacgcaggccgucguaagaacuuugugagaccaaagc
+......((((((..(((((......((((....)))).(((((..........))))).)))))..))))))...................... #S
+>DTV_OP037825.1:27-129
+acccacuacagggggugauguggcagcgcaccacgacaucgugacgggaagaggucguccccgacgcaucaucucucuagggcauuuucgugagacccucau
+..........((((((((((((......(((.........)))..(((...........)))..)))))))))))).......................... #S
+>DTV_AF311056.1:27-129
+acccacuacagggggugauguggcagcgcaccacgacaucgugacgggaagaggucgucccccacgcaucaucucucuagggcauuuucgugagacccucau
+..........((((((((((((......(((.........)))..(((...........)))..)))))))))))).......................... #S
+>GGV_MN830233.1:2-106
+ccuaaaaaucugagacuuguguggcagcgcacuaacggugugacgggcaguggucgcucccgacgcaugaguuuucagaaaaccgagauucgugagaccccccg
+...........((((((((((((......(((.......))).((((.(((....))))))).))))))))))))............................. #S
+>GGV_X000007.1:3-103
+cu--gaaguuugggucucguguggcagcgcacgacgagugugacgggcaguggucgcucccgacgcaugggaucc--aaagcccagaauucgugagaccccccg
+...........((((((((((((......(((.......))).((((.(((....))))))).))))))))))))............................. #S
+>KFDV_MG720087.1:75-170
+agccccaacgacgaacuguggcagcacaccauuuggugacgggaagcuggucgcucccgacgcaggucgucguaagaacuuugugagaccaaaac
+.......(((((((.(((((......((((....)))).(((((..........))))).))))).)))))))...................... #S
+>KFDV_MG720086.1:75-170
+agccccaacgacgaacuguggcagcacaccaucuggugacgggaagcuggucgcucccgacgcaggucgucguaagaacuuugugagaccaaaac
+.......(((((((.(((((......((((....)))).(((((..........))))).))))).)))))))...................... #S
+>KFDV_JF416958.1:75-170
+agccccaacgacgaacuguggcagcacaccauuuggugacgggaagcuggucgcucccgacgcaggucgucguaagaacuuugugagaccaaagc
+.......(((((((.(((((......((((....)))).(((((..........))))).))))).)))))))...................... #S
+>KFDV_MH013227.1:75-170
+agccccaacgacgaacugcggcagcacaccaccuggugacgggaagcuggucgcucccgacgcaggccgucguaagaacuuugugagaccaaaaa
+.......(((((((.(((((......((((....)))).(((((..........))))).))))).)))))))...................... #S
+>KSIV_AY863002.1:2-101
+ccacaauugaggggcacacuggcaacacaccauuggugacgggaauuaggucgaccccgccagugggcuccucaaagacagaaugugagaccaaccaag
+......(((((((((.(((((......((((...)))).((((............)))).))))).)))))))))........................ #S
+>KSIV_MH688511.1:2-100
+ccacaguugaggggcaugcuggcagcacaccauuggugacggg-acuaggucgaccccgccaguaggcuccucaaagacaaaaugugagaccaaccaag
+......(((((((((.(((((......((((...)))).((((............)))).))))).)))))))))........................ #S
+>KSIV_DQ462443.1:2-100
+ccaugcuugaggggcacauuggcaacacaccauuggugacggg-augaggucgaccccgccagugagcuccucaaagacagaaugugagaccaaccaag
+......(((((((((.(((((......((((...)))).((((............)))).))))).)))))))))........................ #S
+>LGTV_OP037822.1:111-213
+acaagaaaaauggugggaugcggcaacgcacgaggcucgugacggggaaaugaucgcucccgacgcaccccuccauuggagacaacuucgugagauccccca
+........(((((.(((.((((......(((((...))))).(((((..........))))).)))).))).)))))......................... #S
+>LGTV_MK680893.1:111-213
+acaagaaaaauggugggaugcggcaacgcacgaggcucgugacggggaauugaucgcucccgacgcacccuuccauuggagauaacuucgugagaucccuca
+........(((((.(((.((((......(((((...))))).(((((..........))))).)))).))).)))))......................... #S
 >LIV_MK007540.1:37-135
 aagguaaccauggaaugaugcggcagcgcgcgacagcgacggggaaauggucgcacccgacgcaccauccaugaggcaacaauucgugagaccccccc
 ........((((((.((.((((......(((....))).((((............)))).)))).))))))))......................... #S
@@ -49,15 +94,45 @@ aaggauaccauggaauggugcggcagcgcgcagcagcgacggggaaauggucgcacccgacgcaccauccaugaggcagc
 >LIV_MK007532.1:37-135
 aaggggaccauggagugaugcggcagcgcgcagcagcgacggggaaauggucgcacccgacgcaccauccaugaggcagcaauucgugagaccccccc
 ........((((((.((.((((......(((....))).((((............)))).)))).))))))))......................... #S
->KSIV_AY863002.1:2-101
-ccacaauugaggggcacacuggcaacacaccauuggugacgggaauuaggucgaccccgccagugggcuccucaaagacagaaugugagaccaaccaag
-......(((((((((.(((((......((((...)))).((((............)))).))))).)))))))))........................ #S
->KSIV_MH688511.1:2-100
-ccacaguugaggggcaugcuggcagcacaccauuggugacggg-acuaggucgaccccgccaguaggcuccucaaagacaaaaugugagaccaaccaag
-......(((((((((.(((((......((((...)))).((((............)))).))))).)))))))))........................ #S
->KSIV_DQ462443.1:2-100
-ccaugcuugaggggcacauuggcaacacaccauuggugacggg-augaggucgaccccgccagugagcuccucaaagacagaaugugagaccaaccaag
-......(((((((((.(((((......((((...)))).((((............)))).))))).)))))))))........................ #S
+>NEGV_KT224355.1:37-135
+AAGGAGACCAUGGAAUGGUGCGGCAGCGCGCAGCAGCGACGGGGAAAUGGUCGCACCCGACGCACCAUCCAUGAGGCAGCAAUUCGUGAGACCCCCCC
+........((((((.(((((((......(((....))).((((............)))).)))))))))))))......................... #S
+>NEGV_Dummyxxxx:176-266
+AAGGAGACCAUGGAAUGGUGCGGCAGCGCGCAGCAGCGACGGGGAAAUGGUCGCACCCGACGCACCAUCCAUGAGGCAGCAAUUCGUGAGACCCCCCU
+........((((((.(((((((......(((....))).((((............)))).)))))))))))))......................... #S
+>OHFV_MT354626.1:245-344
+uaacgaaucaugggaauggagcggcagcgcacgagagugacggggaacuggucgcacccgacgcaccauccaugaagcaccauuucgugagaccccccg
+........((((((..(((.(((......(((....))).((((............)))).))).)))))))))......................... #S
+>OHFV_MT354614.1:61-159
+uuacagaccauggaaguggugcggcagcgcacgagagugacgggg-acuggucgcacccgacgcaccauccaugaagcacaacuucgugagaccccccg
+........((((((..(((.(((......(((....))).((((............)))).))).)))))))))......................... #S
+>OHFV_OL689371.1:245-344
+uaacgaaucauggagauggagcggcagcgcacgagagugacggggaacuggucgcacccgacgcaccauccaugaagcaccauuucgugagaccccccg
+........((((((..(((.(((......(((....))).((((............)))).))).)))))))))......................... #S
+>OHFV_MT354615.1:245-344
+uaacgaaucaugggaauggagcggcagcgcacgagagugacggggaacuggucgcacccgacgcaccauccaugaagcaccuuuucgugagaccccccg
+........((((((..(((.(((......(((....))).((((............)))).))).)))))))))......................... #S
+>OHFV_AY323489.1:61-159
+uuacagaccauggaaguggugcggcagcgcacgagagugacgggg-accggucgcacccgacgcaccauccaugaagcacaacuucgugagaccccccg
+........((((((..(((.(((......(((....))).((((............)))).))).)))))))))......................... #S
+>OHFV_MT350781.1:64-163
+aaacaaucaacgggaauggagcggcagcgcacgagagugacggggaacuggucgcacccgacgcaccauccaugaagcaccauuucgugagaccccccg
+........((((((..(((.(((......(((....))).((((............)))).))).)))))))))......................... #S
+>OHFV_OP037815.1:49-147
+ggaaagaccauggaaauggugcggcagcgcacgagagugacgggg-accggucgcacccgacgcaccauccaugaagcacaacuucgugagaccccccg
+........((((((..(((.(((......(((....))).((((............)))).))).)))))))))......................... #S
+>OHFV_MT354621.1:245-344
+uaacgaaucaugggaauggagcggcagcgcacgagagugacggggaacuggucgcacccgacgcaccaaccaugaagcaccauuucgugagaccccccu
+........((((((..(((.(((......(((....))).((((............)))).))).)))))))))......................... #S
+>OHFV_MT354620.1:245-343
+gaacaaaccauggaaauggagcggcagcgcacgagagugacgggg-acuggucgcacccgacgcaccauccaugaagcaucacuucgugagaccccccg
+........((((((..(((.(((......(((....))).((((............)))).))).)))))))))......................... #S
+>OHFV_MW773725.1:245-343
+gaacaaaccauggaaauggagcggcagcgcacgagagugacgggg-acuggucgcacccgacgcaccauccaugaagcauuacuucgugagaccccccg
+........((((((..(((.(((......(((....))).((((............)))).))).)))))))))......................... #S
+>OHFV_MT354622.1:245-344
+uaacgaaucaugggaauggagcggcagcgcacgagagugacggggaacuggucgcacccgacgcacuacccaugaagcaccauuucgugagaccccccg
+........((((((..(((.(((......(((....))).((((............)))).))).)))))))))......................... #S
 >POWV_OP037817.1:27-131
 cccuaacacaggggaugguguggcagcgcacaacgacaucgugacgggagugggucgcccccgacgcaccauccucuugggaaaaauuuucgugagacccucac
 ..........((((((((((((......(((.........))).((((...........)))).))))))))))))............................ #S
@@ -133,78 +208,6 @@ UAAGGGAUCAUGGAAUGAUGCGGCAGCGCGCGAUAGCGACGGGGAGAUGGUCGCACCCGACGCACCAUCCAUGAGGCAAC
 >SGEV_Dummyxxxxx:176-266
 UAAGGGAUCAUGGAAUGAUGCGGCAGCGCGCGAUAGCGACGGGGAGAUGGUCGCACCCGACGCACCAUCCAUGAGGCAACAAUUCGUGAGACCCCCCU
 .......(((((((.((.((((......(((....))).((((............)))).)))).)))))))))........................ #S
->MPFV_LC582740.1:1-75
-aaccucguggggugagcccaaa-agcaggaagagcugaccgucuuccaccccaacgcucuagggaaggucaac--aa
-....((((((((...((.......)).(.((((.(.....))))).).)))).)))).................... #S
->MPFV_LC582740.1:120-195
-ccagaacaagggugagccuguauagcagaaagaacuaaccgucuuccacccuaaaguac--aggaagguuaaucaaa
-....((((((((...((.......)).(.((((.(.....))))).).)))).)))).................... #S
->MPFV_LC582740.1:186-259
-uuaaucaaagggugagccugaguaccagugaggacugaccgccucccacccaguugaac--aggaaggucaug--gu
-....((((((((...((.......)).(.((((.(.....))))).).)))).)))).................... #S
->DTV_OP037825.1:27-129
-acccacuacagggggugauguggcagcgcaccacgacaucgugacgggaagaggucguccccgacgcaucaucucucuagggcauuuucgugagacccucau
-..........((((((((((((......(((.........)))..(((...........)))..)))))))))))).......................... #S
->DTV_AF311056.1:27-129
-acccacuacagggggugauguggcagcgcaccacgacaucgugacgggaagaggucgucccccacgcaucaucucucuagggcauuuucgugagacccucau
-..........((((((((((((......(((.........)))..(((...........)))..)))))))))))).......................... #S
->OHFV_MT354626.1:245-344
-uaacgaaucaugggaauggagcggcagcgcacgagagugacggggaacuggucgcacccgacgcaccauccaugaagcaccauuucgugagaccccccg
-........((((((..(((.(((......(((....))).((((............)))).))).)))))))))......................... #S
->OHFV_MT354614.1:61-159
-uuacagaccauggaaguggugcggcagcgcacgagagugacgggg-acuggucgcacccgacgcaccauccaugaagcacaacuucgugagaccccccg
-........((((((..(((.(((......(((....))).((((............)))).))).)))))))))......................... #S
->OHFV_OL689371.1:245-344
-uaacgaaucauggagauggagcggcagcgcacgagagugacggggaacuggucgcacccgacgcaccauccaugaagcaccauuucgugagaccccccg
-........((((((..(((.(((......(((....))).((((............)))).))).)))))))))......................... #S
->OHFV_MT354615.1:245-344
-uaacgaaucaugggaauggagcggcagcgcacgagagugacggggaacuggucgcacccgacgcaccauccaugaagcaccuuuucgugagaccccccg
-........((((((..(((.(((......(((....))).((((............)))).))).)))))))))......................... #S
->OHFV_AY323489.1:61-159
-uuacagaccauggaaguggugcggcagcgcacgagagugacgggg-accggucgcacccgacgcaccauccaugaagcacaacuucgugagaccccccg
-........((((((..(((.(((......(((....))).((((............)))).))).)))))))))......................... #S
->OHFV_MT350781.1:64-163
-aaacaaucaacgggaauggagcggcagcgcacgagagugacggggaacuggucgcacccgacgcaccauccaugaagcaccauuucgugagaccccccg
-........((((((..(((.(((......(((....))).((((............)))).))).)))))))))......................... #S
->OHFV_OP037815.1:49-147
-ggaaagaccauggaaauggugcggcagcgcacgagagugacgggg-accggucgcacccgacgcaccauccaugaagcacaacuucgugagaccccccg
-........((((((..(((.(((......(((....))).((((............)))).))).)))))))))......................... #S
->OHFV_MT354621.1:245-344
-uaacgaaucaugggaauggagcggcagcgcacgagagugacggggaacuggucgcacccgacgcaccaaccaugaagcaccauuucgugagaccccccu
-........((((((..(((.(((......(((....))).((((............)))).))).)))))))))......................... #S
->OHFV_MT354620.1:245-343
-gaacaaaccauggaaauggagcggcagcgcacgagagugacgggg-acuggucgcacccgacgcaccauccaugaagcaucacuucgugagaccccccg
-........((((((..(((.(((......(((....))).((((............)))).))).)))))))))......................... #S
->OHFV_MW773725.1:245-343
-gaacaaaccauggaaauggagcggcagcgcacgagagugacgggg-acuggucgcacccgacgcaccauccaugaagcauuacuucgugagaccccccg
-........((((((..(((.(((......(((....))).((((............)))).))).)))))))))......................... #S
->OHFV_MT354622.1:245-344
-uaacgaaucaugggaauggagcggcagcgcacgagagugacggggaacuggucgcacccgacgcacuacccaugaagcaccauuucgugagaccccccg
-........((((((..(((.(((......(((....))).((((............)))).))).)))))))))......................... #S
->ALKV_JF416965.1:77-171
-gccccaacgacgaacuguggcagcacaccauuuggugacgggaaacuggucgcucccgacgcaggccgucguaagaacuuugugagaccaaagc
-......((((((..(((((......((((....)))).(((((..........))))).)))))..))))))...................... #S
->ALKV_JX271893.1:77-171
-gccccaacgacgaacuguggcagcacaccauuuggugacgggaagcuggucgcucccgacgcaggccgucguaagaacuuugugagaccaaagc
-......((((((..(((((......((((....)))).(((((..........))))).)))))..))))))...................... #S
->NEGV_KT224355.1:37-135
-AAGGAGACCAUGGAAUGGUGCGGCAGCGCGCAGCAGCGACGGGGAAAUGGUCGCACCCGACGCACCAUCCAUGAGGCAGCAAUUCGUGAGACCCCCCC
-........((((((.(((((((......(((....))).((((............)))).)))))))))))))......................... #S
->NEGV_Dummyxxxx:176-266
-AAGGAGACCAUGGAAUGGUGCGGCAGCGCGCAGCAGCGACGGGGAAAUGGUCGCACCCGACGCACCAUCCAUGAGGCAGCAAUUCGUGAGACCCCCCU
-........((((((.(((((((......(((....))).((((............)))).)))))))))))))......................... #S
->GGV_MN830233.1:2-106
-ccuaaaaaucugagacuuguguggcagcgcacuaacggugugacgggcaguggucgcucccgacgcaugaguuuucagaaaaccgagauucgugagaccccccg
-...........((((((((((((......(((.......))).((((.(((....))))))).))))))))))))............................. #S
->GGV_X000007.1:3-103
-cu--gaaguuugggucucguguggcagcgcacgacgagugugacgggcaguggucgcucccgacgcaugggaucc--aaagcccagaauucgugagaccccccg
-...........((((((((((((......(((.......))).((((.(((....))))))).))))))))))))............................. #S
->LGTV_OP037822.1:111-213
-acaagaaaaauggugggaugcggcaacgcacgaggcucgugacggggaaaugaucgcucccgacgcaccccuccauuggagacaacuucgugagauccccca
-........(((((.(((.((((......(((((...))))).(((((..........))))).)))).))).)))))......................... #S
->LGTV_MK680893.1:111-213
-acaagaaaaauggugggaugcggcaacgcacgaggcucgugacggggaauugaucgcucccgacgcacccuuccauuggagauaacuucgugagaucccuca
-........(((((.(((.((((......(((((...))))).(((((..........))))).)))).))).)))))......................... #S
 >MG243699.1:10392-10491
 cuaggggaucauggagugaugcggcagcgcgcgauagcgacggggagauggucgaacccgacgcaccauccaugaagcaacaauucgugagaccccccc
 .........((((((.((.((((......(((....))).((((............)))).)))).))))))))......................... #S
@@ -400,15 +403,3 @@ cauuguccagaaccaaugaugcggcagcgcgcgagagcgacggggaaauggucgcacccgacgcaccauccaugaagaaa
 >KU761569.1:10639-10738
 gccacagagcaugggaugaugcggcaacucgcgaaagcuaugggaaaccggucgcacccgaagcaccaccaauguggaaccguuucgggaggccccccg
 .........((((((.((.((((......(((....))).((((............)))).)))).))))))))......................... #S
->KFDV_MG720087.1:75-170
-agccccaacgacgaacuguggcagcacaccauuuggugacgggaagcuggucgcucccgacgcaggucgucguaagaacuuugugagaccaaaac
-.......(((((((.(((((......((((....)))).(((((..........))))).))))).)))))))...................... #S
->KFDV_MG720086.1:75-170
-agccccaacgacgaacuguggcagcacaccaucuggugacgggaagcuggucgcucccgacgcaggucgucguaagaacuuugugagaccaaaac
-.......(((((((.(((((......((((....)))).(((((..........))))).))))).)))))))...................... #S
->KFDV_JF416958.1:75-170
-agccccaacgacgaacuguggcagcacaccauuuggugacgggaagcuggucgcucccgacgcaggucgucguaagaacuuugugagaccaaagc
-.......(((((((.(((((......((((....)))).(((((..........))))).))))).)))))))...................... #S
->KFDV_MH013227.1:75-170
-agccccaacgacgaacugcggcagcacaccaccuggugacgggaagcuggucgcucccgacgcaggccgucguaagaacuuugugagaccaaaaa
-.......(((((((.(((((......((((....)))).(((((..........))))).))))).)))))))...................... #S
