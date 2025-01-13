@@ -1,0 +1,27 @@
+algorithm: null
+autoHelices: null
+autoInteriorLoops: null
+autoTerminalLoops: null
+backbone: null
+background: null
+baseInner: null
+baseName: null
+baseNum: !color '#ffffff'
+baseOutline: null
+border: null
+bp: null
+bpIncrement: null
+bpStyle: none
+drawBackbone: false
+drawBases: false
+drawNC: null
+drawTertiary: null
+fillBases: false
+flat: null
+gapsColor: null
+nsBasesColor: null
+periodNum: null
+resolution: null
+rotation: null
+spaceBetweenBases: 0.5
+zoom: null

@@ -14,6 +14,7 @@ parser = argparse.ArgumentParser(
         "Example usage:\n"
         "  python script.py\n"
         "  python script.py -o design.out\n"
+        "  python script.py -q"
     ),
     formatter_class=argparse.RawTextHelpFormatter
 )
