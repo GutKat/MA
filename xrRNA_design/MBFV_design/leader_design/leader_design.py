@@ -8,6 +8,15 @@ import pandas as pd
 import random
 import math
 
+import argparse
+
+
+parser = argparse.ArgumentParser(description="A script to create leader for a designs")
+parser.add_argument("-s", "--steps", type=int, help="steps for MC optimization", default=100000)
+parser.add_argument("-d", "--design", type=str, help="design to create leader for", default=None)
+
+args = parser.parse_args()
+
 def remove_positioned_gaps(sequence, structure):
     remove = [i for i, nt in enumerate(sequence) if nt == '-']
     new_ss = [structure[i] for i in range(len(structure)) if i not in remove]
@@ -77,7 +86,16 @@ def print_suboptimal_ss(leader_seq, xrRNA_seq, xrRNA_ss, sample_size=1000):
             suboptimal_ss.append(s.structure)
     return True
 
-seq = 'AGUCAGGCCGGG-UCC-----CCCGCCACGUGGAG------CCCU----UA---UCCGCGUGCUGCCUGU---------AGGGAA'
+# sequences from new designs
+design2 = 'UGUCAGGCCUAG-GAAAAGA-CUAGCCACGGAU--------GCGUUC--A-----AUUCGUGCAGCCUGUUU-----GAGUGUUU'
+design3 = 'UGUCAGGCCUCG-UCCAGU--CGAGCCACGUGCC-------GGUCCG--A----GGUACGUGCAGCCUGUUUUUC--CGGAUUUU'
+design7 = 'UGUCAGGCCCUC-GUUCA---GAGGCCACGUCU-A------GAG-----CAAAA-AGACGUGCAGCCUGUU---------UUUUU'
+design10 =  'UGUCAGGCCUCUGUAAC---CAGAGCCACGUGU--------UUUAACAUU-----GCACGUGCAGCCUGUUUUU-AUGUUAAGUC'
+
+if not args.design:
+    seq = design2
+else:
+    seq = args.design
 
 structures = ['...((((((((((.......))))).((((((((....................))))))))..)))))................',
 		      '((............................................................)).....................',
@@ -86,8 +104,8 @@ xrRNA_ss = [remove_positioned_gaps(seq, s) for s in structures]
 xrRNA_seq = seq.replace('-','')
 
 ## GCUAA stays unpaired
-target =         ".........(((((.....)))))...."
-iupac_sequence = 'GCUAANNNXNNNNNNNNXXNNNNNNNXX'
+target =         ".........((((((....))))))...."
+iupac_sequence = 'GCUAANNNXNNNNNXNNNXXNNNNNNNXX'
 n = len(target)
 model = ir.Model()
 model.add_variables(n, 5)
@@ -109,7 +127,7 @@ def mc_optimize(model, objective, steps, temp):
     ccs = model.connected_components()
     weights = [1 / len(cc) for cc in ccs]
 
-    for i in tqdm((range(steps))):  # tqdm
+    for i in range(steps):  # tqdm
         cc = random.choices(ccs, weights)[0]
         new = sampler.resample(cc, cur)
 
@@ -119,16 +137,21 @@ def mc_optimize(model, objective, steps, temp):
             cur, curval = new, newval
             if curval > bestval:
                 best, bestval = cur, curval
+        print(f'Done: {i/steps*100:.1f}%\tbest TF: {bestval:.2f}', end='\r')
+
     return (best, bestval), sampler
 
+print(f"start leader-design for '{seq}'")
 steps = 100000
 (best, bestval), sampler = mc_optimize(model,
                                 lambda sequence: target_frequency(sequence, target),
-                                steps,
+                                args.steps,
                                 0.01,
                                 )
 
-print(bestval)
+print('\n')
+print('-'*100)
+print('\n')
 
 # get sequence from the MC optimization
 best_seq = rna.values_to_seq(best.values())
@@ -137,13 +160,11 @@ culled_structures = remove_positioned_gaps(best_seq, target)
 culled_seq = best_seq.replace('-','')
 print(culled_structures)
 print(culled_seq)
-
-print('\n')
-print('-'*100)
-print('\n')
-
 print(best_seq)
-print_suboptimal_ss(best_seq, xrRNA_seq, xrRNA_ss[0], 400)
-print('\n')
-print('-'*100)
-print('\n')
+
+
+
+# print_suboptimal_ss(best_seq, xrRNA_seq, xrRNA_ss[0], 400)
+# print('\n')
+# print('-'*100)
+# print('\n')
